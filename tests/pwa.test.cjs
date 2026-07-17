@@ -28,6 +28,12 @@ test('le service worker prend en charge précache, reprise et annulation', () =>
   assert.match(worker, /ignoreSearch: true/);
 });
 
+test('le build republie les dépendances Web hors du chemin node_modules ignoré par Git', () => {
+  const prepare = read('scripts/prepare-pwa-dist.mjs');
+  assert.match(prepare, /pwa-runtime/);
+  assert.match(prepare, /replaceAll\('\/assets\/node_modules\/', '\/pwa-runtime\/'\)/);
+});
+
 test('le Web utilise les URL stables des packs audio', () => {
   const assets = read('src/services/audio-assets.web.ts');
   assert.match(assets, /'\/assets\/audio\/courses\/course-001\/section-001\.aac'/);

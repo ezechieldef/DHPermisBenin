@@ -12,11 +12,15 @@ if (!(await exists(dist))) throw new Error(`Export web introuvable: ${dist}`);
 
 await fs.cp(path.join(staging, 'pwa-icons'), path.join(dist, 'pwa-icons'), { recursive: true });
 await fs.cp(path.join(root, 'assets/audio'), path.join(dist, 'assets/audio'), { recursive: true });
+const metroNodeAssets = path.join(dist, 'assets/node_modules');
+if (await exists(metroNodeAssets)) {
+  await fs.cp(metroNodeAssets, path.join(dist, 'pwa-runtime'), { recursive: true });
+}
 for (const name of ['manifest.webmanifest', 'offline-packs.json', 'offline-manager.js', '.htaccess']) {
   await fs.copyFile(path.join(staging, name), path.join(dist, name));
 }
 
-const registration = `<script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/service-worker.js',{scope:'/'}).catch(console.error));}</script>`;
+const registration = `<script>if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const r=await navigator.serviceWorker.register('/service-worker.js',{scope:'/'});const activate=()=>{if(r.waiting)r.waiting.postMessage({type:'SKIP_WAITING'})};activate();r.addEventListener('updatefound',()=>{const w=r.installing;if(w)w.addEventListener('statechange',()=>{if(w.state==='installed'&&navigator.serviceWorker.controller)activate()})});let reloading=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!reloading){reloading=true;location.reload()}})}catch(e){console.error(e)}});}</script>`;
 const manifest = `<link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#0B8F6A"><link rel="apple-touch-icon" href="/pwa-icons/icon-192.png">`;
 
 const htmlFiles = [];
@@ -36,6 +40,19 @@ for (const file of htmlFiles) {
   await fs.writeFile(file, html);
 }
 
+async function rewriteMetroNodeAssetUrls(dir) {
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const target = path.join(dir, entry.name);
+    if (entry.isDirectory()) await rewriteMetroNodeAssetUrls(target);
+    else if (/\.(?:html|js|css|json)$/.test(entry.name)) {
+      const source = await fs.readFile(target, 'utf8');
+      const rewritten = source.replaceAll('/assets/node_modules/', '/pwa-runtime/');
+      if (rewritten !== source) await fs.writeFile(target, rewritten);
+    }
+  }
+}
+await rewriteMetroNodeAssetUrls(dist);
+
 const precacheFiles = [];
 async function collectPrecache(dir) {
   for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
@@ -43,7 +60,7 @@ async function collectPrecache(dir) {
     if (entry.isDirectory()) await collectPrecache(target);
     else {
       const relative = `/${path.relative(dist, target).split(path.sep).join('/')}`;
-      if (relative.includes('/audio/') || relative.endsWith('.map') || ['/service-worker.js', '/offline-manager.js', '/.htaccess'].includes(relative)) continue;
+      if (relative.startsWith('/assets/node_modules/') || relative.includes('/audio/') || relative.endsWith('.map') || ['/service-worker.js', '/offline-manager.js', '/.htaccess'].includes(relative)) continue;
       precacheFiles.push(relative);
     }
   }
