@@ -9,6 +9,7 @@ import { Card, EmptyState, Heading, ProgressBar, Screen } from '@/src/components
 import { getDashboardStats, getRecentAttempts, resetAllProgress } from '@/src/db/queries';
 import type { AttemptSummary, DashboardStats } from '@/src/types/models';
 import { colors } from '@/src/theme/colors';
+import { PwaInstallCard } from '@/src/components/pwa-install-card';
 
 export default function ProgressScreen() {
   const db = useSQLiteContext();
@@ -32,6 +33,7 @@ export default function ProgressScreen() {
     <Heading title="Votre progression" subtitle="Vos résultats apparaîtront ici après votre premier sujet." />
     <EmptyState icon="stats-chart" title="Votre parcours commence ici" message="Terminez un sujet ou une simulation pour obtenir vos premières statistiques." />
     <ResetProgressButton onReset={reset} />
+    <PwaInstallCard />
     <BrandFooter />
   </Screen>;
 

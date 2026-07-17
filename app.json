@@ -22,7 +22,11 @@
       },
       "package": "com.dharvest.prepapermisbenin",
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "output": "static",
@@ -49,6 +53,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c22fe4c9-4078-41de-94b5-08f5ac4ab9fa"
+      }
+    },
+    "owner": "ezechiel_def"
   }
 }

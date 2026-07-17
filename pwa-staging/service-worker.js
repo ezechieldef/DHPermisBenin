@@ -1,16 +1,16 @@
-const APP_VERSION = 'dhp-v1';
+const APP_VERSION = '__APP_VERSION__';
 const SHELL_CACHE = `${APP_VERSION}-shell`;
 const RUNTIME_CACHE = `${APP_VERSION}-runtime`;
-const PACK_CACHE_PREFIX = `${APP_VERSION}-pack-`;
-const SHELL_URLS = ['/', '/index.html', '/manifest.webmanifest', '/pwa-icons/icon-192.png', '/pwa-icons/icon-512.png'];
+const PACK_CACHE_PREFIX = 'dhp-pack-';
+const SHELL_URLS = __PRECACHE_URLS__;
+const cancelledPacks = new Set();
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(SHELL_CACHE);
-    await Promise.all(SHELL_URLS.map(async (url) => {
-      try { await cache.add(new Request(url, { cache: 'reload' })); } catch { /* The offline screen reports incomplete installation. */ }
-    }));
-    await self.skipWaiting();
+    for (const url of SHELL_URLS) {
+      try { await cache.add(new Request(url, { cache: 'reload' })); } catch { /* A runtime request can retry this asset. */ }
+    }
   })());
 });
 
@@ -30,7 +30,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
-    event.respondWith(networkFirst(request, SHELL_CACHE, '/index.html'));
+    event.respondWith(networkFirstNavigation(request, url.pathname));
     return;
   }
   if (url.pathname.startsWith('/assets/audio/')) {
@@ -44,24 +44,30 @@ self.addEventListener('message', (event) => {
   const { type, pack } = event.data || {};
   if (type === 'SKIP_WAITING') self.skipWaiting();
   if (type === 'DOWNLOAD_PACK' && pack) event.waitUntil(downloadPack(pack));
+  if (type === 'CANCEL_PACK' && pack?.id) cancelledPacks.add(pack.id);
   if (type === 'DELETE_PACK' && pack?.id) event.waitUntil(deletePack(pack.id));
   if (type === 'GET_PACK_STATUS') event.waitUntil(sendPackStatus(event.source));
 });
 
-async function networkFirst(request, cacheName, fallbackUrl) {
-  const cache = await caches.open(cacheName);
+async function networkFirstNavigation(request, pathname) {
+  const cache = await caches.open(SHELL_CACHE);
   try {
     const response = await fetch(request);
     if (response.ok) await cache.put(request, response.clone());
     return response;
   } catch {
-    return (await cache.match(request)) || (await cache.match(fallbackUrl)) || Response.error();
+    const clean = pathname === '/' ? '/index' : pathname.replace(/\/$/, '');
+    return (await cache.match(request, { ignoreSearch: true }))
+      || (await cache.match(`${clean}.html`))
+      || (await cache.match(`${clean}/index.html`))
+      || (await cache.match('/index.html'))
+      || Response.error();
   }
 }
 
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(RUNTIME_CACHE);
-  const cached = await cache.match(request);
+  const cached = await cache.match(request, { ignoreSearch: true });
   const update = fetch(request).then(async (response) => {
     if (response.ok) await cache.put(request, response.clone());
     return response;
@@ -70,7 +76,7 @@ async function staleWhileRevalidate(request) {
 }
 
 async function cacheFirstAcrossPacks(request) {
-  const cached = await caches.match(request);
+  const cached = await caches.match(request, { ignoreSearch: true });
   if (cached) return cached;
   try {
     const response = await fetch(request);
@@ -80,11 +86,16 @@ async function cacheFirstAcrossPacks(request) {
 }
 
 async function downloadPack(pack) {
+  cancelledPacks.delete(pack.id);
   const cacheName = `${PACK_CACHE_PREFIX}${pack.id}`;
   const cache = await caches.open(cacheName);
   let completed = 0;
   try {
     for (const file of pack.files) {
+      if (cancelledPacks.has(pack.id)) {
+        await broadcast({ type: 'PACK_CANCELLED', packId: pack.id });
+        return;
+      }
       const request = new Request(file.url, { cache: 'no-store' });
       const existing = await cache.match(request);
       if (!existing) {
@@ -112,7 +123,13 @@ async function deletePack(packId) {
 
 async function sendPackStatus(target) {
   const keys = await caches.keys();
-  const installed = keys.filter((key) => key.startsWith(PACK_CACHE_PREFIX)).map((key) => key.slice(PACK_CACHE_PREFIX.length));
+  const candidates = keys.filter((key) => key.startsWith(PACK_CACHE_PREFIX));
+  const installed = [];
+  for (const key of candidates) {
+    const packId = key.slice(PACK_CACHE_PREFIX.length);
+    const cache = await caches.open(key);
+    if (await cache.match(`/__offline_pack__/${packId}`)) installed.push(packId);
+  }
   target?.postMessage({ type: 'PACK_STATUS', installed });
 }
 

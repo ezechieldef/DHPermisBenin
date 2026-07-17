@@ -9,6 +9,7 @@ import { ResetProgressButton } from '@/src/components/reset-progress-button';
 import { getCourseOverview, resetAllProgress } from '@/src/db/queries';
 import type { CourseOverview } from '@/src/types/models';
 import { colors } from '@/src/theme/colors';
+import { PwaInstallCard } from '@/src/components/pwa-install-card';
 
 export default function CoursesScreen() {
   const db = useSQLiteContext();
@@ -40,6 +41,7 @@ export default function CoursesScreen() {
 
   return <Screen>
     <Heading eyebrow="Votre parcours" title="Cours et entraînements" subtitle="Apprenez chapitre par chapitre et suivez précisément votre avancement." />
+    <PwaInstallCard />
 
     <Card className="mb-6 overflow-hidden" style={{ backgroundColor: colors.progressBackground, borderColor: colors.progressBorder }}>
       <View className="absolute -right-8 -top-10 h-40 w-40 rounded-full bg-primary/20" />

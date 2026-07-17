@@ -18,7 +18,9 @@
     "audio:openai:course": "python3 scripts/generate-openai-course-audio.py --course-id 2",
     "audio:openai:quiz-sample": "python3 scripts/generate-openai-quiz-sample.py --question-number 1",
     "audio:openai:quiz-all": "python3 scripts/generate-openai-quiz-sample.py --all --workers 8",
-    "audio:manifest": "python3 scripts/generate-kokoro-audio.py --only manifest && node scripts/build-audio-assets.mjs"
+    "audio:manifest": "python3 scripts/generate-kokoro-audio.py --only manifest && node scripts/build-audio-assets.mjs",
+    "build:pwa": "node scripts/build-audio-assets.mjs && node scripts/generate-pwa-pack-catalog.mjs --hash && expo export -p web --clear && node scripts/prepare-pwa-dist.mjs dist",
+    "serve:pwa": "node scripts/serve-pwa.mjs"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",

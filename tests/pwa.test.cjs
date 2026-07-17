@@ -1,0 +1,35 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+
+const root = path.resolve(__dirname, '..');
+const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
+
+test('la PWA déclare ses icônes, son mode autonome et sa langue', () => {
+  const manifest = JSON.parse(read('pwa-staging/manifest.webmanifest'));
+  assert.equal(manifest.display, 'standalone');
+  assert.equal(manifest.lang, 'fr-BJ');
+  assert.ok(manifest.icons.some((icon) => icon.purpose === 'maskable'));
+});
+
+test('le serveur LWS fournit les en-têtes indispensables à SQLite Web', () => {
+  const htaccess = read('pwa-staging/.htaccess');
+  assert.match(htaccess, /Cross-Origin-Opener-Policy "same-origin"/);
+  assert.match(htaccess, /Cross-Origin-Embedder-Policy "require-corp"/);
+  assert.match(htaccess, /Cross-Origin-Resource-Policy "same-origin"/);
+});
+
+test('le service worker prend en charge précache, reprise et annulation', () => {
+  const worker = read('pwa-staging/service-worker.js');
+  assert.match(worker, /__PRECACHE_URLS__/);
+  assert.match(worker, /DOWNLOAD_PACK/);
+  assert.match(worker, /CANCEL_PACK/);
+  assert.match(worker, /ignoreSearch: true/);
+});
+
+test('le Web utilise les URL stables des packs audio', () => {
+  const assets = read('src/services/audio-assets.web.ts');
+  assert.match(assets, /'\/assets\/audio\/courses\/course-001\/section-001\.aac'/);
+  assert.doesNotMatch(assets, /require\(/);
+});

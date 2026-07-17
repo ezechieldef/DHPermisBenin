@@ -1,6 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.resolve(root, process.argv[2] || 'dist');
@@ -11,7 +12,7 @@ if (!(await exists(dist))) throw new Error(`Export web introuvable: ${dist}`);
 
 await fs.cp(path.join(staging, 'pwa-icons'), path.join(dist, 'pwa-icons'), { recursive: true });
 await fs.cp(path.join(root, 'assets/audio'), path.join(dist, 'assets/audio'), { recursive: true });
-for (const name of ['manifest.webmanifest', 'service-worker.js', 'offline-packs.json', 'offline-manager.js', '.htaccess']) {
+for (const name of ['manifest.webmanifest', 'offline-packs.json', 'offline-manager.js', '.htaccess']) {
   await fs.copyFile(path.join(staging, name), path.join(dist, name));
 }
 
@@ -35,4 +36,29 @@ for (const file of htmlFiles) {
   await fs.writeFile(file, html);
 }
 
-console.log(`PWA préparée dans ${dist}: ${htmlFiles.length} page(s) HTML, audio et packs hors ligne inclus.`);
+const precacheFiles = [];
+async function collectPrecache(dir) {
+  for (const entry of await fs.readdir(dir, { withFileTypes: true })) {
+    const target = path.join(dir, entry.name);
+    if (entry.isDirectory()) await collectPrecache(target);
+    else {
+      const relative = `/${path.relative(dist, target).split(path.sep).join('/')}`;
+      if (relative.includes('/audio/') || relative.endsWith('.map') || ['/service-worker.js', '/offline-manager.js', '/.htaccess'].includes(relative)) continue;
+      precacheFiles.push(relative);
+    }
+  }
+}
+await collectPrecache(dist);
+if (!precacheFiles.includes('/index.html')) throw new Error('index.html absent du précache PWA');
+precacheFiles.sort();
+const versionSeed = await Promise.all(precacheFiles.map(async (url) => {
+  const stat = await fs.stat(path.join(dist, url.slice(1)));
+  return `${url}:${stat.size}:${stat.mtimeMs}`;
+}));
+let worker = await fs.readFile(path.join(staging, 'service-worker.js'), 'utf8');
+versionSeed.push(worker);
+const appVersion = `dhp-${createHash('sha256').update(versionSeed.join('|')).digest('hex').slice(0, 12)}`;
+worker = worker.replace('__APP_VERSION__', appVersion).replace('__PRECACHE_URLS__', JSON.stringify(precacheFiles));
+await fs.writeFile(path.join(dist, 'service-worker.js'), worker);
+
+console.log(`PWA ${appVersion} préparée dans ${dist}: ${htmlFiles.length} page(s), ${precacheFiles.length} ressources essentielles et packs audio.`);
