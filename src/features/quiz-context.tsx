@@ -6,7 +6,7 @@ type QuizContextValue = {
   result: QuizResult | null;
   start: (session: QuizSession) => void;
   answer: (questionId: number, letters: string[]) => void;
-  finish: (data: { attemptId: number; score: number; completedAt: number }) => void;
+  finish: (session: QuizSession, data: { attemptId: number; score: number; completedAt: number }) => void;
   reset: () => void;
 };
 
@@ -20,8 +20,9 @@ export function QuizProvider({ children }: PropsWithChildren) {
     result,
     start: (next) => { setSession(next); setResult(null); },
     answer: (questionId, letters) => setSession((current) => current ? ({ ...current, answers: { ...current.answers, [questionId]: letters } }) : current),
-    finish: (data) => {
-      if (session) setResult({ ...session, ...data });
+    finish: (completedSession, data) => {
+      setSession(completedSession);
+      setResult({ ...completedSession, ...data });
     },
     reset: () => { setSession(null); setResult(null); },
   }), [session, result]);

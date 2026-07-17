@@ -3,5 +3,6 @@ module.exports.colors = {
   primarySoft: '#DDF5EC', secondary: '#F4B740', secondarySoft: '#FFF4D8',
   danger: '#E35D6A', dangerSoft: '#FDE8EB', info: '#3478C9', infoSoft: '#E6F0FC',
   background: '#F6F8F7', surface: '#FFFFFF', border: '#E4EAE7', success: '#18875F',
+  progressBackground: '#E7F6F1', progressBorder: '#B9E5D7', progressText: '#10243A',
   white: '#FFFFFF', black: '#07131F',
 };

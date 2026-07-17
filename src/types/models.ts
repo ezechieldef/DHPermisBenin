@@ -35,6 +35,32 @@ export type Course = {
   is_published: number;
 };
 
+export type CourseOverview = Course & {
+  group_title: string | null;
+  group_order: number;
+  subject_count: number;
+  completed_subjects: number;
+  attempts_count: number;
+  is_read: number;
+};
+
+export type Definition = {
+  id: number;
+  mot: string;
+  sens: string;
+  image_path: string | null;
+};
+
+export type Subject = {
+  id: number;
+  course_id: number;
+  number: number;
+  title: string;
+  description: string | null;
+  display_order: number;
+  question_count: number;
+};
+
 export type AttemptSummary = {
   id: number;
   mode: 'subject' | 'exam' | 'review';
@@ -62,6 +88,7 @@ export type QuizSession = {
   categoryId: number | null;
   categoryName: string | null;
   subjectIndex: number | null;
+  subjectId?: number | null;
   questions: Question[];
   answers: Record<number, string[]>;
   startedAt: number;

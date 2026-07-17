@@ -1,20 +1,20 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren, ReactNode, type Ref } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '@/src/theme/colors';
 
-export function Screen({ children, scroll = true, className = '' }: PropsWithChildren<{ scroll?: boolean; className?: string }>) {
+export function Screen({ children, scroll = true, className = '', scrollRef }: PropsWithChildren<{ scroll?: boolean; className?: string; scrollRef?: Ref<ScrollView> }>) {
   const content = <View className={`flex-1 px-5 pb-8 ${className}`}>{children}</View>;
   return (
     <SafeAreaView className="flex-1 bg-background" edges={['top']}>
-      {scroll ? <ScrollView contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>{content}</ScrollView> : content}
+      {scroll ? <ScrollView ref={scrollRef} contentContainerStyle={{ flexGrow: 1 }} showsVerticalScrollIndicator={false}>{content}</ScrollView> : content}
     </SafeAreaView>
   );
 }
 
-export function Card({ children, className = '' }: PropsWithChildren<{ className?: string }>) {
-  return <View className={`rounded-3xl border border-border bg-surface p-5 ${className}`} style={{ shadowColor: '#10243A', shadowOpacity: 0.05, shadowRadius: 12, shadowOffset: { width: 0, height: 5 } }}>{children}</View>;
+export function Card({ children, className = '', style }: PropsWithChildren<{ className?: string; style?: object }>) {
+  return <View className={`rounded-3xl border border-border bg-surface p-5 ${className}`} style={[{ shadowColor: '#10243A', shadowOpacity: 0.05, shadowRadius: 12, shadowOffset: { width: 0, height: 5 } }, style]}>{children}</View>;
 }
 
 export function Heading({ eyebrow, title, subtitle }: { eyebrow?: string; title: string; subtitle?: string }) {

@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { Ionicons } from '@expo/vector-icons';
 import { Card, Heading, PrimaryButton, Screen } from '@/src/components/ui';
+import { BrandFooter } from '@/src/components/brand-footer';
 import { getExamQuestions } from '@/src/db/queries';
 import { useQuiz } from '@/src/features/quiz-context';
 import { colors } from '@/src/theme/colors';
@@ -15,6 +16,7 @@ export default function ExamScreen() {
     <Card className="mb-6"><Rule icon="shuffle" text="Questions tirées aléatoirement"/><Rule icon="eye-off" text="Pas d’indication pendant l’épreuve"/><Rule icon="save" text="Résultat enregistré automatiquement"/><Rule icon="wifi" text="Fonctionne entièrement hors ligne" last /></Card>
     <PrimaryButton label="Commencer l’examen" icon="play" onPress={start} />
     <Text className="mt-4 text-center text-sm leading-5 text-inkMuted">Prenez votre temps. L’objectif est de comprendre vos erreurs et de progresser.</Text>
+    <BrandFooter />
   </Screen>;
 }
 

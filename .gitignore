@@ -33,6 +33,13 @@ yarn-error.*
 # local env files
 .env*.local
 
+# local generated-audio backups (large, restorable, never committed)
+work/audio-backups/
+
+# local generation workspaces, models, virtual environments and logs
+/work/
+__pycache__/
+
 # typescript
 *.tsbuildinfo
 

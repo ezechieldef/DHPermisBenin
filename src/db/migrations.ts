@@ -32,8 +32,18 @@ export async function migrateDatabase(db: SQLiteDatabase) {
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL
     );
+    CREATE TABLE IF NOT EXISTS course_progress (
+      course_id INTEGER PRIMARY KEY REFERENCES cours(id) ON DELETE CASCADE,
+      is_read INTEGER NOT NULL DEFAULT 0 CHECK(is_read IN (0,1)),
+      last_opened_at TEXT,
+      completed_at TEXT
+    );
     CREATE INDEX IF NOT EXISTS idx_attempts_completed_at ON attempts(completed_at DESC);
     CREATE INDEX IF NOT EXISTS idx_attempt_answers_attempt_id ON attempt_answers(attempt_id);
     CREATE INDEX IF NOT EXISTS idx_question_progress_flagged ON question_progress(is_flagged);
   `);
+  const attemptColumns = await db.getAllAsync<{ name: string }>('PRAGMA table_info(attempts)');
+  if (!attemptColumns.some((column) => column.name === 'subject_id')) {
+    await db.execAsync('ALTER TABLE attempts ADD COLUMN subject_id INTEGER REFERENCES subjects(id)');
+  }
 }
