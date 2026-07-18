@@ -7,6 +7,7 @@ import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-g
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Animated, { runOnJS, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { colors } from '@/src/theme/colors';
+import { useThemePreferences } from '@/src/theme/preferences';
 
 type ViewerImage = { source: ImageSourcePropType; title: string; aspectRatio: number } | null;
 
@@ -18,6 +19,7 @@ const clamp = (value: number, minimum: number, maximum: number) => {
 export function CourseImageViewer({ image, onClose }: { image: ViewerImage; onClose: () => void }) {
   const { width, height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
+  const { colors: themeColors, themeVariables } = useThemePreferences();
   const [zoomLabel, setZoomLabel] = useState(1);
   const viewportWidth = Math.max(280, width);
   const viewportHeight = Math.max(280, height - 112);
@@ -120,8 +122,8 @@ export function CourseImageViewer({ image, onClose }: { image: ViewerImage; onCl
   const animatedStyle = useAnimatedStyle(() => ({ transform: [{ translateX: translateX.value }, { translateY: translateY.value }, { scale: scale.value }] }));
 
   return <Modal visible={Boolean(image)} transparent animationType="fade" onRequestClose={onClose}>
-    <GestureHandlerRootView style={{ flex: 1 }}>
-    <View className="flex-1 bg-black">
+    <GestureHandlerRootView style={[{ flex: 1, backgroundColor: themeColors.black }, themeVariables]}>
+    <View className="flex-1" style={{ backgroundColor: themeColors.black }}>
       <View className="absolute left-0 right-0 top-0 z-10 flex-row items-center justify-between px-4 pb-3" style={{ paddingTop: Math.max(16, insets.top + 8) }}>
         <View className="mr-3 flex-1"><Text numberOfLines={2} className="text-base font-black text-white">{image?.title}</Text><Text className="mt-1 text-xs text-white/60">Pincez pour zoomer · faites glisser pour explorer</Text></View>
         <Pressable accessibilityLabel="Fermer l’image" onPress={onClose} className="h-12 w-12 items-center justify-center rounded-full bg-white/15"><Ionicons name="close" size={27} color="white" /></Pressable>
