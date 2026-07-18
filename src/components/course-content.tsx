@@ -1,5 +1,6 @@
 import { useMemo, type ReactNode } from 'react';
-import { Image, Pressable, Text, View } from 'react-native';
+import { Image, Pressable, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { COURSE_IMAGES, COURSE_IMAGE_RATIOS } from '@/src/services/course-images';
 import type { Definition } from '@/src/types/models';
 import type { ViewerImage } from '@/src/components/course-image-viewer';

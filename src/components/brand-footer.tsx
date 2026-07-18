@@ -1,4 +1,5 @@
-import { Linking, Pressable, Text, View } from 'react-native';
+import { Linking, Pressable, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 
 const WEBSITE = 'https://d-harvest.com';
 

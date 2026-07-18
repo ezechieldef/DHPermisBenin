@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { Modal, Pressable, Text, View } from 'react-native';
+import { Modal, Pressable, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useAudioPlayer, useAudioPlayerStatus, type AudioSource } from 'expo-audio';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
 import { colors } from '@/src/theme/colors';
+import { useThemePreferences } from '@/src/theme/preferences';
 import type { CourseAudioSegment } from '@/src/services/audio-assets';
 
 const RING_SIZE = 44;
@@ -16,6 +18,8 @@ const RING_LENGTH = 2 * Math.PI * RING_RADIUS;
 export function AudioButton({ sources = [], segments = [], label = 'Écouter le chapitre', onReadingChange, showSubjects = false, onSubjectsPress }: { text: string; sources?: AudioSource[]; segments?: CourseAudioSegment[]; label?: string; onReadingChange?: (state: { index: number; playing: boolean; startLine: number; endLine: number } | null) => void; showSubjects?: boolean; onSubjectsPress?: () => void }) {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
+  const { colors: themeColors, fontChoice, themeVariables } = useThemePreferences();
+  const headerFont = fontChoice === 'system' ? undefined : `${fontChoice === 'poppins' ? 'Poppins' : 'Karla'}_800ExtraBold`;
   const player = useAudioPlayer(null, { updateInterval: 200 });
   const status = useAudioPlayerStatus(player);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -89,18 +93,21 @@ export function AudioButton({ sources = [], segments = [], label = 'Écouter le 
 
   useLayoutEffect(() => {
     navigation.setOptions({
+      headerStyle: { backgroundColor: themeColors.background },
+      headerTintColor: themeColors.ink,
+      headerTitleStyle: { fontFamily: headerFont },
       headerRight: () => <View className="flex-row items-center">
         {showSubjects ? <Pressable accessibilityLabel="Voir les sujets de ce cours" onPress={onSubjectsPress} className="h-12 w-12 items-center justify-center"><Ionicons name="school-outline" size={23} color={colors.ink} /></Pressable> : null}
         <AudioHeaderAction available={available} playing={playing} progress={progress} onPress={() => setSheetOpen(true)} />
       </View>,
     });
     return () => navigation.setOptions({ headerRight: undefined });
-  }, [available, navigation, onSubjectsPress, playing, progress, showSubjects]);
+  }, [available, headerFont, navigation, onSubjectsPress, playing, progress, showSubjects, themeColors.background, themeColors.ink]);
 
   return <Modal visible={sheetOpen} transparent animationType="slide" onRequestClose={() => setSheetOpen(false)}>
-    <View className="flex-1 justify-end bg-black/40">
+    <View className="flex-1 justify-end" style={[themeVariables, { backgroundColor: 'rgba(0, 0, 0, 0.55)' }]}>
       <Pressable accessibilityLabel="Fermer les commandes audio" className="flex-1" onPress={() => setSheetOpen(false)} />
-      <View className="rounded-t-[32px] bg-surface px-5 pt-3" style={{ paddingBottom: Math.max(32, insets.bottom + 18) }}>
+      <View className="rounded-t-[32px] px-5 pt-3" style={{ backgroundColor: themeColors.surface, paddingBottom: Math.max(32, insets.bottom + 18) }}>
         <View className="mb-5 h-1.5 w-12 self-center rounded-full bg-border" />
         <View className="mb-6 flex-row items-start justify-between">
           <View className="flex-1 pr-3">

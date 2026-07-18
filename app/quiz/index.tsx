@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Alert, BackHandler, Platform, Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, BackHandler, Platform, Pressable, ScrollView, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { Image } from 'expo-image';
 import { useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';

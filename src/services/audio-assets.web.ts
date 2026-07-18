@@ -2,6 +2,11 @@
 import type { AudioSource } from 'expo-audio';
 
 export type CourseAudioSegment = { source: AudioSource; startLine: number; endLine: number };
+
+// Metro réserve /assets/* à ses propres ressources en développement et y retire
+// le premier segment. L'export PWA, lui, publie les packs sous /assets/audio/*.
+const webAudioUrl = (source: AudioSource): AudioSource => __DEV__ && typeof source === 'string' ? `/assets${source}` : source;
+
 export const COURSE_AUDIO: Record<number, AudioSource[]> = {
   1: ['/assets/audio/courses/course-001/section-001.aac', '/assets/audio/courses/course-001/section-002.aac', '/assets/audio/courses/course-001/section-003.aac', '/assets/audio/courses/course-001/section-004.aac', '/assets/audio/courses/course-001/section-005.aac', '/assets/audio/courses/course-001/section-006.aac', '/assets/audio/courses/course-001/section-007.aac', '/assets/audio/courses/course-001/section-008.aac', '/assets/audio/courses/course-001/section-009.aac'],
   2: ['/assets/audio/courses/course-002/section-001.aac', '/assets/audio/courses/course-002/section-002.aac', '/assets/audio/courses/course-002/section-003.aac', '/assets/audio/courses/course-002/section-004.aac', '/assets/audio/courses/course-002/section-005.aac', '/assets/audio/courses/course-002/section-006.aac', '/assets/audio/courses/course-002/section-007.aac'],
@@ -4135,12 +4140,17 @@ export const OPTION_AUDIO: Record<number, AudioSource> = {
   3171: '/assets/audio/options/q-0930-d.aac',
 };
 
-export function getCourseAudio(courseId: number) { return COURSE_AUDIO[courseId] ?? []; }
-export function getCourseAudioSegments(courseId: number) { return COURSE_AUDIO_SEGMENTS[courseId] ?? []; }
+const RESOLVED_COURSE_AUDIO = Object.fromEntries(Object.entries(COURSE_AUDIO).map(([id, sources]) => [id, sources.map(webAudioUrl)]));
+const RESOLVED_COURSE_SEGMENTS = Object.fromEntries(Object.entries(COURSE_AUDIO_SEGMENTS).map(([id, segments]) => [id, segments.map((segment) => ({ ...segment, source: webAudioUrl(segment.source) }))]));
+const RESOLVED_QUESTION_AUDIO = Object.fromEntries(Object.entries(QUESTION_AUDIO).map(([id, source]) => [id, webAudioUrl(source)]));
+const RESOLVED_OPTION_AUDIO = Object.fromEntries(Object.entries(OPTION_AUDIO).map(([id, source]) => [id, webAudioUrl(source)]));
+
+export function getCourseAudio(courseId: number) { return RESOLVED_COURSE_AUDIO[courseId] ?? []; }
+export function getCourseAudioSegments(courseId: number) { return RESOLVED_COURSE_SEGMENTS[courseId] ?? []; }
 export function getQuizAudio(questionId: number, optionIds: number[]) {
   const sources: AudioSource[] = [];
-  const question = QUESTION_AUDIO[questionId];
+  const question = RESOLVED_QUESTION_AUDIO[questionId];
   if (question) sources.push(question);
-  optionIds.forEach((id) => { const option = OPTION_AUDIO[id]; if (option) sources.push(option); });
+  optionIds.forEach((id) => { const option = RESOLVED_OPTION_AUDIO[id]; if (option) sources.push(option); });
   return sources;
 }

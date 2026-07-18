@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Alert, Platform, Pressable, Text, View } from 'react-native';
+import { Alert, Platform, Pressable, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '@/src/theme/colors';
 

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Modal, Pressable, Text, useWindowDimensions, View, type ImageSourcePropType } from 'react-native';
+import { Modal, Pressable, useWindowDimensions, View, type ImageSourcePropType } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { Image } from 'expo-image';
 import { Ionicons } from '@expo/vector-icons';
 import { Gesture, GestureDetector, GestureHandlerRootView } from 'react-native-gesture-handler';

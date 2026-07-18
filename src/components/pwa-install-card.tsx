@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Alert, Platform, Text, View } from 'react-native';
+import { Alert, Platform, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { Ionicons } from '@expo/vector-icons';
 import { type Href, useRouter } from 'expo-router';
 import { Card, PrimaryButton } from '@/src/components/ui';

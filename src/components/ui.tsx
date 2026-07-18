@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode, type Ref } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors } from '@/src/theme/colors';

@@ -1,4 +1,5 @@
-import { Image, Modal, Pressable, ScrollView, Text, View } from 'react-native';
+import { Image, Modal, Pressable, ScrollView, View } from 'react-native';
+import { AppText as Text } from '@/src/components/app-text';
 import { Ionicons } from '@expo/vector-icons';
 import { COURSE_IMAGES, COURSE_IMAGE_RATIOS } from '@/src/services/course-images';
 import type { Definition } from '@/src/types/models';
