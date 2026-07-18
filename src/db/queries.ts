@@ -1,4 +1,5 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
+import type { PermitType } from '@/src/theme/preferences';
 import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, Option, Question, QuizMode, Subject } from '@/src/types/models';
 
 export async function getCategories(db: SQLiteDatabase): Promise<Category[]> {
@@ -25,7 +26,8 @@ export async function getCourseOverview(db: SQLiteDatabase): Promise<CourseOverv
       (SELECT COUNT(*) FROM subjects s WHERE s.course_id=c.id) subject_count,
       (SELECT COUNT(DISTINCT a.subject_id) FROM attempts a JOIN subjects s ON s.id=a.subject_id WHERE s.course_id=c.id AND a.mode='subject') completed_subjects,
       (SELECT COUNT(*) FROM attempts a JOIN subjects s ON s.id=a.subject_id WHERE s.course_id=c.id AND a.mode='subject') attempts_count,
-      COALESCE(cp.is_read,0) is_read
+      COALESCE(cp.is_read,0) is_read,cp.last_step_key,
+      (SELECT COUNT(*) FROM course_section_progress csp WHERE csp.course_id=c.id) completed_sections
     FROM cours c
     LEFT JOIN course_groups cg ON cg.id=c.group_id
     LEFT JOIN course_progress cp ON cp.course_id=c.id
@@ -36,6 +38,37 @@ export async function getCourseOverview(db: SQLiteDatabase): Promise<CourseOverv
 export async function markCourseOpened(db: SQLiteDatabase, courseId: number) {
   await db.runAsync(`INSERT INTO course_progress(course_id,last_opened_at) VALUES (?,?)
     ON CONFLICT(course_id) DO UPDATE SET last_opened_at=excluded.last_opened_at`, courseId, new Date().toISOString());
+}
+
+export async function getCourseLearningProgress(db: SQLiteDatabase, courseId: number) {
+  const course = await db.getFirstAsync<{ last_step_key: string | null; is_read: number }>('SELECT last_step_key,is_read FROM course_progress WHERE course_id=?', courseId);
+  const sections = await db.getAllAsync<{ section_key: string }>('SELECT section_key FROM course_section_progress WHERE course_id=?', courseId);
+  return { lastStepKey: course?.last_step_key ?? null, legacyRead: Boolean(course?.is_read), completedSectionKeys: sections.map((row) => row.section_key) };
+}
+
+export async function saveCourseResumeStep(db: SQLiteDatabase, courseId: number, stepKey: string) {
+  await db.runAsync(`INSERT INTO course_progress(course_id,last_opened_at,last_step_key) VALUES (?,?,?)
+    ON CONFLICT(course_id) DO UPDATE SET last_opened_at=excluded.last_opened_at,last_step_key=excluded.last_step_key`, courseId, new Date().toISOString(), stepKey);
+}
+
+export async function markCourseSectionRead(db: SQLiteDatabase, courseId: number, sectionKey: string, courseCompleted: boolean) {
+  const now = new Date().toISOString();
+  await db.withTransactionAsync(async () => {
+    await db.runAsync('INSERT OR IGNORE INTO course_section_progress(course_id,section_key,completed_at) VALUES (?,?,?)', courseId, sectionKey, now);
+    await db.runAsync(`INSERT INTO course_progress(course_id,is_read,last_opened_at,completed_at,last_step_key) VALUES (?,?,?,?,?)
+      ON CONFLICT(course_id) DO UPDATE SET is_read=excluded.is_read,last_opened_at=excluded.last_opened_at,completed_at=CASE WHEN excluded.is_read=1 THEN COALESCE(course_progress.completed_at,excluded.completed_at) ELSE course_progress.completed_at END,last_step_key=excluded.last_step_key`,
+    courseId, courseCompleted ? 1 : 0, now, courseCompleted ? now : null, sectionKey);
+  });
+}
+
+export async function importLegacyCourseCompletion(db: SQLiteDatabase, courseId: number, sectionKeys: string[]) {
+  const progress = await getCourseLearningProgress(db, courseId);
+  if (!progress.legacyRead || progress.completedSectionKeys.length || !sectionKeys.length) return progress;
+  const now = new Date().toISOString();
+  await db.withTransactionAsync(async () => {
+    for (const key of sectionKeys) await db.runAsync('INSERT OR IGNORE INTO course_section_progress(course_id,section_key,completed_at) VALUES (?,?,?)', courseId, key, now);
+  });
+  return { ...progress, completedSectionKeys: sectionKeys };
 }
 
 export async function markCourseRead(db: SQLiteDatabase, courseId: number) {
@@ -54,6 +87,7 @@ export async function resetAllProgress(db: SQLiteDatabase) {
     await db.runAsync('DELETE FROM attempt_answers');
     await db.runAsync('DELETE FROM attempts');
     await db.runAsync('DELETE FROM question_progress');
+    await db.runAsync('DELETE FROM course_section_progress');
     await db.runAsync('DELETE FROM course_progress');
   });
 }
@@ -85,41 +119,61 @@ async function hydrateQuestions(db: SQLiteDatabase, rows: Omit<Question, 'option
   return rows.map((row) => ({ ...row, options: byQuestion.get(row.id) ?? [] }));
 }
 
-const QUESTION_COLUMNS = 'id,number,category_id,statement,explanation,image_path,answer_type,source_page';
+const QUESTION_COLUMNS = 'id,number,category_id,statement,explanation,image_path,answer_type,permis_type,source_page';
 
-export async function getSubjectQuestions(db: SQLiteDatabase, categoryId: number, subjectIndex: number) {
+function permitFilter(permitTypes: PermitType[]) {
+  const selected = [...new Set(permitTypes.length ? permitTypes : ['B' as PermitType])];
+  return { selected, placeholders: selected.map(() => '?').join(',') };
+}
+
+export async function getFilteredCategoryQuestionCount(db: SQLiteDatabase, categoryId: number, permitTypes: PermitType[]) {
+  const filter = permitFilter(permitTypes);
+  const row = await db.getFirstAsync<{ count: number }>(
+    `SELECT COUNT(*) AS count FROM questions WHERE category_id=? AND permis_type IN (${filter.placeholders})`,
+    categoryId, ...filter.selected,
+  );
+  return row?.count ?? 0;
+}
+
+export async function getSubjectQuestions(db: SQLiteDatabase, categoryId: number, subjectIndex: number, permitTypes: PermitType[]) {
+  const filter = permitFilter(permitTypes);
   const rows = await db.getAllAsync<Omit<Question, 'options'>>(
-    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE category_id=? ORDER BY number LIMIT 20 OFFSET ?`,
-    categoryId, (subjectIndex - 1) * 20,
+    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE category_id=? AND permis_type IN (${filter.placeholders}) ORDER BY number LIMIT 20 OFFSET ?`,
+    categoryId, ...filter.selected, (subjectIndex - 1) * 20,
   );
   return hydrateQuestions(db, rows);
 }
 
-export async function getCourseSubjectQuestions(db: SQLiteDatabase, subjectId: number) {
+export async function getCourseSubjectQuestions(db: SQLiteDatabase, subjectId: number, permitTypes: PermitType[]) {
+  const filter = permitFilter(permitTypes);
   const rows = await db.getAllAsync<Omit<Question, 'options'>>(
     `SELECT ${QUESTION_COLUMNS} FROM questions q
      JOIN subject_questions sq ON sq.question_id=q.id
-     WHERE sq.subject_id=? ORDER BY sq.display_order`,
-    subjectId,
+     WHERE sq.subject_id=? AND q.permis_type IN (${filter.placeholders}) ORDER BY sq.display_order`,
+    subjectId, ...filter.selected,
   );
   return hydrateQuestions(db, rows);
 }
 
-export async function getExamQuestions(db: SQLiteDatabase) {
+export async function getExamQuestions(db: SQLiteDatabase, permitTypes: PermitType[]) {
+  const filter = permitFilter(permitTypes);
   const rows = await db.getAllAsync<Omit<Question, 'options'>>(
-    `SELECT ${QUESTION_COLUMNS} FROM questions ORDER BY RANDOM() LIMIT 20`,
+    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE permis_type IN (${filter.placeholders}) ORDER BY RANDOM() LIMIT 20`,
+    ...filter.selected,
   );
   return hydrateQuestions(db, rows);
 }
 
-export async function getReviewQuestions(db: SQLiteDatabase) {
+export async function getReviewQuestions(db: SQLiteDatabase, permitTypes: PermitType[]) {
+  const filter = permitFilter(permitTypes);
   const rows = await db.getAllAsync<Omit<Question, 'options'>>(`
-    SELECT q.id,q.number,q.category_id,q.statement,q.explanation,q.image_path,q.answer_type,q.source_page
+    SELECT q.id,q.number,q.category_id,q.statement,q.explanation,q.image_path,q.answer_type,q.permis_type,q.source_page
     FROM questions q
     LEFT JOIN question_progress p ON p.question_id=q.id
-    WHERE COALESCE(p.is_flagged,0)=1 OR COALESCE(p.times_seen,0)>COALESCE(p.times_correct,0)
+    WHERE q.permis_type IN (${filter.placeholders})
+      AND (COALESCE(p.is_flagged,0)=1 OR COALESCE(p.times_seen,0)>COALESCE(p.times_correct,0))
     ORDER BY COALESCE(p.times_correct,0)*1.0/NULLIF(p.times_seen,0), RANDOM() LIMIT 20
-  `);
+  `, ...filter.selected);
   return hydrateQuestions(db, rows);
 }
 

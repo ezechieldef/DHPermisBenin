@@ -2,7 +2,7 @@ import { Pressable, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { AppText as Text } from '@/src/components/app-text';
 import { Card, Heading, Screen } from '@/src/components/ui';
-import { type FontChoice, type TextScale, type ThemeMode, useThemePreferences } from '@/src/theme/preferences';
+import { PERMIT_TYPES, type FontChoice, type PermitType, type TextScale, type ThemeMode, useThemePreferences } from '@/src/theme/preferences';
 import { BrandFooter } from '@/src/components/brand-footer';
 
 const themeChoices: { value: ThemeMode; label: string; icon: keyof typeof Ionicons.glyphMap }[] = [
@@ -22,11 +22,45 @@ const fontChoices: { value: FontChoice; label: string; sample: string }[] = [
   { value: 'system', label: 'Système', sample: 'Police de votre appareil' },
 ];
 
+const permitLabels: Record<PermitType, { label: string; description: string }> = {
+  B: { label: 'Permis B', description: 'Socle commun obligatoire' },
+  B1: { label: 'Permis B1', description: 'Tricycles et quadricycles lourds' },
+  'A1, A2, A3': { label: 'Permis A1, A2 et A3', description: 'Motos et véhicules assimilés' },
+  'C, C1': { label: 'Permis C et C1', description: 'Transport de marchandises' },
+  D: { label: 'Permis D', description: 'Transport de personnes' },
+};
+
 export default function SettingsScreen() {
-  const { colors, fontChoice, mode, setFontChoice, setMode, textScale, setTextScale } = useThemePreferences();
+  const { colors, fontChoice, mode, selectedPermitTypes, setFontChoice, setMode, textScale, setTextScale, togglePermitType } = useThemePreferences();
 
   return <Screen>
     <Heading eyebrow="Confort de lecture" title="Réglages" subtitle="Adaptez l’apparence de l’application. Vos choix restent enregistrés sur cet appareil." />
+    <Card className="mb-5">
+      <Text className="text-lg font-black text-ink">Types de permis préparés</Text>
+      <Text className="mb-4 mt-1 text-sm leading-5 text-inkMuted">Les quiz utilisent uniquement les questions correspondant à vos choix. Le permis B constitue le socle commun et reste toujours actif.</Text>
+      <View className="gap-2">
+        {PERMIT_TYPES.map((permitType) => {
+          const selected = selectedPermitTypes.includes(permitType);
+          const required = permitType === 'B';
+          const copy = permitLabels[permitType];
+          return <Pressable
+            key={permitType}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: selected, disabled: required }}
+            accessibilityHint={required ? 'Le permis B est obligatoire' : undefined}
+            disabled={required}
+            onPress={() => togglePermitType(permitType)}
+            className={`min-h-16 flex-row items-center rounded-2xl border px-4 py-3 ${selected ? 'border-primary bg-primarySoft' : 'border-border bg-background'}`}
+          >
+            <View className="flex-1 pr-3">
+              <Text className={`text-base font-bold ${selected ? 'text-primary' : 'text-ink'}`}>{copy.label}</Text>
+              <Text className="mt-1 text-xs text-inkMuted">{copy.description}</Text>
+            </View>
+            <Ionicons name={selected ? 'checkbox' : 'square-outline'} size={24} color={selected ? colors.primary : colors.inkMuted} />
+          </Pressable>;
+        })}
+      </View>
+    </Card>
     <Card className="mb-5">
       <Text className="mb-4 text-lg font-black text-ink">Thème</Text>
       <View className="flex-row gap-2">

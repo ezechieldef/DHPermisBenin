@@ -11,6 +11,7 @@ import { getCourseOverview, resetAllProgress } from '@/src/db/queries';
 import type { CourseOverview } from '@/src/types/models';
 import { colors } from '@/src/theme/colors';
 import { PwaInstallCard } from '@/src/components/pwa-install-card';
+import { parseCourseStructure } from '@/src/services/course-structure';
 
 export default function CoursesScreen() {
   const db = useSQLiteContext();
@@ -34,11 +35,13 @@ export default function CoursesScreen() {
 
   if (!courses) return <Loading />;
 
-  const readCount = courses.filter((course) => Boolean(course.is_read)).length;
+  const sectionStats = courses.map((course) => ({ course, structure: parseCourseStructure(course.content_markdown, course.title) }));
+  const totalSections = sectionStats.reduce((total, item) => total + item.structure.sectionKeys.length, 0);
+  const completedSections = sectionStats.reduce((total, item) => total + Math.min(Number(item.course.completed_sections), item.structure.sectionKeys.length), 0);
   const totalSubjects = courses.reduce((total, course) => total + Number(course.subject_count), 0);
   const completedSubjects = courses.reduce((total, course) => total + Number(course.completed_subjects), 0);
   const attempts = courses.reduce((total, course) => total + Number(course.attempts_count), 0);
-  const readingProgress = courses.length ? Math.round((readCount / courses.length) * 100) : 0;
+  const readingProgress = totalSections ? Math.round((completedSections / totalSections) * 100) : 0;
 
   return <Screen>
     <Heading eyebrow="Votre parcours" title="Cours et entraînements" subtitle="Apprenez chapitre par chapitre et suivez précisément votre avancement." />
@@ -49,7 +52,7 @@ export default function CoursesScreen() {
       <View className="flex-row items-center justify-between">
         <View className="flex-1">
           <Text className="text-xs font-bold uppercase tracking-widest text-primary">Progression des cours</Text>
-          <Text className="mt-2 text-3xl font-black" style={{ color: colors.progressText }}>{readCount} sur {courses.length} lus</Text>
+          <Text className="mt-2 text-3xl font-black" style={{ color: colors.progressText }}>{completedSections} sur {totalSections}</Text>
         </View>
         <View className="h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
           <Ionicons name="book" size={28} color={colors.secondary} />
@@ -85,10 +88,12 @@ export default function CoursesScreen() {
 }
 
 function CourseCard({ course, onPress }: { course: CourseOverview; onPress: () => void }) {
-  const done = Number(course.completed_subjects);
-  const total = Number(course.subject_count);
+  const structure = parseCourseStructure(course.content_markdown, course.title);
+  const done = Math.min(Number(course.completed_sections), structure.sectionKeys.length);
+  const total = structure.sectionKeys.length;
   const progress = total ? Math.round((done / total) * 100) : 0;
-  const read = Boolean(course.is_read);
+  const read = total > 0 && done >= total;
+  const resumeStep = structure.steps.find((step) => step.key === course.last_step_key);
 
   return <Pressable onPress={onPress} className="mb-3 active:opacity-80">
     <Card className="p-4">
@@ -103,7 +108,8 @@ function CourseCard({ course, onPress }: { course: CourseOverview; onPress: () =
               <Text className={`text-[11px] font-extrabold ${read ? 'text-primary' : 'text-inkMuted'}`}>{read ? 'LU' : 'À LIRE'}</Text>
             </View>
           </View>
-          <Text className="mt-2 text-xs font-semibold text-inkMuted">{done}/{total} sujets effectués · {course.attempts_count} composition{Number(course.attempts_count) > 1 ? 's' : ''}</Text>
+          <Text className="mt-2 text-xs font-semibold text-inkMuted">{done}/{total} sections lues · {course.completed_subjects}/{course.subject_count} sujets effectués</Text>
+          {resumeStep && !read ? <Text className="mt-1 text-xs font-bold text-primary" numberOfLines={1}>Reprendre : {resumeStep.title}</Text> : null}
           <View className="mt-3"><ProgressBar value={progress} /></View>
         </View>
         <Ionicons name="chevron-forward" size={20} color={colors.inkMuted} style={{ marginLeft: 8, marginTop: 16 }} />

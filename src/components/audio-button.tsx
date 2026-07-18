@@ -3,9 +3,10 @@ import { Modal, Pressable, View } from 'react-native';
 import { AppText as Text } from '@/src/components/app-text';
 import { useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { useAudioPlayer, useAudioPlayerStatus, type AudioSource } from 'expo-audio';
+import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus, type AudioSource } from 'expo-audio';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { Circle } from 'react-native-svg';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colors } from '@/src/theme/colors';
 import { useThemePreferences } from '@/src/theme/preferences';
 import type { CourseAudioSegment } from '@/src/services/audio-assets';
@@ -14,6 +15,7 @@ const RING_SIZE = 44;
 const RING_STROKE = 3;
 const RING_RADIUS = (RING_SIZE - RING_STROKE) / 2;
 const RING_LENGTH = 2 * Math.PI * RING_RADIUS;
+const BACKGROUND_AUDIO_KEY = 'dh-prepa-course-background-audio-v1';
 
 export function AudioButton({ sources = [], segments = [], label = 'Écouter le chapitre', onReadingChange, showSubjects = false, onSubjectsPress }: { text: string; sources?: AudioSource[]; segments?: CourseAudioSegment[]; label?: string; onReadingChange?: (state: { index: number; playing: boolean; startLine: number; endLine: number } | null) => void; showSubjects?: boolean; onSubjectsPress?: () => void }) {
   const navigation = useNavigation();
@@ -27,7 +29,36 @@ export function AudioButton({ sources = [], segments = [], label = 'Écouter le 
   const [pendingPlay, setPendingPlay] = useState(false);
   const [started, setStarted] = useState(false);
   const [rate, setRate] = useState(1);
+  const [backgroundEnabled, setBackgroundEnabled] = useState(false);
   const indexRef = useRef(0);
+
+  const configureBackgroundPlayback = useCallback(async (enabled: boolean) => {
+    await setAudioModeAsync({
+      playsInSilentMode: true,
+      shouldPlayInBackground: enabled,
+      interruptionMode: 'duckOthers',
+    });
+    player.setActiveForLockScreen(enabled, enabled ? {
+      title: label,
+      artist: 'DH Prépa Permis Bénin',
+      albumTitle: 'Cours du Code de la route',
+    } : undefined, { showSeekBackward: false, showSeekForward: false });
+  }, [label, player]);
+
+  useEffect(() => {
+    AsyncStorage.getItem(BACKGROUND_AUDIO_KEY).then((stored) => {
+      const enabled = stored === 'true';
+      setBackgroundEnabled(enabled);
+      void configureBackgroundPlayback(enabled);
+    });
+  }, [configureBackgroundPlayback]);
+
+  const toggleBackgroundPlayback = useCallback(() => {
+    const enabled = !backgroundEnabled;
+    setBackgroundEnabled(enabled);
+    void AsyncStorage.setItem(BACKGROUND_AUDIO_KEY, String(enabled));
+    void configureBackgroundPlayback(enabled);
+  }, [backgroundEnabled, configureBackgroundPlayback]);
 
   const load = useCallback((next: number, play = true) => {
     if (!sources[next]) return;
@@ -138,6 +169,25 @@ export function AudioButton({ sources = [], segments = [], label = 'Écouter le 
             <RateButton icon="add" disabled={rate >= 2.5} onPress={() => setRate((value) => Math.min(2.5, value + 0.25))} />
           </View>
         </View>
+
+        <Pressable
+          accessibilityRole="switch"
+          accessibilityState={{ checked: backgroundEnabled }}
+          accessibilityLabel="Autoriser la lecture audio en arrière-plan"
+          onPress={toggleBackgroundPlayback}
+          className={`mt-3 flex-row items-center rounded-2xl border p-3 ${backgroundEnabled ? 'border-primary bg-primarySoft' : 'border-border bg-surface'}`}
+        >
+          <View className={`h-11 w-11 items-center justify-center rounded-full ${backgroundEnabled ? 'bg-primary' : 'bg-background'}`}>
+            <Ionicons name="phone-portrait-outline" size={22} color={backgroundEnabled ? colors.white : colors.inkMuted} />
+          </View>
+          <View className="ml-3 flex-1">
+            <Text className="font-black text-ink">Lecture en arrière-plan</Text>
+            <Text className="mt-1 text-xs leading-4 text-inkMuted">Continue lorsque l’application est réduite ou l’écran verrouillé.</Text>
+          </View>
+          <View className={`h-8 w-14 justify-center rounded-full px-1 ${backgroundEnabled ? 'items-end bg-primary' : 'items-start bg-border'}`}>
+            <View className="h-6 w-6 rounded-full bg-white" />
+          </View>
+        </Pressable>
       </View>
     </View>
   </Modal>;

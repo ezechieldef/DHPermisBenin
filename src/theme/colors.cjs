@@ -11,7 +11,7 @@ const darkColors = {
   ink: '#F2F7F5', inkMuted: '#A8B8B2', primary: '#46D6AA', primaryDark: '#22B88D',
   primarySoft: '#123D32', secondary: '#F4C35A', secondarySoft: '#463817',
   danger: '#FF8C98', dangerSoft: '#48242A', info: '#76AEEF', infoSoft: '#193653',
-  background: '#09130F', surface: '#111E19', border: '#293A33', success: '#51D2A9',
+  background: '#030504', surface: '#0D1411', border: '#24312B', success: '#51D2A9',
   progressBackground: '#123128', progressBorder: '#275848', progressText: '#F2F7F5',
   white: '#FFFFFF', black: '#050A08',
 };

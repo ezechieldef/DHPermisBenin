@@ -23,6 +23,7 @@ export type Question = {
   explanation: string | null;
   image_path: string | null;
   answer_type: 'single' | 'multiple';
+  permis_type: string;
   source_page: number;
   options: Option[];
 };
@@ -42,6 +43,8 @@ export type CourseOverview = Course & {
   completed_subjects: number;
   attempts_count: number;
   is_read: number;
+  completed_sections: number;
+  last_step_key: string | null;
 };
 
 export type Definition = {

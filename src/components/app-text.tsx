@@ -21,15 +21,16 @@ function classValue(className: string | undefined, values: Record<string, number
 }
 
 const InheritedFontSizeContext = createContext<number | null>(null);
+const InheritedFontFamilyContext = createContext<string | undefined>(undefined);
 
-function fontFamily(choice: 'poppins' | 'karla' | 'system', className?: string, weight?: TextStyle['fontWeight']) {
+function fontFamily(choice: 'poppins' | 'karla' | 'system', inherited: string | undefined, className?: string, weight?: TextStyle['fontWeight']) {
   if (choice === 'system') return undefined;
   const prefix = choice === 'poppins' ? 'Poppins' : 'Karla';
   if (className?.match(/\bfont-(black|extrabold)\b/) || weight === '800' || weight === '900') return `${prefix}_800ExtraBold`;
   if (className?.match(/\bfont-bold\b/) || weight === 'bold' || weight === '700') return `${prefix}_700Bold`;
   if (className?.match(/\bfont-semibold\b/) || weight === '600') return `${prefix}_600SemiBold`;
   if (className?.match(/\bfont-medium\b/) || weight === '500') return `${prefix}_500Medium`;
-  return `${prefix}_400Regular`;
+  return inherited ?? `${prefix}_400Regular`;
 }
 
 export const AppText = forwardRef<NativeText, TextProps & { className?: string }>(function AppText(
@@ -37,13 +38,15 @@ export const AppText = forwardRef<NativeText, TextProps & { className?: string }
 ) {
   const { fontChoice, textScale } = useThemePreferences();
   const inheritedSize = React.use(InheritedFontSizeContext);
+  const inheritedFamily = React.use(InheritedFontFamilyContext);
   const flat = StyleSheet.flatten(style) as TextStyle | undefined;
   const classSize = classValue(className, sizes);
   const classLineHeight = classValue(className, lineHeights);
   const resolvedSize = flat?.fontSize ?? classSize ?? inheritedSize ?? 14;
   const resolvedLineHeight = flat?.lineHeight ?? classLineHeight;
+  const resolvedFamily = fontFamily(fontChoice, inheritedFamily, className, flat?.fontWeight);
 
-  return <InheritedFontSizeContext value={resolvedSize}><NativeText
+  return <InheritedFontFamilyContext value={resolvedFamily}><InheritedFontSizeContext value={resolvedSize}><NativeText
       ref={ref}
       {...props}
       allowFontScaling={allowFontScaling}
@@ -51,10 +54,10 @@ export const AppText = forwardRef<NativeText, TextProps & { className?: string }
       style={[
         style,
         {
-          fontFamily: fontFamily(fontChoice, className, flat?.fontWeight),
+          fontFamily: resolvedFamily,
           fontSize: resolvedSize * textScale,
           ...(resolvedLineHeight ? { lineHeight: resolvedLineHeight * textScale } : null),
         },
       ]}
-    >{children}</NativeText></InheritedFontSizeContext>;
+    >{children}</NativeText></InheritedFontSizeContext></InheritedFontFamilyContext>;
 });

@@ -5,6 +5,7 @@ import { SQLiteProvider } from 'expo-sqlite';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 import { useFonts, Karla_400Regular, Karla_500Medium, Karla_600SemiBold, Karla_700Bold, Karla_800ExtraBold } from '@expo-google-fonts/karla';
 import { Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold, Poppins_800ExtraBold } from '@expo-google-fonts/poppins';
 import { QuizProvider } from '@/src/features/quiz-context';
@@ -29,11 +30,11 @@ function RootNavigator() {
   const headerFont = fontChoice === 'system' ? undefined : `${fontChoice === 'poppins' ? 'Poppins' : 'Karla'}_800ExtraBold`;
 
   return (
-    <GestureHandlerRootView style={[{ flex: 1 }, themeVariables]}><SafeAreaProvider><Suspense fallback={<Loading />}>
+    <GestureHandlerRootView style={{ flex: 1 }}><View style={[{ flex: 1 }, themeVariables]}><SafeAreaProvider><Suspense fallback={<Loading />}>
       {/* eslint-disable-next-line @typescript-eslint/no-require-imports */}
       <SQLiteProvider databaseName="permis-v3.sqlite" assetSource={{ assetId: require('../assets/database/permis.sqlite') }} onInit={migrateDatabase} useSuspense>
         <QuizProvider>
-          <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
+          <StatusBar animated style={scheme === 'dark' ? 'light' : 'dark'} backgroundColor={colors.background} />
           <Stack screenOptions={{
             headerShadowVisible: false,
             headerStyle: { backgroundColor: colors.background },
@@ -51,6 +52,6 @@ function RootNavigator() {
           </Stack>
         </QuizProvider>
       </SQLiteProvider>
-    </Suspense></SafeAreaProvider></GestureHandlerRootView>
+    </Suspense></SafeAreaProvider></View></GestureHandlerRootView>
   );
 }
