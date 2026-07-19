@@ -61,6 +61,26 @@ test('le cours contient ses sept illustrations hors ligne', () => {
   for (const name of new Set(links)) assert.ok(fs.existsSync(path.join(root, 'assets/course', `${name}.png`)), `${name}.png absent`);
 });
 
+test('le cours de signalisation contient ses illustrations progressives et ses récapitulatifs', () => {
+  const markdown = sql("SELECT content_markdown FROM cours WHERE title='La signalisation routière';");
+  const links = [...markdown.matchAll(/assets\/cours\/course-2\/([^\s)]+\.png)/g)].map((match) => match[1]);
+  const webpLinks = [...markdown.matchAll(/assets\/cours\/course-2\/([^\s)]+\.webp)/g)].map((match) => match[1]);
+  assert.equal(new Set(links).size, 17);
+  assert.equal(new Set(webpLinks).size, 5);
+  assert.equal((markdown.match(/\{(?:left|right)\}/g) ?? []).length, 14);
+  for (const name of new Set(links)) assert.ok(fs.existsSync(path.join(root, 'assets/course/course-2', name === 'balises-course-2.png' ? 'balises.png' : name)), `${name} absent`);
+  for (const name of new Set(webpLinks)) assert.ok(fs.existsSync(path.join(root, 'assets/course/course-2', name)), `${name} absent`);
+  for (const recap of ['recap-verticale.png', 'recap-marquage.png', 'recap-agents.png']) assert.ok(links.includes(recap));
+});
+
+test('le cours sur les priorités illustre autoroute, urgences et intersections', () => {
+  const markdown = sql("SELECT content_markdown FROM cours WHERE title='Les règles de priorité et l’autoroute';");
+  const links = [...markdown.matchAll(/assets\/cours\/course-3\/([^\s)]+\.png)/g)].map((match) => match[1]);
+  assert.equal(new Set(links).size, 7);
+  for (const name of new Set(links)) assert.ok(fs.existsSync(path.join(root, 'assets/course/course-3', name)), `${name} absent`);
+  for (const recap of ['recap-autoroute.png', 'recap-priorites.png']) assert.ok(links.includes(recap));
+});
+
 test('les couleurs proviennent du thème global partagé avec Tailwind', () => {
   const { colors } = require(path.join(root, 'src/theme/colors.cjs'));
   assert.equal(colors.primary, '#0B8F6A');
@@ -73,6 +93,14 @@ test('les variables du thème sont injectées par une View native', () => {
   assert.match(layout, /<GestureHandlerRootView style=\{\{ flex: 1 \}\}>/);
   assert.match(layout, /<View style=\{\[\{ flex: 1 \}, themeVariables\]\}>/);
   assert.doesNotMatch(layout, /<GestureHandlerRootView[^>]+themeVariables/);
+});
+
+test('le Web empêche deux onglets d’ouvrir simultanément SQLite', () => {
+  const layout = fs.readFileSync(path.join(root, 'app/_layout.tsx'), 'utf8');
+  assert.match(layout, /navigator\.locks\.request/);
+  assert.match(layout, /dh-prepa-permis-sqlite/);
+  assert.match(layout, /ifAvailable: true/);
+  assert.match(layout, /Application déjà ouverte/);
 });
 
 test('le thème sombre utilise un fond presque noir et une barre système lisible', () => {

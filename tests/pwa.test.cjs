@@ -34,8 +34,9 @@ test('le build republie les dépendances Web hors du chemin node_modules ignoré
   assert.match(prepare, /replaceAll\('\/assets\/node_modules\/', '\/pwa-runtime\/'\)/);
 });
 
-test('le Web utilise les URL stables des packs audio', () => {
+test('le Web conserve les URL stables des quiz sans embarquer les audios de cours', () => {
   const assets = read('src/services/audio-assets.web.ts');
-  assert.match(assets, /'\/assets\/audio\/courses\/course-001\/section-001\.aac'/);
+  assert.match(assets, /'\/assets\/audio\/questions\/q-0001\.aac'/);
+  assert.doesNotMatch(assets, /\/assets\/audio\/courses\//);
   assert.doesNotMatch(assets, /require\(/);
 });

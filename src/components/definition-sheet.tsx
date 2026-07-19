@@ -1,7 +1,8 @@
-import { Image, Modal, Pressable, ScrollView, View } from 'react-native';
+import { Modal, Pressable, ScrollView, useWindowDimensions, View } from 'react-native';
 import { AppText as Text } from '@/src/components/app-text';
 import { Ionicons } from '@expo/vector-icons';
-import { COURSE_IMAGES, COURSE_IMAGE_RATIOS } from '@/src/services/course-images';
+import { CourseGalleryImage } from '@/src/components/course-content';
+import { COURSE_IMAGES } from '@/src/services/course-images';
 import type { Definition } from '@/src/types/models';
 import { colors } from '@/src/theme/colors';
 import { useThemePreferences } from '@/src/theme/preferences';
@@ -9,6 +10,7 @@ import { useThemePreferences } from '@/src/theme/preferences';
 function MarkdownText({value}:{value:string}){const pieces=value.split(/(\*\*[^*]+\*\*)/g);return <Text className="text-base leading-7 text-ink">{pieces.map((piece,index)=>piece.startsWith('**')?<Text key={index} className="font-black">{piece.slice(2,-2)}</Text>:piece)}</Text>}
 
 export function DefinitionSheet({definition,onClose}:{definition:Definition|null;onClose:()=>void}) {
+  const {width}=useWindowDimensions();
   const { colors: themeColors, themeVariables } = useThemePreferences();
   const name = definition?.image_path?.split('/').pop();
   const source = name ? COURSE_IMAGES[name] : undefined;
@@ -23,7 +25,7 @@ export function DefinitionSheet({definition,onClose}:{definition:Definition|null
           <Pressable accessibilityRole="button" accessibilityLabel="Fermer" onPress={onClose} className="h-11 w-11 items-center justify-center rounded-full bg-background"><Ionicons name="close" size={24} color={colors.ink}/></Pressable>
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
-          {source?<Image source={source} className="mb-5 w-full rounded-2xl bg-white" style={{aspectRatio:name?COURSE_IMAGE_RATIOS[name]??1:1}} resizeMode="contain"/>:null}
+          {source?<View className="mb-5"><CourseGalleryImage source={source} title={definition?.mot||'Illustration du dictionnaire'} width={Math.max(280,Math.min(width-40,760))}/></View>:null}
           {definition?<MarkdownText value={definition.sens}/>:null}
           <Text className="mt-5 text-sm leading-5 text-inkMuted">Touchez un autre mot souligné dans le cours pour consulter sa définition.</Text>
         </ScrollView>

@@ -9,8 +9,7 @@ const icons: Record<string, keyof typeof Ionicons.glyphMap> = {
 
 export default function TabLayout() {
   const insets = useSafeAreaInsets();
-  const { colors, fontChoice, textScale } = useThemePreferences();
-  const labelFont = fontChoice === 'system' ? undefined : `${fontChoice === 'poppins' ? 'Poppins' : 'Karla'}_700Bold`;
+  const { colors, textScale } = useThemePreferences();
 
   return <Tabs initialRouteName="cours" screenOptions={({ route }) => ({
     headerShown: false,
@@ -27,7 +26,7 @@ export default function TabLayout() {
     tabBarLabelStyle: {
       fontSize: 11 * textScale,
       lineHeight: Math.ceil(16 * textScale),
-      fontFamily: labelFont,
+      fontFamily: 'Poppins_700Bold',
       marginTop: 1,
     },
     tabBarIcon: ({ color, size }) => <Ionicons name={icons[route.name] ?? 'ellipse'} color={color} size={size} />,

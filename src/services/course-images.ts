@@ -1,4 +1,5 @@
 import type { ImageSourcePropType } from 'react-native';
+import { Asset } from 'expo-asset';
 
 export const COURSE_IMAGES: Record<string, ImageSourcePropType> = {
   'intersection.svg': require('../../assets/course/intersection.svg.png'),
@@ -8,6 +9,35 @@ export const COURSE_IMAGES: Record<string, ImageSourcePropType> = {
   'balises.svg': require('../../assets/course/balises.svg.png'),
   'vehicules-prioritaires.svg': require('../../assets/course/vehicules-prioritaires.svg.png'),
   'categories-permis.svg': require('../../assets/course/categories-permis.svg.png'),
+  'vertical-danger.png': require('../../assets/course/course-2/vertical-danger.png'),
+  'vertical-interdiction.png': require('../../assets/course/course-2/vertical-interdiction.png'),
+  'vertical-fin-interdiction.png': require('../../assets/course/course-2/vertical-fin-interdiction.png'),
+  'vertical-obligation.png': require('../../assets/course/course-2/vertical-obligation.png'),
+  'vertical-fin-obligation.png': require('../../assets/course/course-2/vertical-fin-obligation.png'),
+  'vertical-indication.png': require('../../assets/course/course-2/vertical-indication.png'),
+  'vertical-priorite.png': require('../../assets/course/course-2/vertical-priorite.png'),
+  'marquage-lignes.png': require('../../assets/course/course-2/marquage-lignes.png'),
+  'marquage-fleches.png': require('../../assets/course/course-2/marquage-fleches.png'),
+  'marquage-zones.png': require('../../assets/course/course-2/marquage-zones.png'),
+  'marquage-stockage.png': require('../../assets/course/course-2/marquage-stockage.png'),
+  'feux-circulation.png': require('../../assets/course/course-2/feux-circulation.png'),
+  'agents-positions.png': require('../../assets/course/course-2/agents-positions.png'),
+  'balises-course-2.png': require('../../assets/course/course-2/balises.png'),
+  'recap-verticale.png': require('../../assets/course/course-2/recap-verticale.png'),
+  'recap-marquage.png': require('../../assets/course/course-2/recap-marquage.png'),
+  'recap-agents.png': require('../../assets/course/course-2/recap-agents.png'),
+  'panneaux-danger-frequents.webp': require('../../assets/course/course-2/panneaux-danger-frequents.webp'),
+  'panneaux-indication-frequents.webp': require('../../assets/course/course-2/panneaux-indication-frequents.webp'),
+  'panneaux-interdiction-frequents.webp': require('../../assets/course/course-2/panneaux-interdiction-frequents.webp'),
+  'panneaux-obligation-frequents.webp': require('../../assets/course/course-2/panneaux-obligation-frequents.webp'),
+  'recap-reconnaissance-panneaux.webp': require('../../assets/course/course-2/recap-reconnaissance-panneaux.webp'),
+  'autoroute-circulation.png': require('../../assets/course/course-3/autoroute-circulation.png'),
+  'autoroute-urgence.png': require('../../assets/course/course-3/autoroute-urgence.png'),
+  'priorite-droite.png': require('../../assets/course/course-3/priorite-droite.png'),
+  'perte-priorite-sortie.png': require('../../assets/course/course-3/perte-priorite-sortie.png'),
+  'recap-autoroute.png': require('../../assets/course/course-3/recap-autoroute.png'),
+  'recap-priorites.png': require('../../assets/course/course-3/recap-priorites.png'),
+  'intersection-complexe.png': require('../../assets/course/course-3/intersection-complexe.png'),
   'planche-53.webp': require('../../assets/course/support/planche-53.webp'),
   'planche-54.webp': require('../../assets/course/support/planche-54.webp'),
   'planche-55.webp': require('../../assets/course/support/planche-55.webp'),
@@ -39,16 +69,11 @@ export const COURSE_IMAGES: Record<string, ImageSourcePropType> = {
   'circuit-examen-benin.webp': require('../../assets/course/support/circuit-examen-benin.webp'),
 };
 
-const SUPPORT_PAGE_RATIO = 1191 / 862;
+export function getCourseImageSize(source: ImageSourcePropType) {
+  const asset = Asset.fromModule(source as number);
+  return { width: asset.width || 1, height: asset.height || 1 };
+}
 
-export const COURSE_IMAGE_RATIOS: Record<string, number> = {
-  'intersection.svg': 1000 / 656,
-  'route-automobile-autoroute.svg': 932 / 468,
-  'route-chaussees-voies.svg': 884 / 448,
-  'familles-panneaux.svg': 944 / 372,
-  'balises.svg': 714 / 364,
-  'vehicules-prioritaires.svg': 882 / 388,
-  'categories-permis.svg': 944 / 456,
-  ...Object.fromEntries(Array.from({ length: 28 }, (_, index) => [`planche-${index + 53}.webp`, SUPPORT_PAGE_RATIO])),
-  'circuit-examen-benin.webp': 862 / 1191,
-};
+export function getCourseImageUri(source: ImageSourcePropType) {
+  return Asset.fromModule(source as number).uri;
+}

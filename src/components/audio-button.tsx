@@ -20,8 +20,8 @@ const BACKGROUND_AUDIO_KEY = 'dh-prepa-course-background-audio-v1';
 export function AudioButton({ sources = [], segments = [], label = 'Écouter le chapitre', onReadingChange, showSubjects = false, onSubjectsPress }: { text: string; sources?: AudioSource[]; segments?: CourseAudioSegment[]; label?: string; onReadingChange?: (state: { index: number; playing: boolean; startLine: number; endLine: number } | null) => void; showSubjects?: boolean; onSubjectsPress?: () => void }) {
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
-  const { colors: themeColors, fontChoice, themeVariables } = useThemePreferences();
-  const headerFont = fontChoice === 'system' ? undefined : `${fontChoice === 'poppins' ? 'Poppins' : 'Karla'}_800ExtraBold`;
+  const { colors: themeColors, themeVariables } = useThemePreferences();
+  const headerFont = 'Poppins_800ExtraBold';
   const player = useAudioPlayer(null, { updateInterval: 200 });
   const status = useAudioPlayerStatus(player);
   const [sheetOpen, setSheetOpen] = useState(false);

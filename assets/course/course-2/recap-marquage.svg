@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+  <rect width="1200" height="900" rx="44" fill="#303840"/>
+  <text x="600" y="75" text-anchor="middle" font-family="Arial" font-size="46" font-weight="800" fill="#fff">MARQUAGE AU SOL &#x2014; M&#xC9;MO</text>
+  <g font-family="Arial" font-weight="700" fill="#fff">
+    <text x="80" y="145" font-size="28">LIGNE CONTINUE</text>
+    <path d="M80 185h460" stroke="#fff" stroke-width="18"/>
+    <text x="620" y="200" font-size="25">NE PAS FRANCHIR</text>
+    <text x="80" y="285" font-size="28">LIGNE DISCONTINUE</text>
+    <path d="M80 325h460" stroke="#fff" stroke-width="18" stroke-dasharray="65 38"/>
+    <text x="620" y="340" font-size="25">FRANCHISSABLE SI S&#xDB;R</text>
+    <text x="80" y="425" font-size="28">LIGNE MIXTE</text>
+    <path d="M80 465h460" stroke="#fff" stroke-width="13"/>
+    <path d="M80 495h460" stroke="#fff" stroke-width="13" stroke-dasharray="65 38"/>
+    <text x="620" y="480" font-size="25">SUIVRE LA LIGNE DE SON C&#xD4;T&#xC9;</text>
+    <path d="M150 790V610l-50 55-27-27 97-100 97 100-27 27-50-55v180Z" fill="#fff"/>
+    <text x="340" y="655" text-anchor="middle" font-size="25">FL&#xC8;CHE : CHOISIR</text>
+    <text x="340" y="690" text-anchor="middle" font-size="25">OU SE RABATTRE</text>
+    <g stroke="#fff" stroke-width="18">
+      <path d="M650 590h300M650 640h300M650 690h300M650 740h300"/>
+    </g>
+    <text x="800" y="805" text-anchor="middle" font-size="25">PASSAGE PI&#xC9;TONS : C&#xC9;DER</text>
+    <text x="600" y="865" text-anchor="middle" font-size="22" fill="#f0c32f">Jaune continu : arr&#xEA;t et stationnement interdits</text>
+  </g>
+</svg>

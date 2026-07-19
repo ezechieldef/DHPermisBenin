@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="1200" height="800" rx="36" fill="#f4f7f6"/>
+  <text x="60" y="82" font-family="Poppins,Arial" font-size="42" font-weight="800" fill="#10233a">AUTOROUTE : LES RÉFLEXES</text>
+  <g font-family="Poppins,Arial" fill="#10233a">
+    <g transform="translate(60 125)"><rect width="520" height="250" rx="28" fill="#fff"/><text x="30" y="55" font-size="27" font-weight="700" fill="#0b8f6a">CIRCULER</text><path d="M45 95h430M45 145h430M45 195h430" stroke="#9aa8b5" stroke-width="7" stroke-dasharray="34 24"/><path d="M400 82l50 25-50 25" fill="none" stroke="#0b8f6a" stroke-width="10"/><text x="30" y="235" font-size="21">Rester à droite · dépasser à gauche</text></g>
+    <g transform="translate(620 125)"><rect width="520" height="250" rx="28" fill="#fff"/><text x="30" y="55" font-size="27" font-weight="700" fill="#e05b45">INTERDIT</text><g font-size="23"><text x="30" y="105">↩ Marche arrière et demi-tour</text><text x="30" y="150">■ Arrêt et stationnement</text><text x="30" y="195">🚶 Piétons et engins trop lents</text></g></g>
+    <g transform="translate(60 415)"><rect width="520" height="310" rx="28" fill="#fff"/><text x="30" y="55" font-size="27" font-weight="700" fill="#e2a400">URGENCE</text><path d="M55 205h410" stroke="#3e4f60" stroke-width="7"/><path d="M95 205l55-70 55 70z" fill="#ef513f"/><rect x="270" y="130" width="145" height="68" rx="18" fill="#8395a7"/><text x="30" y="260" font-size="21">Feux de détresse · gilet · se protéger</text><text x="30" y="292" font-size="21">Triangle seulement sans se mettre en danger</text></g>
+    <g transform="translate(620 415)"><rect width="520" height="310" rx="28" fill="#fff"/><text x="30" y="55" font-size="27" font-weight="700" fill="#0b8f6a">ÉCHANGEURS</text><g fill="none" stroke="#0b8f6a" stroke-width="14" stroke-linecap="round"><path d="M55 130h105q80 0 110 75"/><path d="M55 130h110q90 0 160-65"/><path d="M300 235q60-105 170-105"/></g><g font-size="20"><text x="30" y="275">Bifurcation · sortie · jonction</text><text x="30" y="302">Choisir sa voie assez tôt</text></g></g>
+  </g>
+</svg>

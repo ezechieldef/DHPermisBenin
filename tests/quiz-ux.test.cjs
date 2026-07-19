@@ -66,21 +66,21 @@ test('la visionneuse plein écran possède sa propre racine gestuelle', () => {
   assert.match(viewer, /collapsable=\{false\}/);
 });
 
-test('le lecteur de cours propose les quatre commandes et la vitesse', () => {
-  for (const label of ['Précédent', 'Pause', 'Suivant', 'Recommencer', 'Vitesse de lecture']) assert.match(audio, new RegExp(label));
-  assert.match(audio, /Math\.max\(0\.5/);
-  assert.match(audio, /Math\.min\(2\.5/);
-  assert.match(audio, /setPlaybackRate\(rate\)/);
-});
-
 test('la lecture des cours maintient l’écran actif', () => {
-  assert.match(courseDetail, /useKeepAwake\('course-reading'\)/);
+  assert.match(courseDetail, /useKeepAwake\('course-reading'/);
   assert.match(courseDetail, /from 'expo-keep-awake'/);
+  assert.match(courseDetail, /process\.env\.EXPO_OS === 'web' \? null : <NativeKeepAwake \/>/);
+  assert.match(courseDetail, /suppressDeactivateWarnings: true/);
 });
 
-test('les sujets restent accessibles depuis la barre du cours avant sa lecture complète', () => {
-  assert.match(courseDetail, /showSubjects=\{subjectCount > 0\}/);
-  assert.doesNotMatch(courseDetail, /showSubjects=\{courseDone/);
+test('les sujets restent accessibles depuis l’en-tête du cours', () => {
+  assert.match(courseDetail, /accessibilityLabel="Voir les sujets du cours"/);
+  assert.match(courseDetail, /subjectCount > 0/);
+});
+
+test('la lecture audio des cours est désactivée', () => {
+  assert.doesNotMatch(courseDetail, /AudioButton/);
+  assert.doesNotMatch(courseDetail, /getCourseAudioSegments/);
 });
 
 test('les textes imbriqués du dictionnaire héritent de la police du cours', () => {
@@ -96,12 +96,24 @@ test('les titres affichés dans un cours sont en majuscules', () => {
   assert.match(courseContent, /line\.slice\(3\)\)\.toLocaleUpperCase\('fr-FR'\)/);
 });
 
-test('le lecteur de cours propose un mode audio persistant en arrière-plan', () => {
-  assert.match(audio, /Lecture en arrière-plan/);
-  assert.match(audio, /shouldPlayInBackground: enabled/);
-  assert.match(audio, /setActiveForLockScreen\(enabled/);
-  assert.match(audio, /BACKGROUND_AUDIO_KEY/);
-  assert.match(audio, /accessibilityRole="switch"/);
+test('les illustrations de cours peuvent accompagner un paragraphe à gauche ou à droite', () => {
+  assert.match(courseContent, /left\|right/);
+  assert.match(courseContent, /splitAtWord/);
+  assert.match(courseContent, /linesNextToImage/);
+  assert.match(courseContent, /charactersPerLine/);
+  assert.match(courseContent, /float:side/);
+  assert.match(courseContent, /display:'flow-root'/);
+  assert.match(courseContent, /\*0\.3/);
+  assert.match(courseContent, /flex-row-reverse/);
+  assert.match(courseContent, /Galeria\.Image dynamicAspectRatio=/);
+  assert.match(courseContent, /style=\{\{width,height,overflow:'hidden'\}\}/);
+  assert.match(courseContent, /getCourseImageSize/);
+  assert.match(courseContent, /getCourseImageUri/);
+  assert.match(courseContent, /closest\('\[galeria-popup\] img'\)/);
+  assert.match(courseContent, /addEventListener\('dblclick'/);
+  assert.match(courseContent, /addEventListener\('wheel'/);
+  assert.doesNotMatch(courseContent, /COURSE_IMAGE_RATIOS/);
+  assert.doesNotMatch(courseContent, /items-center gap-4 rounded-3xl border border-border bg-surface p-3/);
 });
 
 test('les lecteurs natifs ne sont pas mis en pause après leur libération automatique', () => {
