@@ -62,6 +62,16 @@ export type Subject = {
   description: string | null;
   display_order: number;
   question_count: number;
+  last_score: number | null;
+  last_total: number | null;
+  last_completed_at: string | null;
+};
+
+export type SubjectLastResult = {
+  subjectIndex: number;
+  score: number;
+  total: number;
+  completedAt: string;
 };
 
 export type AttemptSummary = {

@@ -1,6 +1,6 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 import type { PermitType } from '@/src/theme/preferences';
-import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, ExamLot, Option, Question, QuizMode, Subject } from '@/src/types/models';
+import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, ExamLot, Option, Question, QuizMode, Subject, SubjectLastResult } from '@/src/types/models';
 
 export async function getCategories(db: SQLiteDatabase): Promise<Category[]> {
   return db.getAllAsync<Category>(`
@@ -98,9 +98,32 @@ export async function getDefinitions(db: SQLiteDatabase): Promise<Definition[]> 
 
 export async function getCourseSubjects(db: SQLiteDatabase, courseId: number): Promise<Subject[]> {
   return db.getAllAsync<Subject>(
-    'SELECT id,course_id,number,title,description,display_order,question_count FROM subjects WHERE course_id=? ORDER BY display_order,number',
+    `SELECT s.id,s.course_id,s.number,s.title,s.description,s.display_order,s.question_count,
+      a.score last_score,a.total last_total,a.completed_at last_completed_at
+     FROM subjects s
+     LEFT JOIN attempts a ON a.id=(
+       SELECT latest.id FROM attempts latest
+       WHERE latest.mode='subject' AND latest.subject_id=s.id
+       ORDER BY latest.completed_at DESC,latest.id DESC LIMIT 1
+     )
+     WHERE s.course_id=? ORDER BY s.display_order,s.number`,
     courseId,
   );
+}
+
+export async function getCategorySubjectLastResults(db: SQLiteDatabase, categoryId: number): Promise<SubjectLastResult[]> {
+  const rows = await db.getAllAsync<{ subject_index: number; score: number; total: number; completed_at: string }>(`
+    SELECT a.subject_index,a.score,a.total,a.completed_at
+    FROM attempts a
+    WHERE a.mode='subject' AND a.category_id=? AND a.subject_index IS NOT NULL
+      AND a.id=(
+        SELECT latest.id FROM attempts latest
+        WHERE latest.mode='subject' AND latest.category_id=a.category_id AND latest.subject_index=a.subject_index
+        ORDER BY latest.completed_at DESC,latest.id DESC LIMIT 1
+      )
+    ORDER BY a.subject_index
+  `, categoryId);
+  return rows.map((row) => ({ subjectIndex: row.subject_index, score: row.score, total: row.total, completedAt: row.completed_at }));
 }
 
 async function hydrateQuestions(db: SQLiteDatabase, rows: Omit<Question, 'options'>[]): Promise<Question[]> {
