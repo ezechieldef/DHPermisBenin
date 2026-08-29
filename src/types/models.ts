@@ -122,3 +122,17 @@ export type ExamLot = {
   lastTotal: number | null;
   lastCompletedAt: string | null;
 };
+
+export type DifficultSubject = {
+  index: number;
+  questionCount: number;
+  lastScore: number | null;
+  lastTotal: number | null;
+  lastCompletedAt: string | null;
+};
+
+export type DifficultSubjectCatalog = {
+  subjects: DifficultSubject[];
+  pendingErrorCount: number;
+  distinctErrorCount: number;
+};

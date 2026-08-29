@@ -1,6 +1,6 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 import type { PermitType } from '@/src/theme/preferences';
-import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, ExamLot, Option, Question, QuizMode, Subject, SubjectLastResult } from '@/src/types/models';
+import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, DifficultSubjectCatalog, ExamLot, Option, Question, QuizMode, Subject, SubjectLastResult } from '@/src/types/models';
 
 export async function getCategories(db: SQLiteDatabase): Promise<Category[]> {
   return db.getAllAsync<Category>(`
@@ -212,6 +212,53 @@ export async function getExamQuestions(db: SQLiteDatabase, lotIndex: number, per
     firstQuestionNumber, lastQuestionNumber, ...filter.selected,
   );
   return hydrateQuestions(db, rows);
+}
+
+async function getDistinctErrorQuestionIds(db: SQLiteDatabase) {
+  const rows = await db.getAllAsync<{ question_id: number }>(`
+    SELECT aa.question_id
+    FROM attempt_answers aa
+    WHERE aa.is_correct=0
+    GROUP BY aa.question_id
+    ORDER BY MIN(aa.id),aa.question_id
+  `);
+  return rows.map((row) => row.question_id);
+}
+
+export async function getDifficultSubjectCatalog(db: SQLiteDatabase): Promise<DifficultSubjectCatalog> {
+  const [questionIds, attempts] = await Promise.all([
+    getDistinctErrorQuestionIds(db),
+    db.getAllAsync<{ subject_index: number; score: number; total: number; completed_at: string }>(`
+      SELECT subject_index,score,total,completed_at FROM attempts
+      WHERE mode='review' AND subject_index IS NOT NULL
+      ORDER BY completed_at DESC,id DESC
+    `),
+  ]);
+  const subjectCount = Math.floor(questionIds.length / 10);
+  const latestBySubject = new Map<number, (typeof attempts)[number]>();
+  attempts.forEach((attempt) => { if (!latestBySubject.has(attempt.subject_index)) latestBySubject.set(attempt.subject_index, attempt); });
+  return {
+    subjects: Array.from({ length: subjectCount }, (_, offset) => {
+      const index = offset + 1;
+      const latest = latestBySubject.get(index);
+      return { index, questionCount: 10, lastScore: latest?.score ?? null, lastTotal: latest?.total ?? null, lastCompletedAt: latest?.completed_at ?? null };
+    }),
+    pendingErrorCount: questionIds.length % 10,
+    distinctErrorCount: questionIds.length,
+  };
+}
+
+export async function getDifficultSubjectQuestions(db: SQLiteDatabase, subjectIndex: number) {
+  const questionIds = await getDistinctErrorQuestionIds(db);
+  const selectedIds = questionIds.slice((subjectIndex - 1) * 10, subjectIndex * 10);
+  if (selectedIds.length < 10) return [];
+  const placeholders = selectedIds.map(() => '?').join(',');
+  const rows = await db.getAllAsync<Omit<Question, 'options'>>(
+    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE id IN (${placeholders})`,
+    ...selectedIds,
+  );
+  const byId = new Map(rows.map((row) => [row.id, row]));
+  return hydrateQuestions(db, selectedIds.map((id) => byId.get(id)).filter((row): row is Omit<Question, 'options'> => Boolean(row)));
 }
 
 export async function getReviewQuestions(db: SQLiteDatabase, permitTypes: PermitType[]) {

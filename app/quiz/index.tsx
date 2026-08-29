@@ -32,10 +32,10 @@ export default function QuizScreen() {
   const isCorrect = isSubmitted && [...selected].sort().join(',') === [...correctLetters].sort().join(',');
 
   const leaveQuiz = useCallback(() => {
-    const destination = session?.mode === 'exam' ? '/(tabs)/examen' : '/(tabs)/entrainement';
+    const destination = session?.mode === 'exam' || (session?.mode === 'review' && session.subjectIndex !== null) ? '/(tabs)/examen' : '/(tabs)/entrainement';
     quiz.reset();
     router.replace(destination);
-  }, [quiz, router, session?.mode]);
+  }, [quiz, router, session?.mode, session?.subjectIndex]);
 
   const confirmExit = useCallback(() => {
     if (Platform.OS === 'web') {
