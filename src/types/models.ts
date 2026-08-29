@@ -102,3 +102,13 @@ export type QuizResult = QuizSession & {
   score: number;
   completedAt: number;
 };
+
+export type ExamLot = {
+  index: number;
+  firstQuestionNumber: number;
+  lastQuestionNumber: number;
+  questionCount: number;
+  lastScore: number | null;
+  lastTotal: number | null;
+  lastCompletedAt: string | null;
+};

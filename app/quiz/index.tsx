@@ -21,16 +21,21 @@ export default function QuizScreen() {
   const [index, setIndex] = useState(0);
   const [focusedOption, setFocusedOption] = useState(0);
   const [busy, setBusy] = useState(false);
+  const [submittedQuestionIds, setSubmittedQuestionIds] = useState<Set<number>>(() => new Set());
   const [viewerImage, setViewerImage] = useState<ViewerImage>(null);
   const contentScrollRef = useRef<ScrollView>(null);
   const session = quiz.session;
   const question = session?.questions[index];
   const selected = useMemo(() => question ? session?.answers[question.id] ?? [] : [], [question, session?.answers]);
+  const isSubmitted = question ? submittedQuestionIds.has(question.id) : false;
+  const correctLetters = useMemo(() => question?.options.filter((option) => option.is_correct).map((option) => option.letter) ?? [], [question]);
+  const isCorrect = isSubmitted && [...selected].sort().join(',') === [...correctLetters].sort().join(',');
 
   const leaveQuiz = useCallback(() => {
+    const destination = session?.mode === 'exam' ? '/(tabs)/examen' : '/(tabs)/entrainement';
     quiz.reset();
-    router.replace('/(tabs)/entrainement');
-  }, [quiz, router]);
+    router.replace(destination);
+  }, [quiz, router, session?.mode]);
 
   const confirmExit = useCallback(() => {
     if (Platform.OS === 'web') {
@@ -56,11 +61,11 @@ export default function QuizScreen() {
   const audioSources = useMemo(() => question ? getQuizAudio(question.id, question.options.map((option) => option.id)) : [], [question]);
 
   const select = useCallback((letter: string) => {
-    if (!question) return;
+    if (!question || isSubmitted) return;
     quiz.answer(question.id, selected.includes(letter)
       ? selected.filter((item) => item !== letter)
       : [...selected, letter]);
-  }, [question, quiz, selected]);
+  }, [isSubmitted, question, quiz, selected]);
 
   const finishOrAdvance = useCallback(async (answers = session?.answers) => {
     if (!session || !answers) return;
@@ -74,20 +79,26 @@ export default function QuizScreen() {
     } finally { setBusy(false); }
   }, [db, index, quiz, router, session]);
 
-  const next = useCallback(() => {
+  const submit = useCallback(() => {
     if (!selected.length) {
       Alert.alert('Choisissez une réponse', 'Sélectionnez une proposition ou utilisez « Ignorer » pour obtenir 0 à cette question.');
       return;
     }
+    if (!question) return;
+    setSubmittedQuestionIds((current) => new Set(current).add(question.id));
+  }, [question, selected.length]);
+
+  const next = useCallback(() => {
+    if (!isSubmitted) { submit(); return; }
     void finishOrAdvance();
-  }, [finishOrAdvance, selected.length]);
+  }, [finishOrAdvance, isSubmitted, submit]);
 
   const skip = useCallback(() => {
     if (!question || !session) return;
     const answers = { ...session.answers, [question.id]: [] };
-    quiz.answer(question.id, []);
-    void finishOrAdvance(answers);
-  }, [finishOrAdvance, question, quiz, session]);
+    quiz.answer(question.id, answers[question.id]);
+    setSubmittedQuestionIds((current) => new Set(current).add(question.id));
+  }, [question, quiz, session]);
 
   const previous = useCallback(() => {
     if (index > 0) setIndex((current) => current - 1);
@@ -100,7 +111,7 @@ export default function QuizScreen() {
         event.preventDefault();
         const direction = event.key === 'ArrowDown' ? 1 : -1;
         setFocusedOption((current) => (current + direction + question.options.length) % question.options.length);
-      } else if (event.key === ' ') {
+      } else if (event.key === ' ' && !isSubmitted) {
         event.preventDefault();
         const option = question.options[focusedOption];
         if (option) select(option.letter);
@@ -111,7 +122,7 @@ export default function QuizScreen() {
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [focusedOption, next, question, select]);
+  }, [focusedOption, isSubmitted, next, question, select]);
 
   if (!session || !question) return <Screen><Text className="mt-20 text-center text-ink">Aucune session active.</Text></Screen>;
 
@@ -132,13 +143,14 @@ export default function QuizScreen() {
       <QuizAudioPlayer questionId={question.id} sources={audioSources} />
       <Text className="mb-5 text-2xl font-black leading-8 text-ink">{question.statement}</Text>
       {QUESTION_IMAGES[question.number] ? <Pressable accessibilityLabel="Ouvrir l’illustration de la question" accessibilityHint="Affiche l’image en plein écran avec zoom" onPress={() => setViewerImage({ source: QUESTION_IMAGES[question.number], title: `Illustration de la question ${question.number}`, aspectRatio: 1 })} className="mb-5 h-48 overflow-hidden rounded-3xl border border-border bg-white p-2 active:opacity-80"><Image source={QUESTION_IMAGES[question.number]} style={{ width: '100%', height: '100%' }} contentFit="contain" /><View className="absolute bottom-3 right-3 h-10 w-10 items-center justify-center rounded-full bg-black/60"><Ionicons name="expand" size={20} color="white" /></View></Pressable> : null}
-      <View className="gap-3">{question.options.map((option, optionIndex) => { const active = selected.includes(option.letter); const focused = Platform.OS === 'web' && optionIndex === focusedOption; return <Pressable key={option.id} accessibilityRole="checkbox" accessibilityState={{ checked: active }} onFocus={() => setFocusedOption(optionIndex)} onPress={() => select(option.letter)} className={`min-h-14 flex-row items-center rounded-2xl border p-4 ${active ? 'border-primary bg-primarySoft' : focused ? 'border-info bg-infoSoft' : 'border-border bg-surface'}`}><View className={`mr-3 h-9 w-9 items-center justify-center rounded-xl ${active ? 'bg-primary' : 'bg-background'}`}><Text className={`font-black ${active ? 'text-white' : 'text-ink'}`}>{option.letter}</Text></View><Text className="flex-1 text-base font-semibold leading-6 text-ink">{option.text}</Text>{active ? <Ionicons name="checkmark-circle" size={23} color={colors.primary} /> : null}</Pressable>; })}</View>
+      <View className="gap-3">{question.options.map((option, optionIndex) => { const active = selected.includes(option.letter); const correct = isSubmitted && Boolean(option.is_correct); const focused = !isSubmitted && Platform.OS === 'web' && optionIndex === focusedOption; return <Pressable key={option.id} disabled={isSubmitted} accessibilityRole="checkbox" accessibilityState={{ checked: active, disabled: isSubmitted }} onFocus={() => setFocusedOption(optionIndex)} onPress={() => select(option.letter)} className={`min-h-14 flex-row items-center rounded-2xl border p-4 ${correct ? 'border-primary bg-primarySoft' : isSubmitted && active ? 'border-danger bg-dangerSoft' : active ? 'border-primary bg-primarySoft' : focused ? 'border-info bg-infoSoft' : 'border-border bg-surface'}`}><View className={`mr-3 h-9 w-9 items-center justify-center rounded-xl ${correct ? 'bg-primary' : isSubmitted && active ? 'bg-danger' : active ? 'bg-primary' : 'bg-background'}`}><Text className={`font-black ${correct || active ? 'text-white' : 'text-ink'}`}>{option.letter}</Text></View><Text className="flex-1 text-base font-semibold leading-6 text-ink">{option.text}</Text>{correct ? <Ionicons name="checkmark-circle" size={23} color={colors.primary} /> : isSubmitted && active ? <Ionicons name="close-circle" size={23} color={colors.danger} /> : active ? <Ionicons name="checkmark-circle" size={23} color={colors.primary} /> : null}</Pressable>; })}</View>
+      {isSubmitted ? <View accessibilityLiveRegion="assertive" className={`mt-4 rounded-2xl border p-4 ${isCorrect ? 'border-primary bg-primarySoft' : 'border-danger bg-dangerSoft'}`}><View className="flex-row items-center"><Ionicons name={isCorrect ? 'checkmark-circle' : selected.length ? 'close-circle' : 'remove-circle'} size={25} color={isCorrect ? colors.primary : colors.danger} /><Text className={`ml-2 flex-1 text-base font-black ${isCorrect ? 'text-primary' : 'text-danger'}`}>{isCorrect ? 'Bonne réponse !' : selected.length ? 'Réponse incorrecte' : 'Question ignorée'}</Text></View><Text className="mt-2 font-bold text-ink">Bonne réponse : {correctLetters.join(', ')}</Text>{question.explanation ? <Text className="mt-2 leading-6 text-inkMuted">{question.explanation}</Text> : null}</View> : null}
       {Platform.OS === 'web' ? <Text className="mt-3 text-xs text-inkMuted">↑/↓ choisir · Espace cocher · Entrée valider</Text> : null}
     </ScrollView>
     <View className="flex-row gap-3 pt-3">
       <Pressable accessibilityRole="button" accessibilityLabel="Question précédente" disabled={busy || index === 0} onPress={previous} className={`h-14 w-14 items-center justify-center rounded-2xl border border-border bg-surface ${busy || index === 0 ? 'opacity-35' : 'active:bg-primarySoft'}`}><Ionicons name="arrow-back" size={23} color={colors.ink} /></Pressable>
-      <View className="flex-1"><PrimaryButton variant="ghost" disabled={busy} label="Ignorer" icon="play-skip-forward" onPress={skip} /></View>
-      <View className="flex-[2]"><PrimaryButton disabled={busy} label={index === session.questions.length - 1 ? (busy ? 'Calcul en cours…' : 'Terminer le sujet') : 'Question suivante'} icon={index === session.questions.length - 1 ? 'flag' : 'arrow-forward'} onPress={next} /></View>
+      <View className="flex-1"><PrimaryButton variant="ghost" disabled={busy || isSubmitted} label="Ignorer" icon="play-skip-forward" onPress={skip} /></View>
+      <View className="flex-[2]"><PrimaryButton disabled={busy} label={!isSubmitted ? 'Valider ma réponse' : index === session.questions.length - 1 ? (busy ? 'Calcul en cours…' : 'Terminer le sujet') : 'Question suivante'} icon={!isSubmitted ? 'checkmark' : index === session.questions.length - 1 ? 'flag' : 'arrow-forward'} onPress={next} /></View>
     </View>
   </Screen><CourseImageViewer image={viewerImage} onClose={() => setViewerImage(null)} /></>;
 }

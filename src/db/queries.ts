@@ -1,6 +1,6 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
 import type { PermitType } from '@/src/theme/preferences';
-import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, Option, Question, QuizMode, Subject } from '@/src/types/models';
+import type { AttemptSummary, Category, Course, CourseOverview, DashboardStats, Definition, ExamLot, Option, Question, QuizMode, Subject } from '@/src/types/models';
 
 export async function getCategories(db: SQLiteDatabase): Promise<Category[]> {
   return db.getAllAsync<Category>(`
@@ -155,11 +155,38 @@ export async function getCourseSubjectQuestions(db: SQLiteDatabase, subjectId: n
   return hydrateQuestions(db, rows);
 }
 
-export async function getExamQuestions(db: SQLiteDatabase, permitTypes: PermitType[]) {
+export async function getExamLots(db: SQLiteDatabase, permitTypes: PermitType[]): Promise<ExamLot[]> {
+  const selected = new Set(permitFilter(permitTypes).selected);
+  const [questions, attempts] = await Promise.all([
+    db.getAllAsync<{ number: number; permis_type: string }>('SELECT number,permis_type FROM questions ORDER BY number'),
+    db.getAllAsync<{ subject_index: number; score: number; total: number; completed_at: string }>(`
+      SELECT subject_index,score,total,completed_at FROM attempts
+      WHERE mode='exam' AND subject_index IS NOT NULL
+      ORDER BY completed_at DESC
+    `),
+  ]);
+  const latestByLot = new Map<number, (typeof attempts)[number]>();
+  attempts.forEach((attempt) => { if (!latestByLot.has(attempt.subject_index)) latestByLot.set(attempt.subject_index, attempt); });
+  const maxNumber = questions.at(-1)?.number ?? 0;
+  const lots: ExamLot[] = [];
+  for (let index = 1; index <= Math.ceil(maxNumber / 50); index += 1) {
+    const firstQuestionNumber = (index - 1) * 50 + 1;
+    const lastQuestionNumber = Math.min(index * 50, maxNumber);
+    const questionCount = questions.filter((question) => question.number >= firstQuestionNumber && question.number <= lastQuestionNumber && selected.has(question.permis_type as PermitType)).length;
+    if (!questionCount) continue;
+    const latest = latestByLot.get(index);
+    lots.push({ index, firstQuestionNumber, lastQuestionNumber, questionCount, lastScore: latest?.score ?? null, lastTotal: latest?.total ?? null, lastCompletedAt: latest?.completed_at ?? null });
+  }
+  return lots;
+}
+
+export async function getExamQuestions(db: SQLiteDatabase, lotIndex: number, permitTypes: PermitType[]) {
   const filter = permitFilter(permitTypes);
+  const firstQuestionNumber = (lotIndex - 1) * 50 + 1;
+  const lastQuestionNumber = lotIndex * 50;
   const rows = await db.getAllAsync<Omit<Question, 'options'>>(
-    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE permis_type IN (${filter.placeholders}) ORDER BY RANDOM() LIMIT 20`,
-    ...filter.selected,
+    `SELECT ${QUESTION_COLUMNS} FROM questions WHERE number BETWEEN ? AND ? AND permis_type IN (${filter.placeholders}) ORDER BY number`,
+    firstQuestionNumber, lastQuestionNumber, ...filter.selected,
   );
   return hydrateQuestions(db, rows);
 }
