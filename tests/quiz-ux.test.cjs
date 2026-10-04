@@ -125,7 +125,7 @@ test('les lecteurs natifs ne sont pas mis en pause après leur libération autom
 test('le résultat reçoit explicitement la session terminée avant la navigation', () => {
   assert.match(quiz, /quiz\.finish\(completedSession, saved\)/);
   assert.match(quiz, /requestAnimationFrame\(\(\) => router\.replace\('\/result'\)\)/);
-  assert.match(context, /setResult\(\{ \.\.\.completedSession, \.\.\.data \}\)/);
+  assert.match(context, /result: \{ \.\.\.completedSession, \.\.\.data \}/);
 });
 
 test('l’identité Android publique est définitive', () => {

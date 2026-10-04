@@ -51,8 +51,9 @@ export default function OfflineScreen() {
     return [
       { id: 'courses', title: 'Cours audio', subtitle: 'Écouter les chapitres sans connexion', packs: packs.filter((pack) => pack.id.startsWith('cours-')) },
       { id: 'questions', title: 'Questions audio', subtitle: 'Lecture des énoncés pendant les quiz', packs: packs.filter((pack) => pack.id.startsWith('questions-')) },
+      { id: 'images', title: 'Illustrations', subtitle: 'Images des cours et des questions sans connexion', packs: packs.filter((pack) => pack.id.startsWith('images-')) },
       { id: 'options', title: 'Options audio', subtitle: 'Lecture des propositions A, B, C et D', packs: packs.filter((pack) => pack.id.startsWith('options-')) },
-    ];
+    ].filter((group) => group.packs.length > 0);
   }, [catalog]);
 
   if (!supported) return <Screen><Heading title="Contenu hors ligne" /><EmptyState icon="globe-outline" title="Disponible dans la PWA" message="Cette page sert à installer les ressources de la version Web. L’application Android contient déjà ses ressources." /></Screen>;
@@ -60,15 +61,19 @@ export default function OfflineScreen() {
   if (error) return <Screen><Heading title="Contenu hors ligne" /><EmptyState icon="cloud-offline-outline" title="Catalogue indisponible" message={error} /></Screen>;
 
   const start = async (packs: OfflinePack[]) => {
-    const missing = packs.filter((pack) => !installed.has(pack.id) && !progress[pack.id]);
+    const missing = packs.filter((pack) => !installed.has(pack.id) && (!progress[pack.id] || progress[pack.id].error));
     if (!missing.length) return Alert.alert('Déjà disponible', 'Tous les contenus de ce groupe sont déjà enregistrés.');
     const persistent = await requestPersistentStorage();
     if (persistent) setStorage((current) => ({ ...current, persisted: true }));
-    for (const pack of missing) await downloadOfflinePack(pack);
+    for (const pack of missing) {
+      setProgress((current) => ({ ...current, [pack.id]: { completed: 0, total: pack.fileCount } }));
+      try { await downloadOfflinePack(pack); }
+      catch (reason) { setProgress((current) => ({ ...current, [pack.id]: { completed: 0, total: pack.fileCount, error: String((reason as Error)?.message || reason) } })); }
+    }
   };
   const allPacks = catalog!.packs;
   const installedBytes = allPacks.filter((pack) => installed.has(pack.id)).reduce((sum, pack) => sum + pack.bytes, 0);
-  const activeCount = Object.keys(progress).length;
+  const activeCount = Object.values(progress).filter((item) => !item.error).length;
 
   return <Screen>
     <Heading eyebrow="Installation à la carte" title="Contenu hors ligne" subtitle="Téléchargez seulement ce dont vous avez besoin. Une interruption peut être reprise sans recommencer les fichiers déjà reçus." />
@@ -77,7 +82,7 @@ export default function OfflineScreen() {
       <Text className="mt-3 text-sm text-inkMuted">{installed.size}/{allPacks.length} packs · espace disponible estimé : {formatBytes(storage.available)}</Text>
       <Text className="mt-2 text-xs font-bold text-primary">{storage.persisted ? 'Stockage persistant accordé' : 'La persistance sera demandée au premier téléchargement'}</Text>
     </Card>
-    <View className="mb-6 gap-2"><PrimaryButton label={`Tout télécharger (${formatBytes(catalog!.totalBytes)})`} icon="download" onPress={() => void start(allPacks)} /><PrimaryButton label="Télécharger uniquement les cours" icon="book-outline" variant="ghost" onPress={() => void start(groups[0].packs)} /></View>
+    <View className="mb-6 gap-2"><PrimaryButton label={`Tout télécharger (${formatBytes(catalog!.totalBytes)})`} icon="download" onPress={() => void start(allPacks)} /><PrimaryButton label="Télécharger uniquement les illustrations" icon="images-outline" variant="ghost" onPress={() => void start(allPacks.filter((pack) => pack.id.startsWith('images-')))} /></View>
     {activeCount ? <Card className="mb-5 border-secondary bg-secondarySoft"><Text className="font-black text-ink">{activeCount} téléchargement{activeCount > 1 ? 's' : ''} en cours</Text><Text className="mt-1 text-sm text-inkMuted">Vous pouvez continuer à utiliser l’application.</Text></Card> : null}
     {groups.map((group) => <View key={group.id} className="mb-7">
       <View className="mb-3 flex-row items-end justify-between"><View className="flex-1"><Text className="text-xl font-black text-ink">{group.title}</Text><Text className="mt-1 text-sm text-inkMuted">{group.subtitle}</Text></View><Pressable onPress={() => void start(group.packs)} className="rounded-xl bg-primarySoft px-3 py-2 active:opacity-70"><Text className="text-xs font-black text-primary">Télécharger</Text></Pressable></View>
@@ -89,7 +94,7 @@ export default function OfflineScreen() {
 function PackRow({ pack, installed, progress, onDownload, onCancel, onDelete }: { pack: OfflinePack; installed: boolean; progress?: { completed: number; total: number; error?: string }; onDownload: () => void; onCancel: () => void; onDelete: () => void }) {
   const percent = progress ? progress.completed / Math.max(1, progress.total) * 100 : installed ? 100 : 0;
   return <Card className="mb-3 p-4">
-    <View className="flex-row items-center gap-3"><View className={`h-10 w-10 items-center justify-center rounded-xl ${installed ? 'bg-primary' : 'bg-primarySoft'}`}><Ionicons name={installed ? 'checkmark' : progress ? 'download' : 'cloud-download-outline'} size={20} color={installed ? colors.white : colors.primary} /></View><View className="flex-1"><Text className="font-black text-ink">{pack.title}</Text><Text className="mt-1 text-xs text-inkMuted">{formatBytes(pack.bytes)} · {pack.fileCount} fichiers</Text></View><Pressable accessibilityLabel={installed ? 'Supprimer' : progress ? 'Suspendre' : 'Télécharger'} onPress={installed ? onDelete : progress ? onCancel : onDownload} className="h-10 w-10 items-center justify-center rounded-xl bg-background"><Ionicons name={installed ? 'trash-outline' : progress ? 'pause' : 'download-outline'} size={19} color={installed ? colors.danger : colors.ink} /></Pressable></View>
+    <View className="flex-row items-center gap-3"><View className={`h-10 w-10 items-center justify-center rounded-xl ${installed ? 'bg-primary' : 'bg-primarySoft'}`}><Ionicons name={installed ? 'checkmark' : progress ? 'download' : 'cloud-download-outline'} size={20} color={installed ? colors.white : colors.primary} /></View><View className="flex-1"><Text className="font-black text-ink">{pack.title}</Text><Text className="mt-1 text-xs text-inkMuted">{formatBytes(pack.bytes)} · {pack.fileCount} fichiers</Text></View><Pressable accessibilityLabel={installed ? 'Supprimer' : progress && !progress.error ? 'Suspendre' : 'Télécharger'} onPress={installed ? onDelete : progress && !progress.error ? onCancel : onDownload} className="h-10 w-10 items-center justify-center rounded-xl bg-background"><Ionicons name={installed ? 'trash-outline' : progress && !progress.error ? 'pause' : 'download-outline'} size={19} color={installed ? colors.danger : colors.ink} /></Pressable></View>
     {(progress || installed) ? <View className="mt-3"><ProgressBar value={percent} /><Text className={`mt-2 text-xs font-bold ${progress?.error ? 'text-danger' : 'text-primary'}`}>{progress?.error ?? (installed ? 'Disponible hors ligne' : `${progress?.completed ?? 0}/${progress?.total ?? 0}`)}</Text></View> : null}
   </Card>;
 }

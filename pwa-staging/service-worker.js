@@ -4,6 +4,7 @@ const RUNTIME_CACHE = `${APP_VERSION}-runtime`;
 const PACK_CACHE_PREFIX = 'dhp-pack-';
 const SHELL_URLS = __PRECACHE_URLS__;
 const cancelledPacks = new Set();
+const downloadingPacks = new Set();
 
 self.addEventListener('install', (event) => {
   event.waitUntil((async () => {
@@ -33,7 +34,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(networkFirstNavigation(request, url.pathname));
     return;
   }
-  if (url.pathname.startsWith('/assets/audio/')) {
+  if (url.pathname.startsWith('/assets/audio/') || url.pathname.startsWith('/assets/assets/course/') || url.pathname.startsWith('/assets/assets/questions/')) {
     event.respondWith(cacheFirstAcrossPacks(request));
     return;
   }
@@ -67,7 +68,8 @@ async function networkFirstNavigation(request, pathname) {
 
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(RUNTIME_CACHE);
-  const cached = await cache.match(request, { ignoreSearch: true });
+  const cached = (await cache.match(request, { ignoreSearch: true }))
+    || (await (await caches.open(SHELL_CACHE)).match(request, { ignoreSearch: true }));
   const update = fetch(request).then(async (response) => {
     if (response.ok) await cache.put(request, response.clone());
     return response;
@@ -77,20 +79,41 @@ async function staleWhileRevalidate(request) {
 
 async function cacheFirstAcrossPacks(request) {
   const cached = await caches.match(request, { ignoreSearch: true });
-  if (cached) return cached;
+  if (cached) return rangedResponse(request, cached);
   try {
     const response = await fetch(request);
-    if (response.ok) (await caches.open(RUNTIME_CACHE)).put(request, response.clone());
+    if (response.status === 200) await (await caches.open(RUNTIME_CACHE)).put(request, response.clone());
     return response;
   } catch { return Response.error(); }
 }
 
+// Safari media playback requests byte ranges even for downloaded audio.
+async function rangedResponse(request, response) {
+  const range = request.headers.get('range');
+  if (!range) return response;
+  const body = await response.arrayBuffer();
+  const match = /^bytes=(\d*)-(\d*)$/.exec(range);
+  const size = body.byteLength;
+  const start = match?.[1] ? Number(match[1]) : Math.max(0, size - Number(match?.[2]));
+  const end = match?.[1] ? (match[2] ? Math.min(Number(match[2]), size - 1) : size - 1) : size - 1;
+  if (!match || (!match[1] && !match[2]) || start >= size || start > end) return new Response(null, { status: 416, headers: { 'content-range': `bytes */${size}` } });
+  const headers = new Headers(response.headers);
+  headers.delete('content-encoding');
+  headers.set('content-range', `bytes ${start}-${end}/${size}`);
+  headers.set('content-length', String(end - start + 1));
+  headers.set('accept-ranges', 'bytes');
+  return new Response(body.slice(start, end + 1), { status: 206, headers });
+}
+
 async function downloadPack(pack) {
+  if (downloadingPacks.has(pack.id)) return;
+  downloadingPacks.add(pack.id);
   cancelledPacks.delete(pack.id);
   const cacheName = `${PACK_CACHE_PREFIX}${pack.id}`;
-  const cache = await caches.open(cacheName);
   let completed = 0;
   try {
+    const cache = await caches.open(cacheName);
+    await cache.delete(`/__offline_pack__/${pack.id}`);
     for (const file of pack.files) {
       if (cancelledPacks.has(pack.id)) {
         await broadcast({ type: 'PACK_CANCELLED', packId: pack.id });
@@ -98,11 +121,12 @@ async function downloadPack(pack) {
       }
       const request = new Request(file.url, { cache: 'no-store' });
       const existing = await cache.match(request);
-      if (!existing) {
+      if (!existing || !(await responseMatchesFile(existing.clone(), file))) {
         const response = await fetch(request);
         if (!response.ok) throw new Error(`HTTP ${response.status}: ${file.url}`);
-        if (file.bytes && Number(response.headers.get('content-length')) && Number(response.headers.get('content-length')) !== file.bytes) throw new Error(`Taille incorrecte: ${file.url}`);
-        if (file.sha256 && !(await responseMatchesSha256(response.clone(), file.sha256))) throw new Error(`Empreinte incorrecte: ${file.url}`);
+        // Content-Length describes the compressed transfer on some hosts.
+        // Fetch exposes the decoded body, which is what the catalog hashes.
+        if (!(await responseMatchesFile(response.clone(), file))) throw new Error(`Contenu incorrect (taille ou empreinte): ${file.url}`);
         await cache.put(request, response);
       }
       completed += 1;
@@ -112,7 +136,8 @@ async function downloadPack(pack) {
     await broadcast({ type: 'PACK_COMPLETE', packId: pack.id });
   } catch (error) {
     await broadcast({ type: 'PACK_ERROR', packId: pack.id, message: String(error?.message || error) });
-    throw error;
+  } finally {
+    downloadingPacks.delete(pack.id);
   }
 }
 
@@ -138,8 +163,12 @@ async function broadcast(message) {
   clients.forEach((client) => client.postMessage(message));
 }
 
-async function responseMatchesSha256(response, expected) {
-  const digest = await crypto.subtle.digest('SHA-256', await response.arrayBuffer());
+async function responseMatchesFile(response, file) {
+  if (response.headers.get('content-type')?.includes('text/html')) return false;
+  const body = await response.arrayBuffer();
+  if (body.byteLength !== file.bytes) return false;
+  if (!file.sha256) return true;
+  const digest = await crypto.subtle.digest('SHA-256', body);
   const actual = [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
-  return actual === expected.toLowerCase();
+  return actual === file.sha256.toLowerCase();
 }

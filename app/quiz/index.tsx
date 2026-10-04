@@ -18,10 +18,10 @@ export default function QuizScreen() {
   const db = useSQLiteContext();
   const router = useRouter();
   const quiz = useQuiz();
-  const [index, setIndex] = useState(0);
+  const { index, setIndex } = quiz;
   const [focusedOption, setFocusedOption] = useState(0);
   const [busy, setBusy] = useState(false);
-  const [submittedQuestionIds, setSubmittedQuestionIds] = useState<Set<number>>(() => new Set());
+  const submittedQuestionIds = useMemo(() => new Set(quiz.submittedQuestionIds), [quiz.submittedQuestionIds]);
   const [viewerImage, setViewerImage] = useState<ViewerImage>(null);
   const contentScrollRef = useRef<ScrollView>(null);
   const session = quiz.session;
@@ -77,7 +77,7 @@ export default function QuizScreen() {
       quiz.finish(completedSession, saved);
       requestAnimationFrame(() => router.replace('/result'));
     } finally { setBusy(false); }
-  }, [db, index, quiz, router, session]);
+  }, [db, index, quiz, router, session, setIndex]);
 
   const submit = useCallback(() => {
     if (!selected.length) {
@@ -85,8 +85,8 @@ export default function QuizScreen() {
       return;
     }
     if (!question) return;
-    setSubmittedQuestionIds((current) => new Set(current).add(question.id));
-  }, [question, selected.length]);
+    quiz.submitQuestion(question.id);
+  }, [question, quiz, selected.length]);
 
   const next = useCallback(() => {
     if (!isSubmitted) { submit(); return; }
@@ -97,12 +97,12 @@ export default function QuizScreen() {
     if (!question || !session) return;
     const answers = { ...session.answers, [question.id]: [] };
     quiz.answer(question.id, answers[question.id]);
-    setSubmittedQuestionIds((current) => new Set(current).add(question.id));
+    quiz.submitQuestion(question.id);
   }, [question, quiz, session]);
 
   const previous = useCallback(() => {
     if (index > 0) setIndex((current) => current - 1);
-  }, [index]);
+  }, [index, setIndex]);
 
   useEffect(() => {
     if (Platform.OS !== 'web' || !question) return;
@@ -124,7 +124,7 @@ export default function QuizScreen() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [focusedOption, isSubmitted, next, question, select]);
 
-  if (!session || !question) return <Screen><Text className="mt-20 text-center text-ink">Aucune session active.</Text></Screen>;
+  if (!session || !question) return <Screen><Text className="my-10 text-center text-ink">Aucune session active. Choisissez un sujet pour commencer.</Text><PrimaryButton label="Choisir un sujet" onPress={() => router.replace("/(tabs)/entrainement")} /></Screen>;
 
   return <><Screen scroll={false} className="pt-2">
     <View className="mb-4 flex-row items-center">
