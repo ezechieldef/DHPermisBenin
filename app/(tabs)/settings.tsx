@@ -1,4 +1,5 @@
 import { Pressable, View } from 'react-native';
+import { Link } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { AppText as Text } from '@/src/components/app-text';
 import { Card, Heading, Screen } from '@/src/components/ui';
@@ -84,6 +85,12 @@ export default function SettingsScreen() {
         })}
       </View>
     </Card>
+    <Link href="/illustration-credits" asChild>
+      <Pressable accessibilityRole="link" className="mt-5 min-h-14 flex-row items-center justify-between rounded-2xl border border-border bg-surface px-4">
+        <Text className="font-bold text-ink">Crédits des illustrations</Text>
+        <Ionicons name="chevron-forward" size={20} color={colors.inkMuted} />
+      </Pressable>
+    </Link>
     <BrandFooter />
   </Screen>;
 }

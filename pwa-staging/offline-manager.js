@@ -33,9 +33,10 @@ export async function deleteOfflinePack(packId) {
   registration.active?.postMessage({ type: 'DELETE_PACK', pack: { id: packId } });
 }
 
-export async function requestOfflinePackStatus() {
+export async function requestOfflinePackStatus(packs) {
+  const expectedPacks = packs ?? (await loadPackCatalog()).packs;
   const registration = await navigator.serviceWorker.ready;
-  registration.active?.postMessage({ type: 'GET_PACK_STATUS' });
+  registration.active?.postMessage({ type: 'GET_PACK_STATUS', packs: expectedPacks.map(({ id, version }) => ({ id, version })) });
 }
 
 export function subscribeToOfflineEvents(listener) {

@@ -48,10 +48,20 @@ test('les sujets couvrent toutes les catégories', () => {
 });
 
 test('tous les assets de questions sont présents et référencés', () => {
-  const files = fs.readdirSync(path.join(root, 'assets/questions')).filter((name) => name.endsWith('.webp'));
+  const files = fs.readdirSync(path.join(root, 'assets/questions')).filter((name) => /^q\d+\.(?:webp|svg)$/.test(name));
   assert.equal(files.length, 230);
+  assert.equal(files.filter((name) => name.endsWith('.svg')).length, 146);
+  assert.equal(files.filter((name) => name.endsWith('.webp')).length, 84);
   const map = fs.readFileSync(path.join(root, 'src/services/question-images.ts'), 'utf8');
-  for (const file of files) assert.ok(map.includes(file), `${file} absent du manifeste`);
+  const paths = JSON.parse(sql('SELECT json_group_array(image_path) FROM questions WHERE image_path IS NOT NULL;'));
+  assert.equal(paths.length, files.length);
+  for (const assetPath of paths) {
+    const file = path.basename(assetPath);
+    assert.ok(files.includes(file), `${assetPath} absent des assets`);
+    assert.ok(map.includes(file), `${file} absent du manifeste`);
+    const otherExtension = file.endsWith('.svg') ? file.replace('.svg', '.webp') : file.replace('.webp', '.svg');
+    assert.ok(!files.includes(otherExtension), `${file} possède encore un doublon`);
+  }
 });
 
 test('le cours contient ses sept illustrations hors ligne', () => {
@@ -111,4 +121,32 @@ test('le thème sombre utilise un fond presque noir et une barre système lisibl
   assert.match(layout, /scheme === 'dark' \? 'light' : 'dark'/);
   assert.equal(appConfig.expo.userInterfaceStyle, 'automatic');
   assert.deepEqual(appConfig.expo.ios.infoPlist.UIBackgroundModes, ['audio']);
+});
+
+
+test('la migration SVG des installations existantes conserve progression, historique et autres illustrations', () => {
+  const source = fs.readFileSync(path.join(root, 'src/db/question-image-migration.ts'), 'utf8');
+  const migration = source.match(/QUESTION_SVG_IMAGE_MIGRATION_SQL = `([\s\S]*?)`/)?.[1];
+  assert.ok(migration, 'SQL de migration SVG introuvable');
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'dhp-svg-migration-'));
+  const temp = path.join(tempDir, 'permis.sqlite');
+  const run = (query) => execFileSync('sqlite3', [temp, query], { encoding: 'utf8' }).trim();
+  fs.copyFileSync(database, temp);
+  try {
+    // Reproduce a database already installed with the old illustration paths.
+    run("UPDATE questions SET image_path=replace(image_path,'.svg','.webp') WHERE image_path LIKE '%.svg'; CREATE TABLE settings(key TEXT PRIMARY KEY, value TEXT); INSERT INTO settings VALUES('theme','dark'); CREATE TABLE question_progress(question_id INTEGER PRIMARY KEY,times_seen INTEGER,times_correct INTEGER); INSERT INTO question_progress VALUES(30,7,5); CREATE TABLE attempts(id INTEGER PRIMARY KEY,score INTEGER,total INTEGER); INSERT INTO attempts VALUES(1,17,20);");
+    const unchangedWebp = run("SELECT group_concat(number||':'||image_path,'|') FROM questions WHERE number IN (56,123,912);");
+    run(migration);
+    assert.equal(run("SELECT COUNT(*) FROM questions WHERE image_path LIKE '%.svg';"), '146');
+    assert.equal(run("SELECT COUNT(*) FROM questions WHERE image_path LIKE '%.webp';"), '84');
+    assert.equal(run("SELECT image_path FROM questions WHERE number=30;"), 'assets/questions/q0030.svg');
+    assert.equal(run("SELECT group_concat(number||':'||image_path,'|') FROM questions WHERE number IN (56,123,912);"), unchangedWebp);
+    assert.equal(run("SELECT times_seen||':'||times_correct FROM question_progress WHERE question_id=30;"), '7:5');
+    assert.equal(run("SELECT score||':'||total FROM attempts WHERE id=1;"), '17:20');
+    assert.equal(run("SELECT value FROM settings WHERE key='theme';"), 'dark');
+    assert.equal(run(migration + '\nSELECT changes();'), '0');
+    assert.equal(run('PRAGMA integrity_check;'), 'ok');
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
 });

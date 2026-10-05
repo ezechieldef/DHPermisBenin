@@ -26,7 +26,10 @@ export default function OfflineScreen() {
 
   useEffect(() => {
     if (!supported) return;
-    loadOfflineCatalog().then(setCatalog).catch((reason) => setError(String(reason?.message || reason)));
+    loadOfflineCatalog().then(async (nextCatalog) => {
+      setCatalog(nextCatalog);
+      await requestOfflinePackStatus(nextCatalog.packs);
+    }).catch((reason) => setError(String(reason?.message || reason)));
     const unsubscribe = subscribeOfflineEvents((event: OfflineEvent) => {
       if (event.type === 'PACK_STATUS') setInstalled(new Set(event.installed ?? []));
       if (event.type === 'PACK_PROGRESS' && event.packId) setProgress((current) => ({ ...current, [event.packId!]: { completed: event.completed ?? 0, total: event.total ?? 1 } }));
@@ -42,7 +45,6 @@ export default function OfflineScreen() {
       if (event.type === 'PACK_CANCELLED' && event.packId) setProgress((current) => { const next = { ...current }; delete next[event.packId!]; return next; });
       if (event.type === 'PACK_ERROR' && event.packId) setProgress((current) => ({ ...current, [event.packId!]: { ...(current[event.packId!] ?? { completed: 0, total: 1 }), error: event.message ?? 'Échec du téléchargement' } }));
     });
-    void requestOfflinePackStatus();
     return unsubscribe;
   }, [reloadStorage, supported]);
 

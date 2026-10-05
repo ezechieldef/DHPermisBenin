@@ -47,7 +47,7 @@ self.addEventListener('message', (event) => {
   if (type === 'DOWNLOAD_PACK' && pack) event.waitUntil(downloadPack(pack));
   if (type === 'CANCEL_PACK' && pack?.id) cancelledPacks.add(pack.id);
   if (type === 'DELETE_PACK' && pack?.id) event.waitUntil(deletePack(pack.id));
-  if (type === 'GET_PACK_STATUS') event.waitUntil(sendPackStatus(event.source));
+  if (type === 'GET_PACK_STATUS') event.waitUntil(sendPackStatus(event.source, event.data.packs));
 });
 
 async function networkFirstNavigation(request, pathname) {
@@ -146,14 +146,23 @@ async function deletePack(packId) {
   await broadcast({ type: 'PACK_DELETED', packId });
 }
 
-async function sendPackStatus(target) {
+async function sendPackStatus(target, expectedPacks) {
   const keys = await caches.keys();
   const candidates = keys.filter((key) => key.startsWith(PACK_CACHE_PREFIX));
   const installed = [];
   for (const key of candidates) {
     const packId = key.slice(PACK_CACHE_PREFIX.length);
     const cache = await caches.open(key);
-    if (await cache.match(`/__offline_pack__/${packId}`)) installed.push(packId);
+    const marker = await cache.match(`/__offline_pack__/${packId}`);
+    if (!marker) continue;
+    if (Array.isArray(expectedPacks)) {
+      const expected = expectedPacks.find((pack) => pack.id === packId);
+      if (!expected) continue;
+      try {
+        if ((await marker.json()).version !== expected.version) continue;
+      } catch { continue; }
+    }
+    installed.push(packId);
   }
   target?.postMessage({ type: 'PACK_STATUS', installed });
 }

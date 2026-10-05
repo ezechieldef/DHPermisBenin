@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 137 837" width="137" height="837" role="img"><title>q0129 — composition pour vérification humaine</title><desc>Balise J3 isolée des cotes techniques ; couleurs plates et contours comme dans le WebP.</desc><svg version="1.1" x="0" y="0" width="137" height="837" viewBox="221 -4 137 837" enable-background="new -0.4 -0.912 447 830" xml:space="preserve" preserveAspectRatio="xMidYMid meet">
+<defs>
+</defs>
+<linearGradient id="q0129-0-SVGID_1_" gradientUnits="userSpaceOnUse" x1="225.0664" y1="573.9224" x2="352.1343" y2="573.9224">
+	<stop offset="0" style="stop-color:#FFFFFF" />
+	<stop offset="0.9494" style="stop-color:#DCDCDC" />
+</linearGradient>
+<polyline fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="  352.134,319.788 352.134,828.057 225.066,828.057 225.066,319.788 " />
+<polyline fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="  352.134,33.886 288.6,2.12 225.066,33.886 225.066,192.72 " />
+<linearGradient id="q0129-0-SVGID_2_" gradientUnits="userSpaceOnUse" x1="225.0664" y1="113.3032" x2="352.1343" y2="113.3032">
+	<stop offset="0" style="stop-color:#FFFFFF" />
+	<stop offset="0.9494" style="stop-color:#DCDCDC" />
+</linearGradient>
+<polyline fill="#ffffff" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="225.066,192.72   352.134,192.72 352.134,33.886 225.066,33.886 " stroke-width="2" />
+<rect x="225.066" y="33.886" fill="#ffffff" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="126.534" height="793.536" stroke-width="2" />
+<linearGradient id="q0129-0-SVGID_3_" gradientUnits="userSpaceOnUse" x1="225.0664" y1="256.2544" x2="352.8003" y2="256.2544">
+	<stop offset="0" style="stop-color:#FFD6BF" />
+	<stop offset="0.2921" style="stop-color:#FF271F" />
+	<stop offset="0.4775" style="stop-color:#FFD1BF" />
+	<stop offset="0.7416" style="stop-color:#DF0800" />
+</linearGradient>
+<rect x="225.066" y="192.72" fill="#ff0000" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="127.734" height="127.068" />
+<linearGradient id="q0129-0-SVGID_4_" gradientUnits="userSpaceOnUse" x1="225.6001" y1="17.0884" x2="350.9331" y2="17.0884">
+	<stop offset="0" style="stop-color:#FFFFFF" />
+	<stop offset="0.1838" style="stop-color:#FBFBFB" />
+	<stop offset="0.3775" style="stop-color:#EEEEEE" />
+	<stop offset="0.5759" style="stop-color:#D9D9D9" />
+	<stop offset="0.776" style="stop-color:#BCBCBC" />
+	<stop offset="0.9494" style="stop-color:#9C9C9C" />
+</linearGradient>
+<polygon fill="#ffffff" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="  225.6,34.088 288.267,0.088 350.933,33.35 " />
+<line fill="none" stroke="#000000" stroke-width="0.1764" stroke-linecap="round" stroke-linejoin="round" x1="123.365" y1="190.305" x2="202.861" y2="190.305" />
+</svg></svg>

@@ -1,0 +1,193 @@
+{
+  "q0023": {
+    "sources": [
+      "A1d",
+      "M2",
+      "Axle"
+    ],
+    "modifications": "Assemblage A1d + M2 ; inscription 5Km, flèches vers le haut.",
+    "bytes": 4197,
+    "sha256": "f8b0d5816d8e90c698a318405b2e5be726af732e2d1e75301f45f1704d57b65b"
+  },
+  "q0024": {
+    "sources": [
+      "A3a",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Assemblage A3a + panonceau 200m.",
+    "bytes": 4021,
+    "sha256": "405829c8a42132de13349297726e5d8629c62b114c10688b919b915f116f982d"
+  },
+  "q0053": {
+    "sources": [
+      "B12",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Adaptation B12 à 3,5m et panonceau 10 Km.",
+    "bytes": 3776,
+    "sha256": "ea385e097e7b52341360d8fae7cb8ff68b09cb95d3bf58898448ada2f2385891"
+  },
+  "q0059": {
+    "sources": [
+      "Speed60",
+      "M4c"
+    ],
+    "modifications": "Assemblage limitation 60 + panonceau de motocyclette.",
+    "bytes": 6985,
+    "sha256": "81f3c8d4b2f72a8f720015efa3477dc501724cc9197588d2fd320c863632bda9"
+  },
+  "q0122": {
+    "sources": [
+      "Speed60",
+      "M4c"
+    ],
+    "modifications": "Assemblage limitation 60 + panonceau de motocyclette.",
+    "bytes": 6985,
+    "sha256": "296d857a65865d040fa035a6c8a49f3cc84711483c5967f705b6342d5004c7ab"
+  },
+  "q0671": {
+    "sources": [
+      "Speed60",
+      "M4c"
+    ],
+    "modifications": "Assemblage limitation 60 + panonceau de motocyclette.",
+    "bytes": 6985,
+    "sha256": "5c8ae3887d7caeabc429509a0751f0e0c6e1d6e5fd6baa018b8b35223456ad5a"
+  },
+  "q0672": {
+    "sources": [
+      "Speed60",
+      "M4c"
+    ],
+    "modifications": "Assemblage limitation 60 + panonceau de motocyclette.",
+    "bytes": 6985,
+    "sha256": "c7c9a5b2ab738ff07560bc611ce2e311988993d41a6e282b995f605e0c2569f6"
+  },
+  "q0060": {
+    "sources": [
+      "B29",
+      "B21a1",
+      "M4c",
+      "Axle"
+    ],
+    "modifications": "Inscription VÉHICULES LENTS sur le disque bleu ; flèche blanche vers le bas à droite sur plaque carrée bleue.",
+    "bytes": 2769,
+    "sha256": "27975db9e0c551920f2e3b921b632e941a265ad59a5b738abc076e711c2621a2"
+  },
+  "q0063": {
+    "sources": [
+      "B14_50",
+      "B8",
+      "M4c"
+    ],
+    "modifications": "Assemblage limitation 50 + panonceau de camion.",
+    "bytes": 7253,
+    "sha256": "87e7abe17a805a6cd906cb58240b37cec869ec50b8af44f27116661de3c348f1"
+  },
+  "q0127": {
+    "sources": [
+      "A18",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Assemblage double sens + panonceau 150m.",
+    "bytes": 4180,
+    "sha256": "bb24815f392a5de89b592099e12eedc3af85f35023916e8470bd56e64c6fda96"
+  },
+  "q0129": {
+    "sources": [
+      "J3"
+    ],
+    "modifications": "Balise J3 isolée des cotes techniques ; couleurs plates et contours comme dans le WebP.",
+    "bytes": 3005,
+    "sha256": "9cf5663496821e02c0abcbdddfe00798fb5fb3c2df6010229e6991c430fcb635"
+  },
+  "q0145": {
+    "sources": [
+      "B14_50",
+      "B25"
+    ],
+    "modifications": "Assemblage vertical limitation maximale 50 et vitesse minimale 30.",
+    "bytes": 10239,
+    "sha256": "d482e031a00a87129279014e71bb99db32cd171423109cec69dc59d8c07be628"
+  },
+  "q0160": {
+    "sources": [
+      "A1d",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Assemblage A1d + panonceau 500m.",
+    "bytes": 3938,
+    "sha256": "5ab8211d1c66f91ff08cf7b7fa8a14a611cb98954d8beea16f9a6754a9a1777d"
+  },
+  "q0167": {
+    "sources": [
+      "B6a1",
+      "M4c"
+    ],
+    "modifications": "Assemblage stationnement interdit + plaque noire à deux fenêtres blanches, reproduisant le panonceau visible dans le WebP par réemploi de rectangles du SVG source.",
+    "bytes": 9917,
+    "sha256": "13ec9027cda94b0ae48e18ee073b807fe48c9c1fa949d4b12b314033704092ed"
+  },
+  "q0179": {
+    "sources": [
+      "B22a",
+      "B2b",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Deux groupes verticaux : piste cyclable obligatoire ; tourner à droite interdit + panonceau 6t, sans pictogramme de camion absent du WebP.",
+    "bytes": 9867,
+    "sha256": "e42609beb8ae1d65e480d64d22073bc80a1af42a34665963d8f28d36c4ed9ebd"
+  },
+  "q0183": {
+    "sources": [
+      "B14_50",
+      "M2",
+      "Axle"
+    ],
+    "modifications": "Assemblage limitation 50 + M2 500m, avec flèches vers le haut.",
+    "bytes": 7153,
+    "sha256": "7f4b493cc8282f65b4b5cd9245cde98124fc89e14f439a12bac50ae4387950ab"
+  },
+  "q0190": {
+    "sources": [
+      "B14_50",
+      "B8"
+    ],
+    "modifications": "Assemblage limitation 50 + accès interdit aux véhicules de transport de marchandises.",
+    "bytes": 7549,
+    "sha256": "8f95e67ef4e49524725f9723b73aa006c80c1051fc47bddc9a0d32c3248caa14"
+  },
+  "q0722": {
+    "sources": [
+      "B2a",
+      "B8",
+      "M4c"
+    ],
+    "modifications": "Assemblage tourner à gauche interdit + panonceau de camion.",
+    "bytes": 5029,
+    "sha256": "1a8c510f393ed50acd8aff9643e45a7faf83a123c94f934146a000f6cb2f6247"
+  },
+  "q0724": {
+    "sources": [
+      "B8",
+      "M1",
+      "Axle"
+    ],
+    "modifications": "Assemblage accès interdit aux véhicules de transport de marchandises + panonceau 5.5t.",
+    "bytes": 4367,
+    "sha256": "477b9301d63e38962b8f1104d839835e9c45952daab94b9cbcd412129257e71d"
+  },
+  "q0725": {
+    "sources": [
+      "Axle"
+    ],
+    "modifications": "Inscription du SVG de limite par essieu adaptée de 5t à 2,5t ; pictogramme existant conservé, sans triangle supplémentaire.",
+    "bytes": 1687,
+    "sha256": "9b6ef03464ffe955cb2baa3b16cfbeda190965f621ea04c9f555f251bceee9d2"
+  }
+}

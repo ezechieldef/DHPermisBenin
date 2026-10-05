@@ -86,8 +86,8 @@ export async function deleteOfflinePack(packId: string) {
   (await activeWorker()).postMessage({ type: 'DELETE_PACK', pack: { id: packId } });
 }
 
-export async function requestOfflinePackStatus() {
-  (await activeWorker()).postMessage({ type: 'GET_PACK_STATUS' });
+export async function requestOfflinePackStatus(packs: OfflinePack[]) {
+  (await activeWorker()).postMessage({ type: 'GET_PACK_STATUS', packs: packs.map(({ id, version }) => ({ id, version })) });
 }
 
 export function subscribeOfflineEvents(listener: (event: OfflineEvent) => void) {

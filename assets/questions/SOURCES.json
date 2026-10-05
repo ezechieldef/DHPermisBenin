@@ -1,0 +1,4256 @@
+{
+  "schemaVersion": 1,
+  "preparedOn": "2026-10-05",
+  "scope": "146 panneaux SVG approuvés, intégrés dans assets/questions et référencés par la base SQLite ; 84 WebP conservés.",
+  "inspected": 146,
+  "downloaded": 126,
+  "pending": 0,
+  "svgEditedOrGenerated": true,
+  "integratedIntoApp": true,
+  "databaseModified": true,
+  "records": [
+    {
+      "original": "q0015.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign C13a.svg",
+      "components": null,
+      "svg": "q0015.svg",
+      "bytes": 3342,
+      "sha256": "ca40b021ce6ff5c3dbaf66919eb532c792b3066c6ca1e43b306b03121319ee58",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "C13a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "9ead8cb6fbd3d96ff71599392e382bb395aeb813320d8b6ff1243cff05c90f89",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0016.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB4.svg",
+      "components": null,
+      "svg": "q0016.svg",
+      "bytes": 6886,
+      "sha256": "79b507b00a1c8155db96c9ba1cfc919d95eff87a7b17fcdb67ab67b060092f80",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB4.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "4c47e78b1669f4448d417fd41b91a69a2fb4a9711989bb1711b563e19c39b609",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0017.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A15c.svg",
+      "components": null,
+      "svg": "q0017.svg",
+      "bytes": 9096,
+      "sha256": "8f2e9fa69f6386bdeee8790a5d0dc155463435ba63d0021074662c260f23555b",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A15c.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/France_road_sign_A15c.svg",
+        "authorHtml": "Roulex_45",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2019-10-04T03:23:28Z"
+      },
+      "modified": false,
+      "originalSha256": "957289027d3222ea0791b3c1670ea3ee4e5e8648ccd162f84aa3d3dd20210ebe",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0018.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A19.svg",
+      "components": null,
+      "svg": "q0018.svg",
+      "bytes": 4503,
+      "sha256": "d7d7a28bffb12f9a8cf3523cb9c534fcc3a9e3f13945608b4ae6ee886d150dc3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A19.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7181f33faa5e4d02d63a6ea4848a125b637a75fec10790bed8da070499cfd233",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0019.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A21.svg",
+      "components": null,
+      "svg": "q0019.svg",
+      "bytes": 8120,
+      "sha256": "0fc073ec008a0be0c83ec06044df28b0b1d96d3d8c90bf8d80d275ae95e32db2",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A21a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "note": "Même panneau de cycliste ; l’archive nomme la variante A21a.",
+      "originalSha256": "727a1e9570b22fc48c344ed3236865c24c31062519d665a955bd137bd9fb0ad0",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0020.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "Belgian road sign B1.svg",
+      "components": null,
+      "svg": "q0020.svg",
+      "bytes": 1412,
+      "sha256": "a135fe284976f4dd905e6c0674476b1dc3ca59ed27b763f557003682927c1449",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Belgian_road_sign_B1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Vascer\" title=\"User:Vascer\">Vascer</a>",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "sourceTimestamp": "2010-08-01T21:01:45Z"
+      },
+      "originalSha256": "2d859e476447f279c6e8ebf675e22022d9ef1dbd91a09e601c01db94f3aaff1a",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0021.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB2.svg",
+      "components": null,
+      "svg": "q0021.svg",
+      "bytes": 3396,
+      "sha256": "55933b96ae8367512e56475c8d008ecf46e568f0380b165f31091f4761c717bc",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "e899edb40f03d70255da11f36376484647311255b089f6bbfe34051eebc8e486",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0022.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB6.svg",
+      "components": null,
+      "svg": "q0022.svg",
+      "bytes": 3039,
+      "sha256": "d9fadfab2feaf65206352807da08006fa88f51cfd047b65662c06e00833880ee",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB6.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "81d54223d21822df5e287c92f80766e7c167ab1182c19d2a545611c67076caf7",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0023.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "A1d",
+        "M2 (5 km)"
+      ],
+      "originalSha256": "72c1459bc472808ed578f85eecae62392efa0fc162c8bf37436ad8f124a27b28",
+      "svg": "q0023.svg",
+      "bytes": 4197,
+      "sha256": "f8b0d5816d8e90c698a318405b2e5be726af732e2d1e75301f45f1704d57b65b",
+      "modified": true,
+      "modifications": [
+        "Assemblage A1d + M2 ; inscription 5Km, flèches vers le haut."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "A1d.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "A1d.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "41830089ffe7b7decb1e96835c640ce15c9f47e81878f346ae60557d5ea117b9",
+            "localSourceFile": "_composition_sources/A1d.svg"
+          },
+          {
+            "file": "M2.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M2.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/France_road_sign_M2.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T13:59:49Z",
+            "sha256": "4887e182d260de574ce52e4ab8aa6ebd7d858a98aa0d836dca1b50e71f557975",
+            "localSourceFile": "_composition_sources/M2.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0024.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "A3a",
+        "M1 (200 m)"
+      ],
+      "originalSha256": "7a24b1e8f23f7729e3e586a00407c2da89689d931bc98f52743b7caa9a3d6cfd",
+      "svg": "q0024.svg",
+      "bytes": 4021,
+      "sha256": "405829c8a42132de13349297726e5d8629c62b114c10688b919b915f116f982d",
+      "modified": true,
+      "modifications": [
+        "Assemblage A3a + panonceau 200m."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "A3a.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "A3a.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "0d3a02d3bd30757d683d038dedd72e2104dd734ef730d7842f71b6fc3123cfd4",
+            "localSourceFile": "_composition_sources/A3a.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0025.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "Belgian road sign B1.svg",
+      "components": null,
+      "svg": "q0025.svg",
+      "bytes": 1412,
+      "sha256": "a135fe284976f4dd905e6c0674476b1dc3ca59ed27b763f557003682927c1449",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Belgian_road_sign_B1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Vascer\" title=\"User:Vascer\">Vascer</a>",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "sourceTimestamp": "2010-08-01T21:01:45Z"
+      },
+      "originalSha256": "0e51371bfaa265492581410061762e8fc9403e97e69872b49711afe71be76020",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0030.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A21.svg",
+      "components": null,
+      "svg": "q0030.svg",
+      "bytes": 8203,
+      "sha256": "0cf6a6d8b63e05e09d4ee06d6a9bfbbfa54e631cc94c55ba77074a00fd9e9b0f",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A21a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": true,
+      "note": "Panneau de cycliste A21 (archive A21a), inversé horizontalement pour respecter le sens du WebP original.",
+      "originalSha256": "30ca83e822629282bcefbb8195f2257ac6d2ecabbc062b470156a68141f0e455",
+      "modifications": [
+        "Miroir horizontal appliqué au SVG source, à la demande de la vérification humaine du 2026-10-05."
+      ],
+      "sourceSha256": "0fc073ec008a0be0c83ec06044df28b0b1d96d3d8c90bf8d80d275ae95e32db2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0031.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A20.svg",
+      "components": null,
+      "svg": "q0031.svg",
+      "bytes": 5938,
+      "sha256": "7b5cb9015c97f2f93f51e9850d32167653b628a5fecb1b3adde124b5992986ec",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A20.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "d50ddfa95db3f52c66af32ccc6b8ea3d494dd8e4b14d98a6f412fa7c49752923",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0032.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A16.svg",
+      "components": null,
+      "svg": "q0032.svg",
+      "bytes": 8702,
+      "sha256": "991df5eed7d0b7225447e4b108cf7d9fa4f2d2e5487ffec832e1941a29948eed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A16.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "0c8ca42519587b33365ad0422db843a2de274c5d0ebc5a3dc516cd24b9e94f39",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0033.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A6.svg",
+      "components": null,
+      "svg": "q0033.svg",
+      "bytes": 5313,
+      "sha256": "e470f5ad782c3bf25e9f8c8a7c64e63fa7fd15f9dc9e8d09250d6ac4d74686cf",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A6.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1edd15878fde369aa80a216225a53d75cfd6025ca1619621b41777f0e97f29cd",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0034.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6a1.svg",
+      "components": null,
+      "svg": "q0034.svg",
+      "bytes": 12664,
+      "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B6a1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "cb300fc629538ea01f715d1691ba407b33ff692589b03199d649b0827af84969",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0035.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6a1.svg",
+      "components": null,
+      "svg": "q0035.svg",
+      "bytes": 12664,
+      "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B6a1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "aaa41c35e8610a44d0cd98842d6ebc309c6a31ae3f85ccaa62351709cda6ea6e",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0036.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6b1.svg",
+      "components": null,
+      "svg": "q0036.svg",
+      "bytes": 2613,
+      "sha256": "32b56105cf7c9be554e2c86f4c0e5a9fa039a187b758e8c1b34cf46ea074a1a9",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B6b1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/France_road_sign_B6b1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2007-12-02T16:19:49Z"
+      },
+      "originalSha256": "28450d792d32dc419cba49ba87c393a7c2603f8f49b9fde4cf6ffa32fa5ee7a1",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0037.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B0.svg",
+      "components": null,
+      "svg": "q0037.svg",
+      "bytes": 1048,
+      "sha256": "5bf6c594169cfd91efdf3b7ea9b3ea2dd777c8d2aeb99839d42977d79a4cd0dd",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B0.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/France_road_sign_B0.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2009-04-25T14:28:32Z"
+      },
+      "modified": false,
+      "originalSha256": "542eb52e3d81d64296264ec3b7b0ad5f939027067cbfa9f802ff6cc041b0ee47",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0038.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B7a.svg",
+      "components": null,
+      "svg": "q0038.svg",
+      "bytes": 5841,
+      "sha256": "c22f4ec09296e9098a789068550aca370ed02963f51bc55118a7ec69bb824bbf",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B7a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "3b3df7392bd456b79ea66611794c0a52e71c5281cdffba8a6d2649b33941ac46",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0039.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B25 (30).svg",
+      "components": null,
+      "svg": "q0039.svg",
+      "bytes": 6510,
+      "sha256": "70f97ba4f0ccbd18173e602f989021373cd9bac2813aa38fc2eb4f3e9b021b92",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B25.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "62d78a0248a226b749bdb9329ee3975919a8e7d8296965b7211bd899f0b810e2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0040.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B21-1.svg",
+      "components": null,
+      "svg": "q0040.svg",
+      "bytes": 2632,
+      "sha256": "f41f1fcea955edf47b3a12271d8b581be0f5e0ccd9b3c806db48829cafea50c2",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B21-1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/France_road_sign_B21-1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T00:37:07Z"
+      },
+      "modified": false,
+      "originalSha256": "bb8e54807e4df39356bf929d264223b50e8182f01eeeb7347f2e2412965ffbfe",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0041.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "J4B.svg",
+      "components": null,
+      "svg": "q0041.svg",
+      "bytes": 3721,
+      "sha256": "5d745d233e2a9936e2866d850f27c958e64d42a0381872a26c93316887a113e6",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:J4B.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/98/J4B.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2007-11-03T22:03:06Z"
+      },
+      "originalSha256": "5153bb3ba54a9b4e93f95a6949306147035374d9958d40104711250a4db4e9be",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0043.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB25.svg",
+      "components": null,
+      "svg": "q0043.svg",
+      "bytes": 4059,
+      "sha256": "9fac295689022addc8ecdc48e2b791493e80a6b0279edf0540a3e358d8016d29",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB25.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1188ebc99e58e92cb8ba39d01499de9e52af0be9ea2b918a00b4287889f42865",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0044.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B15.svg",
+      "components": null,
+      "svg": "q0044.svg",
+      "bytes": 3354,
+      "sha256": "5380d505b189fbb70fcbe106c23b48a494c03167f7e4654466b54be2f9241fd1",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B15.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "e8868cdc0fcec9c87d808ee757780f3bec71ce632836a5dfbd3bd9ee979fe2b1",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0045.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A18.svg",
+      "components": null,
+      "svg": "q0045.svg",
+      "bytes": 3572,
+      "sha256": "656c4eccc6ac6a20925eebf7620c36a3832f0dadeb3c0d762522b4f81db4e930",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A18.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "5b755346274860b30168e209be5928f1dd8d0cd3306061a5195d12f3cc82048d",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0046.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A18.svg",
+      "components": null,
+      "svg": "q0046.svg",
+      "bytes": 3572,
+      "sha256": "656c4eccc6ac6a20925eebf7620c36a3832f0dadeb3c0d762522b4f81db4e930",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A18.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "cda72109feacf22cbf8cd4c59dc0c9c90a3e23323125fe390f5a6064066eb5e4",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0047.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B15.svg",
+      "components": null,
+      "svg": "q0047.svg",
+      "bytes": 3354,
+      "sha256": "5380d505b189fbb70fcbe106c23b48a494c03167f7e4654466b54be2f9241fd1",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B15.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "ae30b02c11b9e62bab563d2df090ed298db9ffa107d6a990dbb080a96320f479",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0048.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B1.svg",
+      "components": null,
+      "svg": "q0048.svg",
+      "bytes": 2628,
+      "sha256": "7f4f1a5c0220c451a6d845aa0e5c47d92e9879f5b8d2a1a1fe353abc9ea7fa2c",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "b615a08c80712ba5b96c7515a43b1e6a3eefc4f3dedade2ba3076bc4b85d71cc",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0049.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B8.svg",
+      "components": null,
+      "svg": "q0049.svg",
+      "bytes": 3629,
+      "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B8.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "094ad6bc6f5c2366f56fc259fc6fceea89b94759743c128fd3e11ca6030b2330",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0050.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B18a.svg",
+      "components": null,
+      "svg": "q0050.svg",
+      "bytes": 5225,
+      "sha256": "46be50b733560605e2fafc9ea9622471c743b5e1dba3b00e924522b1784be24d",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B18a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "d3467aef20d73957741cb535e74220d0691b818474a903d5e6f24e257da67416",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0051.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A1c.svg",
+      "components": null,
+      "svg": "q0051.svg",
+      "bytes": 3557,
+      "sha256": "02cd05259c2869e16ca0d7f02fbf6be5c16d105693eaf570a7a7d935643f2a74",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A1c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "e1432ed456b555fd99b0e1cab6d8d0816a9b7bf044e1fd1981f836bae852055e",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0053.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B12 (3,5 m)",
+        "M1 (10 km)"
+      ],
+      "originalSha256": "81c9ae8c22bff71070d7c9fa7e49ba524fa171108e6c8471bb0457dbb6bf6681",
+      "svg": "q0053.svg",
+      "bytes": 3776,
+      "sha256": "ea385e097e7b52341360d8fae7cb8ff68b09cb95d3bf58898448ada2f2385891",
+      "modified": true,
+      "modifications": [
+        "Adaptation B12 à 3,5m et panonceau 10 Km."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B12.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B12.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "05b53ebbd380c8c506d33a2e5f879df34bfcb8f82598f651dd77ab2b71485cc2",
+            "localSourceFile": "_composition_sources/B12.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0054.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B34a.svg",
+      "components": null,
+      "svg": "q0054.svg",
+      "bytes": 6115,
+      "sha256": "c5bec096188badeb39127e3207d916277d1af59b32205239292756bb870bf48d",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B34a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "01adccbc68b56184227ba64fb89707a1864a8a945e60f7337f5bd1c6e7888084",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0055.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B45a.svg",
+      "components": null,
+      "svg": "q0055.svg",
+      "bytes": 6491,
+      "sha256": "07959928f924ecde5640cd781195ff2eb0e0fa939a3bd184bafe829d2e5eb645",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B45a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "a40d12d9247c5e6464bbbdb3475215d9996974eb9fc77031700ce39aa680d00d",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0057.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B9g.svg",
+      "components": null,
+      "svg": "q0057.svg",
+      "bytes": 4835,
+      "sha256": "c70995008a0bf8fb99c148f8717dde4f94bcfab13c7555d4777bab28f5637c9b",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B9g.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/France_road_sign_B9g.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2019-10-04T01:52:51Z"
+      },
+      "modified": false,
+      "originalSha256": "e1dcbe40f763026d1bb20865a99999c11c5b59d7dec319c384467ba275682705",
+      "note": "Correction après vérification humaine : panneau B9g interdit aux cyclomoteurs, remplaçant le panneau B9h interdit aux motos.",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0058.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B10a.svg",
+      "components": null,
+      "svg": "q0058.svg",
+      "bytes": 7818,
+      "sha256": "14fb321d0039b6ca6ca555babde29eb5c2cf8f9a7398f406b7469601afca1004",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B10a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "a2e696ab6e0e61024b78bbd8b32da5181677689a1d26c476076cefaa1c804912",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0059.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (60)",
+        "M4c"
+      ],
+      "originalSha256": "0cfe761dc08b6797e2a76a033f7cfe00c8eb10d4f5470e1fcf8b2a3c631df01c",
+      "svg": "q0059.svg",
+      "bytes": 6985,
+      "sha256": "81f3c8d4b2f72a8f720015efa3477dc501724cc9197588d2fd320c863632bda9",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 60 + panonceau de motocyclette."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "Speed60.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(60).svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/France_road_sign_B14_%2860%29.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Ryse93\" class=\"mw-redirect\" title=\"User:Ryse93\">Ryse93</a>",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceTimestamp": "2024-10-04T04:35:38Z",
+            "sha256": "27e1905fe391b5084942300c951f76d1ad6c1f4cca6a576407166eb1f86afa78",
+            "localSourceFile": "_composition_sources/Speed60.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0060.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B29 VEHICULES LENTS",
+        "B21a1"
+      ],
+      "originalSha256": "f53ac617f15efac90c4b2b937c331bd68dd74d0e8bb2ffcaae59b46856b4206b",
+      "svg": "q0060.svg",
+      "bytes": 2769,
+      "sha256": "27975db9e0c551920f2e3b921b632e941a265ad59a5b738abc076e711c2621a2",
+      "modified": true,
+      "modifications": [
+        "Inscription VÉHICULES LENTS sur le disque bleu ; flèche blanche vers le bas à droite sur plaque carrée bleue."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B29.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B29.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "831680ea287be2a6a82bb09b8ff46d770f3525f913cedd0b06db4bfdc189ae5c",
+            "localSourceFile": "_composition_sources/B29.svg"
+          },
+          {
+            "file": "B21a1.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B21a1.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "f488d1f2ed174bb8fb93d517357cb6d386eaafd0088e1abf284cabc8ed9deffa",
+            "localSourceFile": "_composition_sources/B21a1.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0061.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B8.svg",
+      "components": null,
+      "svg": "q0061.svg",
+      "bytes": 3629,
+      "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B8.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "77dd880f47c8656d2bf97553a5616137e8202b5ae98ea28f89eb4edf5b9f0513",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0062.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B13.svg",
+      "components": null,
+      "svg": "q0062.svg",
+      "bytes": 5662,
+      "sha256": "19f9f9f57c54c571b993ab99756c1d6a3910c36b4270e9b7f3a165710cfe653d",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B13.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "446af5076a7415b9ccb00099fe0f6ef1f152e3e55c4a3cce2c8f4d0d2fb7fe0c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0063.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (50)",
+        "M4f"
+      ],
+      "originalSha256": "4b1999eb3c36311ae715cbf433a98d0c8f2884c91614f248af2e4e51f85d8385",
+      "svg": "q0063.svg",
+      "bytes": 7253,
+      "sha256": "87e7abe17a805a6cd906cb58240b37cec869ec50b8af44f27116661de3c348f1",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 50 + panonceau de camion."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B14_50.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B14_50.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "d6a4c3be12615f3f38f72066c8fd275be731fdaf8b9e7a4eefba7a17bf5e3d00",
+            "localSourceFile": "_composition_sources/B14_50.svg"
+          },
+          {
+            "file": "B8.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B8.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+            "localSourceFile": "_composition_sources/B8.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0065.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A7.svg",
+      "components": null,
+      "svg": "q0065.svg",
+      "bytes": 4487,
+      "sha256": "83217934d40eda99563da4e9b7ade18f95f869c44bd8be841023ce1f2a366fe0",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A7.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_A7.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2013-07-05T03:13:14Z"
+      },
+      "modified": false,
+      "originalSha256": "1a35f4527e29f458809d3cc56cc7d83bb0546799ecc442bbf6214c2ae4db594b",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0066.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A7.svg",
+      "components": null,
+      "svg": "q0066.svg",
+      "bytes": 4487,
+      "sha256": "83217934d40eda99563da4e9b7ade18f95f869c44bd8be841023ce1f2a366fe0",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A7.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/France_road_sign_A7.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2013-07-05T03:13:14Z"
+      },
+      "modified": false,
+      "originalSha256": "d5ff52beb5843fca7d4ee051883c80a346f59f187e745d9cc759d5c9f0cab8ef",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0067.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A8.svg",
+      "components": null,
+      "svg": "q0067.svg",
+      "bytes": 9186,
+      "sha256": "c1a1827df1a01505cfe8d2a9f62239a0cee264236404668e1b00ac96f391e1aa",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A8.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1acebda29c4a1cacff56a8df99949bebb814f02c4eb9bdd90129af9c43a5082d",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0068.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A8.svg",
+      "components": null,
+      "svg": "q0068.svg",
+      "bytes": 9186,
+      "sha256": "c1a1827df1a01505cfe8d2a9f62239a0cee264236404668e1b00ac96f391e1aa",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A8.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "ee352abc5d90092fa64a4c21630469a51087041721bfd5c4ed69a6cba2f7f95b",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0069.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A13a.svg",
+      "components": null,
+      "svg": "q0069.svg",
+      "bytes": 5021,
+      "sha256": "0bcbac913b8680abdc11d527262cf8447c9410bce6167fb1361a8ddafae0aa64",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A13a.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/France_road_sign_A13a.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2023-08-14T12:36:00Z"
+      },
+      "modified": false,
+      "originalSha256": "ee4c17b49f2d9f4eb9bfb1404484efb78a701ce0f34bca48bce6f7fcedaf8738",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0070.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A3.svg",
+      "components": null,
+      "svg": "q0070.svg",
+      "bytes": 3292,
+      "sha256": "635a5875310cbdc438f0fa96dfcc8daf59bdb63d0dc9bb534043b8eab25b43b8",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A3.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "3d44dbf2806bd6e73b6e79e5de6331a9ee5dec20aac2bdb56284450f03d95dde",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0071.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B1.svg",
+      "components": null,
+      "svg": "q0071.svg",
+      "bytes": 2628,
+      "sha256": "7f4f1a5c0220c451a6d845aa0e5c47d92e9879f5b8d2a1a1fe353abc9ea7fa2c",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "6fc7dc65d33bec8e888c52c87349144f1a1302272a7ac9ee05b235c65177a392",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0072.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B3.svg",
+      "components": null,
+      "svg": "q0072.svg",
+      "bytes": 4937,
+      "sha256": "ad80549f7caebde64818a687ffb8bc6e6d3167ee178e85cc3fbc9e9756872b6b",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B3.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/France_road_sign_B3.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2019-10-04T02:52:31Z"
+      },
+      "modified": false,
+      "originalSha256": "47781c913e20862d1a23f81d24fc9c2ff6e5c8626b4ba50048e47dad94c798fe",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0073.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B3a.svg",
+      "components": null,
+      "svg": "q0073.svg",
+      "bytes": 5765,
+      "sha256": "64eeac70110439f0b554c5c40eba76883f8046d625e95dd8fc0eb6949568f8af",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B3a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7afc5f7cba1e1efe1d6af82692a64d1d2b81e11c9f9fa5dab9bdaa46cfcc77ff",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0074.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0074.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "ddeae61ed776ac1c9fa35beadaf390e725e3eda5ffdf16f73342a72ab355bd9e",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0075.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B15.svg",
+      "components": null,
+      "svg": "q0075.svg",
+      "bytes": 3354,
+      "sha256": "5380d505b189fbb70fcbe106c23b48a494c03167f7e4654466b54be2f9241fd1",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B15.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c655150f50b77732d7bbd9a6ba909fb97ceccbf7fac0ac49601ac07c87d7a191",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0076.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B21c1.svg",
+      "components": null,
+      "svg": "q0076.svg",
+      "bytes": 2940,
+      "sha256": "03cf66112905fb99e5cdb2d0c923dbbfa29cb3d5dbec0b069cd6928fedf4bfa8",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B21c1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/France_road_sign_B21c1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T00:41:04Z"
+      },
+      "modified": false,
+      "originalSha256": "829c566ae4ad4f6a9fc2778c2a9f65018a48a5410ccd4e273a3566c9e5cd3532",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0077.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B25 (30).svg",
+      "components": null,
+      "svg": "q0077.svg",
+      "bytes": 6510,
+      "sha256": "70f97ba4f0ccbd18173e602f989021373cd9bac2813aa38fc2eb4f3e9b021b92",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B25.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "eabbde7b3016d84c1575dcde00de5383f6cf4d599013afe693b5e9c8ce1882e7",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0078.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B31.svg",
+      "components": null,
+      "svg": "q0078.svg",
+      "bytes": 3191,
+      "sha256": "93bd3169839a871950ef0828fb14248837cc24e38575c7fbca6965acc4e48166",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B31.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "ed868ac0ca9342d5be59d9622ae192325b3a5d3ed4d2c169d463d1af5f835bb2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0079.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B33 (50).svg",
+      "components": null,
+      "svg": "q0079.svg",
+      "bytes": 10609,
+      "sha256": "63d82a6350af2e9d162c9f47972d50af2605de8c0c8099ca49a324decfc29b93",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B33_50.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "0ab2185096c5020cd9fde7891799a3d2839157760a40bb81ca8f2214be0080fe",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0080.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B34.svg",
+      "components": null,
+      "svg": "q0080.svg",
+      "bytes": 7232,
+      "sha256": "136a897196ddc7763a1567f9aab13be5e0346ee80511d75973aa71fae5d241e7",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B34.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "b90d7d1eb2c8821c87ea4aa4b9b4570140e7aa73f97a7692dba675466186e1a4",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0081.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "FR road sign G1.svg",
+      "components": null,
+      "svg": "q0081.svg",
+      "bytes": 4736,
+      "sha256": "9e0f6a22b8fa51972b7ae85bf914af3ddafdd853d17b14e8834642774cfe1e3e",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:FR_road_sign_G1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/FR_road_sign_G1.svg",
+        "authorHtml": "Roulex_45",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2014-02-21T21:36:33Z"
+      },
+      "modified": false,
+      "originalSha256": "495072e8ef119d5fa3ff1146206c072db14d6c0b3e5e90e4ba197801784004ca",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0103.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB2.svg",
+      "components": null,
+      "svg": "q0103.svg",
+      "bytes": 3396,
+      "sha256": "55933b96ae8367512e56475c8d008ecf46e568f0380b165f31091f4761c717bc",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "ea5ff56b2ef7f8c1ed699472b594aeaed6d18c0b452b34fb04f2662f05d37fba",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0104.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB4.svg",
+      "components": null,
+      "svg": "q0104.svg",
+      "bytes": 6886,
+      "sha256": "79b507b00a1c8155db96c9ba1cfc919d95eff87a7b17fcdb67ab67b060092f80",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB4.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "2687658ce5311a12b69355f635af93fa6e189baca81226ea822fa1748c636505",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0106.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB4.svg",
+      "components": null,
+      "svg": "q0106.svg",
+      "bytes": 6886,
+      "sha256": "79b507b00a1c8155db96c9ba1cfc919d95eff87a7b17fcdb67ab67b060092f80",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB4.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "3a3c7aa6b1c34e837f526fe1d960052415c98bb9781071acd03e6f6c21b45230",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0107.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "Belgian road sign B1.svg",
+      "components": null,
+      "svg": "q0107.svg",
+      "bytes": 1412,
+      "sha256": "a135fe284976f4dd905e6c0674476b1dc3ca59ed27b763f557003682927c1449",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Belgian_road_sign_B1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Belgian_road_sign_B1.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Vascer\" title=\"User:Vascer\">Vascer</a>",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "sourceTimestamp": "2010-08-01T21:01:45Z"
+      },
+      "originalSha256": "f0c03386777887454659c5d4f776a5bcbb43a510d38912008bb6c33cb569b524",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0108.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B7b.svg",
+      "components": null,
+      "svg": "q0108.svg",
+      "bytes": 8495,
+      "sha256": "0bcd4133b0406e0d7394eb2148e215e34224ab83fd2453311d861f82c6616c51",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B7b.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "6a5192486c32c1390ad5c20f8929fdceb82330d0609e8eee7aca620392213b25",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0109.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6d.svg",
+      "components": null,
+      "svg": "q0109.svg",
+      "bytes": 11779,
+      "sha256": "b7402470b65d81cd6d789ba2c45dbd3831cc37c9f58336fa5c5629d5c0f240c9",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B6d.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/France_road_sign_B6d.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T01:19:29Z"
+      },
+      "modified": false,
+      "originalSha256": "9a1eae9dd0d3ad94dac7d4788d987431dd548f6d24c39fa5ace5f029e6ed09dc",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0110.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B9c.svg",
+      "components": null,
+      "svg": "q0110.svg",
+      "bytes": 4802,
+      "sha256": "71ed33d8ed2f7f2cf838bf7466b3406875ae0c918f1839705bfb6d8084743a98",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B9c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7831a9799aa74ffe36c00781412bc6091db7ff04184d9f9407b0e7b6e63eade9",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0111.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0111.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "b6feba8a4cbbac439101f412519ef9414ca6733af73f27e4c93afba3e27b6b7a",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0112.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0112.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "eb057706285a36b9789445c26fe7d6bb3834a406a4136eb892f239f2f48a40c3",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0114.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B2c.svg",
+      "components": null,
+      "svg": "q0114.svg",
+      "bytes": 3526,
+      "sha256": "47306e9e028c4733e7d255e15b1f6d96d207ed28a61efbaef1597b9484870078",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B2c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "177f9d759b53fae6bb75a2a1490f5aaf3a06ce5cc252e3f573f5ba99d988e220",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0115.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6a1.svg",
+      "components": null,
+      "svg": "q0115.svg",
+      "bytes": 12664,
+      "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B6a1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1d9ad82b9f71ce352c3948f89ed063c5e1b941823ea90c788a9944cc02cd4195",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0116.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B21b.svg",
+      "components": null,
+      "svg": "q0116.svg",
+      "bytes": 3440,
+      "sha256": "bc63eebd991e6d9132b4a38035bb730bd16b0223f5627e6e6e991f8d74155ea2",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B21b.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/France_road_sign_B21b.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2023-03-31T23:14:23Z"
+      },
+      "modified": false,
+      "originalSha256": "045fdbad3dd2fe76eda75df0c71d9c52461da607cb7a2282f3c3ee4ad96c2947",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0117.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0117.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "8e4b381c6e3cb4f4f060c30a10c35ade6db48189d2a678e85d7977142c0acc7a",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0118.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign C12.svg",
+      "components": null,
+      "svg": "q0118.svg",
+      "bytes": 3585,
+      "sha256": "3380117f6db10857544c9218b505ee08a944895dc3e5536e0bd2d758a32a5fe7",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "C12.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "f81c724d808e67e018bd3348d4e940247e1e5db28b160602073338e177986add",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0119.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A21.svg",
+      "components": null,
+      "svg": "q0119.svg",
+      "bytes": 8203,
+      "sha256": "0cf6a6d8b63e05e09d4ee06d6a9bfbbfa54e631cc94c55ba77074a00fd9e9b0f",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A21a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": true,
+      "note": "Panneau de cycliste A21 (archive A21a), inversé horizontalement pour respecter le sens du WebP original.",
+      "originalSha256": "02ab340783d062ced97795cf9693ad3d528493adfb64e299159d214f54725058",
+      "modifications": [
+        "Miroir horizontal appliqué au SVG source, à la demande de la vérification humaine du 2026-10-05."
+      ],
+      "sourceSha256": "0fc073ec008a0be0c83ec06044df28b0b1d96d3d8c90bf8d80d275ae95e32db2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0120.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0120.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "aa8e450cdcf4e974c39d19080eaa9e55971d7d96d6a23f90dcd4572d7694150c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0121.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0121.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "0fb65052561a03f178c813112f8cde66f49675da2c1a0da445246148782d2411",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0122.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (60)",
+        "M4c"
+      ],
+      "originalSha256": "0c0a77d2133b7012f2d3203869c60dfad84a0727a19b49e145718d379c8d80e9",
+      "svg": "q0122.svg",
+      "bytes": 6985,
+      "sha256": "296d857a65865d040fa035a6c8a49f3cc84711483c5967f705b6342d5004c7ab",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 60 + panonceau de motocyclette."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "Speed60.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(60).svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/France_road_sign_B14_%2860%29.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Ryse93\" class=\"mw-redirect\" title=\"User:Ryse93\">Ryse93</a>",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceTimestamp": "2024-10-04T04:35:38Z",
+            "sha256": "27e1905fe391b5084942300c951f76d1ad6c1f4cca6a576407166eb1f86afa78",
+            "localSourceFile": "_composition_sources/Speed60.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0127.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "A18",
+        "M1 (150 m)"
+      ],
+      "originalSha256": "1faafac24a861fb69cfdb2c7c0d1515dcab7b0327a788f428055a0586a0f1263",
+      "svg": "q0127.svg",
+      "bytes": 4180,
+      "sha256": "bb24815f392a5de89b592099e12eedc3af85f35023916e8470bd56e64c6fda96",
+      "modified": true,
+      "modifications": [
+        "Assemblage double sens + panonceau 150m."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "A18.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "A18.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "656c4eccc6ac6a20925eebf7620c36a3832f0dadeb3c0d762522b4f81db4e930",
+            "localSourceFile": "_composition_sources/A18.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0128.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6a1.svg",
+      "components": null,
+      "svg": "q0128.svg",
+      "bytes": 12664,
+      "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B6a1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "791b17e2a7707084d2b312743cbd574aab269bf100ccae57fa9124c30f846c07",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0129.webp",
+      "status": "adapted_for_human_review",
+      "expectedSourceTitle": "J3A.svg",
+      "components": null,
+      "originalSha256": "6d03ae0026653ef18ac72801cea9bd3d594ea7a297c2b0c3d4a9219eae88742f",
+      "svg": "q0129.svg",
+      "bytes": 3005,
+      "sha256": "9cf5663496821e02c0abcbdddfe00798fb5fb3c2df6010229e6991c430fcb635",
+      "modified": true,
+      "modifications": [
+        "Balise J3 isolée des cotes techniques ; couleurs plates et contours comme dans le WebP."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "J3.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:J3A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/J3A.svg",
+            "authorHtml": "Roulex_45",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceTimestamp": "2007-11-03T21:36:51Z",
+            "sha256": "2c4204d1aec2803ad024330282068fcf7b1752aea9b1d50f58b0d1528e799fe4",
+            "localSourceFile": "_composition_sources/J3.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0131.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B31.svg",
+      "components": null,
+      "svg": "q0131.svg",
+      "bytes": 3191,
+      "sha256": "93bd3169839a871950ef0828fb14248837cc24e38575c7fbca6965acc4e48166",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B31.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "5edd69314648aa8d5d764513613db19ace8a25a25da1fb8d9305f6dae42353c2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0132.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A1c.svg",
+      "components": null,
+      "svg": "q0132.svg",
+      "bytes": 3557,
+      "sha256": "02cd05259c2869e16ca0d7f02fbf6be5c16d105693eaf570a7a7d935643f2a74",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A1c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "a9cb884b1e34bf60b3913cd2d738a31cd43d593f4fef08b85f808091b515e365",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0135.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A7 + M9z Signal Automatique.svg",
+      "components": null,
+      "svg": "q0135.svg",
+      "bytes": 7532,
+      "sha256": "5eb79af1fba4320ea21ff5b89e2aff79396bc0e8c0aea710bc18cdd6b6bccab0",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A7_%2B_M9z_Signal_Automatique.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/France_road_sign_A7_%2B_M9z_Signal_Automatique.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Marcel_Roblin\" title=\"User:Marcel Roblin\">Marcel Roblin</a>",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "sourceTimestamp": "2024-05-18T10:53:10Z"
+      },
+      "originalSha256": "8bc68dc01c64e98a770891871126bb6441a10c2046e58b3dd69f6229ac7cca1b",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0136.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B31.svg",
+      "components": null,
+      "svg": "q0136.svg",
+      "bytes": 3191,
+      "sha256": "93bd3169839a871950ef0828fb14248837cc24e38575c7fbca6965acc4e48166",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B31.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "f3f98d233fed53c02c0a4fb1b0a32aae7d55a8153a0bd6c4470c1bf4fd88effd",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0137.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB2.svg",
+      "components": null,
+      "svg": "q0137.svg",
+      "bytes": 3396,
+      "sha256": "55933b96ae8367512e56475c8d008ecf46e568f0380b165f31091f4761c717bc",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c007ddd1ac0ee51f126dab43552b836192bb2a5bc828418359683d3f6906cee2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0138.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB7.svg",
+      "components": null,
+      "svg": "q0138.svg",
+      "bytes": 3797,
+      "sha256": "641ac88ee8591cad21f51cbc2dab5115b509bd1e247d040d6a932d523d70a4dd",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB7.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "ad97de28ad5ccc858276e7762ded2264fdc1d63a2c36a3356fb2f70268b96067",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0139.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB1.svg",
+      "components": null,
+      "svg": "q0139.svg",
+      "bytes": 3614,
+      "sha256": "1883709c7e4b59e3b40fcf3b38c6668b0bfa5135e06e061c26ac436e7f587765",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "9a9b0e758d984a06d845e1c7b19b21aafdde1093d2d4eb04bda6846a80c68036",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0140.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB2.svg",
+      "components": null,
+      "svg": "q0140.svg",
+      "bytes": 3396,
+      "sha256": "55933b96ae8367512e56475c8d008ecf46e568f0380b165f31091f4761c717bc",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c3ecfbeed59e815c4f06a90b74e282f0eb298e921350a8737dc382e9c58007bc",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0141.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AB2.svg",
+      "components": null,
+      "svg": "q0141.svg",
+      "bytes": 3396,
+      "sha256": "55933b96ae8367512e56475c8d008ecf46e568f0380b165f31091f4761c717bc",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "AB2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7eba91e49763b8ffd0b17c8c93734d8196208d3c8bcfcbbc833e12bffc11bfc5",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0143.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AK22.svg",
+      "components": null,
+      "svg": "q0143.svg",
+      "bytes": 11603,
+      "sha256": "d6efc0a732d9a313ca09105e8bad8845d06728c71423bd7d5c8b49abd91c5df7",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_AK22.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/France_road_sign_AK22.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2014-02-14T20:15:08Z"
+      },
+      "originalSha256": "314e4d2df4581b9cd67a0c783756810d286e7d4fb061f8124cc96da58bd2a9cd",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0144.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B5c.svg",
+      "components": null,
+      "svg": "q0144.svg",
+      "bytes": 6597,
+      "sha256": "f9ff49ac0d63ea1e0977ca67693937dd6b1fe246c2734dc6762c65a500339c5a",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B5c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "80c8eacd566c4de2d6679aa3f5cd3d29e946528cd865d9466c452e6800a2dee8",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0145.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (50)",
+        "B25 (30)"
+      ],
+      "originalSha256": "52a25d919c9f821bdd068e56cb0d12cebef1898a6b330896c798360e455a1d5e",
+      "svg": "q0145.svg",
+      "bytes": 10239,
+      "sha256": "d482e031a00a87129279014e71bb99db32cd171423109cec69dc59d8c07be628",
+      "modified": true,
+      "modifications": [
+        "Assemblage vertical limitation maximale 50 et vitesse minimale 30."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B14_50.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B14_50.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "d6a4c3be12615f3f38f72066c8fd275be731fdaf8b9e7a4eefba7a17bf5e3d00",
+            "localSourceFile": "_composition_sources/B14_50.svg"
+          },
+          {
+            "file": "B25.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B25.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "70f97ba4f0ccbd18173e602f989021373cd9bac2813aa38fc2eb4f3e9b021b92",
+            "localSourceFile": "_composition_sources/B25.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0146.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B1.svg",
+      "components": null,
+      "svg": "q0146.svg",
+      "bytes": 2628,
+      "sha256": "7f4f1a5c0220c451a6d845aa0e5c47d92e9879f5b8d2a1a1fe353abc9ea7fa2c",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "2b0cb3efe783ad2e075c53f6cc88a2e1b8c176955f5b5f1a744245c9e3281e6c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0147.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A13b.svg",
+      "components": null,
+      "svg": "q0147.svg",
+      "bytes": 6069,
+      "sha256": "acc15f618054e7615772c4e9f00a2fe2c609b49a3b72f36c7e88578f574387ae",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A13b.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/France_road_sign_A13b.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2022-12-22T01:15:38Z"
+      },
+      "modified": false,
+      "originalSha256": "cea738a8e28c6a05f003e962f98778237001f1218aee5dff97b7862075b6c6cb",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0148.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B26.svg",
+      "components": null,
+      "svg": "q0148.svg",
+      "bytes": 28408,
+      "sha256": "0958eb7bb4475a143be38be1a71c6d6eb92dda1d51999cd5f6d99fd3a003d669",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B26.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "845fcde5768aec1fe5aa92bcb7e7a959703eb3fcc2f9597da5b17e09201e8101",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0149.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0149.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "86a414335b6b87aafb596e20e8e5600fd0a38c607fb76865b75f791556eb2fa0",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0150.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A15a1.svg",
+      "components": null,
+      "svg": "q0150.svg",
+      "bytes": 4027,
+      "sha256": "32373f382ce192c41433438b4dc6cc0b3efc17d6e490f15b47c848017e48bf86",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A15a1.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1e/France_road_sign_A15a1.svg",
+        "authorHtml": "Roulex_45",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2013-07-05T02:40:38Z"
+      },
+      "modified": false,
+      "originalSha256": "cc5b74b33377bd8632bd5334d40972c0e048e9b68bf120dc2169b1965a0b6cc8",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0151.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0151.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1be5152d3ddace9e1195f1a885dec9bffecf0e3a93c70395a7be2c4507f49192",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0155.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AK5.svg",
+      "components": null,
+      "svg": "q0155.svg",
+      "bytes": 4942,
+      "sha256": "4137602a98be0284603a7a35acfed8d2590b17d3a92850fd72c3d914ea895604",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_AK5.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_AK5.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2014-09-04T08:21:58Z"
+      },
+      "originalSha256": "d239ed7a9f365e12956713aaac1367e4df58cedce1ea1b0bb81812ba929f4a0c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0156.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A1d.svg",
+      "components": null,
+      "svg": "q0156.svg",
+      "bytes": 3292,
+      "sha256": "41830089ffe7b7decb1e96835c640ce15c9f47e81878f346ae60557d5ea117b9",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A1d.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "00196b19edf465eb2133552bb2a26228432e11f6d6ba1b92722b9c182c36f78c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0157.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B21c2.svg",
+      "components": null,
+      "svg": "q0157.svg",
+      "bytes": 3243,
+      "sha256": "5267449dad2b22e4ececc059da6fbecf075c273bf9826236d94390722a78ccc0",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B21c2.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c1badd0193aab17d0deba641a90c505df75ce4d92b3698feade16ef3091097c1",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0159.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AK5.svg",
+      "components": null,
+      "svg": "q0159.svg",
+      "bytes": 4942,
+      "sha256": "4137602a98be0284603a7a35acfed8d2590b17d3a92850fd72c3d914ea895604",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_AK5.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_AK5.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2014-09-04T08:21:58Z"
+      },
+      "originalSha256": "7d2f1cf8aec7f14e342ebf29ac14db86e02a915dc95ad577fbe8f4bab84a494e",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0160.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "A1d",
+        "M1 (500 m)"
+      ],
+      "originalSha256": "9f3abdd3651d1a528d37fdd0757997f3a54a0c5dcb0afeeaeb666fba24553a82",
+      "svg": "q0160.svg",
+      "bytes": 3938,
+      "sha256": "5ab8211d1c66f91ff08cf7b7fa8a14a611cb98954d8beea16f9a6754a9a1777d",
+      "modified": true,
+      "modifications": [
+        "Assemblage A1d + panonceau 500m."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "A1d.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "A1d.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "41830089ffe7b7decb1e96835c640ce15c9f47e81878f346ae60557d5ea117b9",
+            "localSourceFile": "_composition_sources/A1d.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0161.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A14.svg",
+      "components": null,
+      "svg": "q0161.svg",
+      "bytes": 3409,
+      "sha256": "e8075cd11c3a5f8a3d58c1820ea5e3a38a9b58f3b7b9099e4372493a7082f9cd",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A14.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/France_road_sign_A14.svg",
+        "authorHtml": "Roulex_45",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2013-07-05T02:17:21Z"
+      },
+      "modified": false,
+      "originalSha256": "49cb219836ef7c3e8852dc146416803f4b0fb5d4961cf718530aa8ce19679a7a",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0167.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B6a1",
+        "M6c disque"
+      ],
+      "originalSha256": "2485555245480146f41bac344e9a94b02c91a7ee8d462f030ceafe2d5819b786",
+      "svg": "q0167.svg",
+      "bytes": 9917,
+      "sha256": "13ec9027cda94b0ae48e18ee073b807fe48c9c1fa949d4b12b314033704092ed",
+      "modified": true,
+      "modifications": [
+        "Assemblage stationnement interdit + plaque noire à deux fenêtres blanches, reproduisant le panonceau visible dans le WebP par réemploi de rectangles du SVG source."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B6a1.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B6a1.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+            "localSourceFile": "_composition_sources/B6a1.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0179.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B22a",
+        "B2b",
+        "panonceau 6t (sans camion)"
+      ],
+      "originalSha256": "e2cadb6d95c36ddb0380a732cb8fe97df236a327b0b0c1bfebee614cece13927",
+      "svg": "q0179.svg",
+      "bytes": 9867,
+      "sha256": "e42609beb8ae1d65e480d64d22073bc80a1af42a34665963d8f28d36c4ed9ebd",
+      "modified": true,
+      "modifications": [
+        "Deux groupes verticaux : piste cyclable obligatoire ; tourner à droite interdit + panonceau 6t, sans pictogramme de camion absent du WebP."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B22a.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B22a.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "5049ef30c695863abb157483df36b08eb9cb916b0a470ff62a3d306cee929cfa",
+            "localSourceFile": "_composition_sources/B22a.svg"
+          },
+          {
+            "file": "B2b.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B2b.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "4dc090367aa16d4b4342bb078b0b0cae30a98fe700bfc0c76f4a48776bfe1e88",
+            "localSourceFile": "_composition_sources/B2b.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0181.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0181.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "317cda7f558ea19cc50025087f4790dddfb9a11343785d9540b4b14dc2794d65",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0182.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign AK4.svg",
+      "components": null,
+      "svg": "q0182.svg",
+      "bytes": 5864,
+      "sha256": "e414763352ef5ff7723e060dc965d03331b542b9869a9212cf4b733deaf9fe2c",
+      "modified": false,
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_AK4.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c1/France_road_sign_AK4.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2020-01-01T18:03:29Z"
+      },
+      "originalSha256": "9639e777f612a96ff3f0c707109c9c3035abc8e5bdb71f26ad877d0d16907a57",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0183.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (50)",
+        "M2 (500 m)"
+      ],
+      "originalSha256": "c81943e08e9b8075c9dd18ea04ea2ff4719d420030db912acc5b4b4eea424339",
+      "svg": "q0183.svg",
+      "bytes": 7153,
+      "sha256": "7f4b493cc8282f65b4b5cd9245cde98124fc89e14f439a12bac50ae4387950ab",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 50 + M2 500m, avec flèches vers le haut."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B14_50.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B14_50.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "d6a4c3be12615f3f38f72066c8fd275be731fdaf8b9e7a4eefba7a17bf5e3d00",
+            "localSourceFile": "_composition_sources/B14_50.svg"
+          },
+          {
+            "file": "M2.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M2.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/France_road_sign_M2.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T13:59:49Z",
+            "sha256": "4887e182d260de574ce52e4ab8aa6ebd7d858a98aa0d836dca1b50e71f557975",
+            "localSourceFile": "_composition_sources/M2.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0190.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (50)",
+        "B8"
+      ],
+      "originalSha256": "1273cf69b8027d93d97eb1f8bb05e43375cd6df81784012a8aee9dd4ab29a138",
+      "svg": "q0190.svg",
+      "bytes": 7549,
+      "sha256": "8f95e67ef4e49524725f9723b73aa006c80c1051fc47bddc9a0d32c3248caa14",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 50 + accès interdit aux véhicules de transport de marchandises."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B14_50.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B14_50.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "d6a4c3be12615f3f38f72066c8fd275be731fdaf8b9e7a4eefba7a17bf5e3d00",
+            "localSourceFile": "_composition_sources/B14_50.svg"
+          },
+          {
+            "file": "B8.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B8.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+            "localSourceFile": "_composition_sources/B8.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0191.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A18.svg",
+      "components": null,
+      "svg": "q0191.svg",
+      "bytes": 3572,
+      "sha256": "656c4eccc6ac6a20925eebf7620c36a3832f0dadeb3c0d762522b4f81db4e930",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A18.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "5ea0feecc5a4d48af8250d83799b9c81c5a8507f39b5d021cf64f91d062ce20b",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0192.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A13a.svg",
+      "components": null,
+      "svg": "q0192.svg",
+      "bytes": 5021,
+      "sha256": "0bcbac913b8680abdc11d527262cf8447c9410bce6167fb1361a8ddafae0aa64",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A13a.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f8/France_road_sign_A13a.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2023-08-14T12:36:00Z"
+      },
+      "modified": false,
+      "originalSha256": "dd6d6be8bde87b6806bf362596cfad7d4619d40e6e9e2809f5540f1b36aeddf1",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0193.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A13b.svg",
+      "components": null,
+      "svg": "q0193.svg",
+      "bytes": 6069,
+      "sha256": "acc15f618054e7615772c4e9f00a2fe2c609b49a3b72f36c7e88578f574387ae",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_A13b.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/France_road_sign_A13b.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "sourceTimestamp": "2022-12-22T01:15:38Z"
+      },
+      "modified": false,
+      "originalSha256": "36631c4a6997ceec457b422b929660235cfb8198ef8358d833a32cdd3beb8ae5",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0194.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign C12.svg",
+      "components": null,
+      "svg": "q0194.svg",
+      "bytes": 3585,
+      "sha256": "3380117f6db10857544c9218b505ee08a944895dc3e5536e0bd2d758a32a5fe7",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "C12.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "0a6690ce5dfe52c9c4d9e916a7ae5e031a3930b7f51ada1d05f0645a438e66a7",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0195.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B7a.svg",
+      "components": null,
+      "svg": "q0195.svg",
+      "bytes": 5841,
+      "sha256": "c22f4ec09296e9098a789068550aca370ed02963f51bc55118a7ec69bb824bbf",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B7a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "2b97ca03c25e9d4c5ab6a9622dc940b3b61fe4fb67187571f9a4c265b3529bf4",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0198.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6d.svg",
+      "components": null,
+      "svg": "q0198.svg",
+      "bytes": 11779,
+      "sha256": "b7402470b65d81cd6d789ba2c45dbd3831cc37c9f58336fa5c5629d5c0f240c9",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B6d.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/France_road_sign_B6d.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T01:19:29Z"
+      },
+      "modified": false,
+      "originalSha256": "fbd483b32e6cec25387e59a13ca55c1679e125a7675627f57f990994d8dddc73",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0199.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6d.svg",
+      "components": null,
+      "svg": "q0199.svg",
+      "bytes": 11779,
+      "sha256": "b7402470b65d81cd6d789ba2c45dbd3831cc37c9f58336fa5c5629d5c0f240c9",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B6d.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/France_road_sign_B6d.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T01:19:29Z"
+      },
+      "modified": false,
+      "originalSha256": "d8cc6be92dbc0408d40d500058940cfa59e9d1138fe275714f0c6167379459cb",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0200.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B2b.svg",
+      "components": null,
+      "svg": "q0200.svg",
+      "bytes": 3361,
+      "sha256": "0bdd7dd4fd5d023acd2aabea8e77d5a536ee43c1f36df5c0b027dbfc68f78d1e",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B2b.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/France_road_sign_B2b.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2019-10-04T05:17:22Z"
+      },
+      "modified": false,
+      "originalSha256": "b98ff65987568f93de0ff8fe7dbe9e3efb145e1f8f3596b1d60647609b6b6912",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0201.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B2a.svg",
+      "components": null,
+      "svg": "q0201.svg",
+      "bytes": 3947,
+      "sha256": "49e8dc1e56b7ab85bb0d2bbfa72e9c3fc40b18184f840f32d76a99d4830d0088",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B2a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "8651e3f66956edc614ec6c7c79b801e91b4ad21d5b6306d593441cebb4c29fcf",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0205.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign C26a.svg",
+      "components": null,
+      "svg": "q0205.svg",
+      "bytes": 5452,
+      "sha256": "776565ea1fffcf7cf2f73fdb0ceb469eb3fd1a1b50de52b6c0800c1e8d8a2f16",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "C26a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7e21bb4d5b71bf7ceedcdbb5a40819b8451ca7c3f736b85c83dadb8cc5a0c7a5",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0272.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B3.svg",
+      "components": null,
+      "svg": "q0272.svg",
+      "bytes": 4937,
+      "sha256": "ad80549f7caebde64818a687ffb8bc6e6d3167ee178e85cc3fbc9e9756872b6b",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B3.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/France_road_sign_B3.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2019-10-04T02:52:31Z"
+      },
+      "modified": false,
+      "originalSha256": "53f6d4aa82c8d07a50c83b57d34e7ee2c3cf73d5dc5208a5e2b7960889d411cc",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0273.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B3.svg",
+      "components": null,
+      "svg": "q0273.svg",
+      "bytes": 4937,
+      "sha256": "ad80549f7caebde64818a687ffb8bc6e6d3167ee178e85cc3fbc9e9756872b6b",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B3.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/France_road_sign_B3.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2019-10-04T02:52:31Z"
+      },
+      "modified": false,
+      "originalSha256": "d702735f68bd9a2b2d3a3cd13864bb19814af579b1505c264e3bf5708d8b3f74",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0413.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B7b.svg",
+      "components": null,
+      "svg": "q0413.svg",
+      "bytes": 8495,
+      "sha256": "0bcd4133b0406e0d7394eb2148e215e34224ab83fd2453311d861f82c6616c51",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B7b.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "f8f4abdf736287a7672e4e96ed7016722caeaf8d88c4e635cd753e6e593a04ba",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0414.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6d.svg",
+      "components": null,
+      "svg": "q0414.svg",
+      "bytes": 11779,
+      "sha256": "b7402470b65d81cd6d789ba2c45dbd3831cc37c9f58336fa5c5629d5c0f240c9",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B6d.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1b/France_road_sign_B6d.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2013-01-23T01:19:29Z"
+      },
+      "modified": false,
+      "originalSha256": "4bc5b4ecfe10946b4ac0d7231438013d4d01d8313fbb9c407087f8ccbbe41696",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0416.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B9c.svg",
+      "components": null,
+      "svg": "q0416.svg",
+      "bytes": 4802,
+      "sha256": "71ed33d8ed2f7f2cf838bf7466b3406875ae0c918f1839705bfb6d8084743a98",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B9c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "7831a9799aa74ffe36c00781412bc6091db7ff04184d9f9407b0e7b6e63eade9",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0427.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0427.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "288d82407c1df62c3c37ad7aa713425f6b4fd23d79fb3df270a497979b3934e9",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0452.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0452.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "8636085a62b65c600e62e8affda67ecae981350e2fdc4053d519e60f9b38724d",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0454.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B2c.svg",
+      "components": null,
+      "svg": "q0454.svg",
+      "bytes": 3526,
+      "sha256": "47306e9e028c4733e7d255e15b1f6d96d207ed28a61efbaef1597b9484870078",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B2c.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c8d83c7050e88357b2ccf4ce27765b382be62cb52047b1a8b9035ff5cf69dbed",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0455.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B6a1.svg",
+      "components": null,
+      "svg": "q0455.svg",
+      "bytes": 12664,
+      "sha256": "b73a52a14590d78f5ce5f22ef1d2b6c2d70e406660378ad844037dc49009eaed",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B6a1.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "0b67f6ae0c1464258f7c8e6b33b21bbc84990dee04f013cb3dc298c17d387bb3",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0456.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B21b.svg",
+      "components": null,
+      "svg": "q0456.svg",
+      "bytes": 3440,
+      "sha256": "bc63eebd991e6d9132b4a38035bb730bd16b0223f5627e6e6e991f8d74155ea2",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B21b.svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/France_road_sign_B21b.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2023-03-31T23:14:23Z"
+      },
+      "modified": false,
+      "originalSha256": "51d51b2c425205b1d38d221b780516ca67c8647e24f0755b9008a73bb055cf4c",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0457.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B43 (30).svg",
+      "components": null,
+      "svg": "q0457.svg",
+      "bytes": 6718,
+      "sha256": "73a547fd85984c1c46711184ad87a1a82ce99133158902ec6078e65faa7dceb3",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B43.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "02439377646e4ca7b5fc1821fc58b6b3e1df9b6fb16d2a2651f9a9b11f01cc95",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0468.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign C12.svg",
+      "components": null,
+      "svg": "q0468.svg",
+      "bytes": 3585,
+      "sha256": "3380117f6db10857544c9218b505ee08a944895dc3e5536e0bd2d758a32a5fe7",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "C12.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "88cf364dfe043f28eece60db3cbe6cc2f0caca6050d10d898167f1f002320d63",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0670.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign A21.svg",
+      "components": null,
+      "svg": "q0670.svg",
+      "bytes": 8203,
+      "sha256": "0cf6a6d8b63e05e09d4ee06d6a9bfbbfa54e631cc94c55ba77074a00fd9e9b0f",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "A21a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": true,
+      "note": "Panneau de cycliste A21 (archive A21a), inversé horizontalement pour respecter le sens du WebP original.",
+      "originalSha256": "51f4f874e36d94d97ba217dc0cd51d28f8287fad7c1cc507dd68bfd06adc9f56",
+      "modifications": [
+        "Miroir horizontal appliqué au SVG source, à la demande de la vérification humaine du 2026-10-05."
+      ],
+      "sourceSha256": "0fc073ec008a0be0c83ec06044df28b0b1d96d3d8c90bf8d80d275ae95e32db2",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0671.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (60)",
+        "M4c"
+      ],
+      "originalSha256": "133ea9c36e47b5e8047078f68dce4f183e86b9712dbcafcf5a6cd5af09f8c7aa",
+      "svg": "q0671.svg",
+      "bytes": 6985,
+      "sha256": "5c8ae3887d7caeabc429509a0751f0e0c6e1d6e5fd6baa018b8b35223456ad5a",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 60 + panonceau de motocyclette."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "Speed60.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(60).svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/France_road_sign_B14_%2860%29.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Ryse93\" class=\"mw-redirect\" title=\"User:Ryse93\">Ryse93</a>",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceTimestamp": "2024-10-04T04:35:38Z",
+            "sha256": "27e1905fe391b5084942300c951f76d1ad6c1f4cca6a576407166eb1f86afa78",
+            "localSourceFile": "_composition_sources/Speed60.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0672.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B14 (60)",
+        "M4c"
+      ],
+      "originalSha256": "b9cf3b7c7e32d71d807f9e2f8535534212c7db70dd66192c3142817e08bc21a1",
+      "svg": "q0672.svg",
+      "bytes": 6985,
+      "sha256": "c7c9a5b2ab738ff07560bc611ce2e311988993d41a6e282b995f605e0c2569f6",
+      "modified": true,
+      "modifications": [
+        "Assemblage limitation 60 + panonceau de motocyclette."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "Speed60.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(60).svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/France_road_sign_B14_%2860%29.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Ryse93\" class=\"mw-redirect\" title=\"User:Ryse93\">Ryse93</a>",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "sourceTimestamp": "2024-10-04T04:35:38Z",
+            "sha256": "27e1905fe391b5084942300c951f76d1ad6c1f4cca6a576407166eb1f86afa78",
+            "localSourceFile": "_composition_sources/Speed60.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0682.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0682.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "6318c49766c18f2f3dfc994509806a699a1e83b2d34080d667e53bf2623b8e1e",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0687.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B14 (50).svg",
+      "components": null,
+      "svg": "q0687.svg",
+      "bytes": 3318,
+      "sha256": "8a7d70efea8fe3bb9276b73c013e9e1328be1bc92bd9ffbc5d6a9b4ab35c9c78",
+      "source": {
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_B14_(50).svg",
+        "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/France_road_sign_B14_%2850%29.svg",
+        "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sourceTimestamp": "2022-12-22T01:40:07Z"
+      },
+      "modified": false,
+      "originalSha256": "f87d1b8c32854b42673c5104c83f1d2d9bcd52acef985a73d094b10e0623c7aa",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0722.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B2a",
+        "M4f"
+      ],
+      "originalSha256": "f2b3271cdb90a9a04eca235117caa1612d0b320ec40fa9445427167f2e13e229",
+      "svg": "q0722.svg",
+      "bytes": 5029,
+      "sha256": "1a8c510f393ed50acd8aff9643e45a7faf83a123c94f934146a000f6cb2f6247",
+      "modified": true,
+      "modifications": [
+        "Assemblage tourner à gauche interdit + panonceau de camion."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B2a.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B2a.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "49e8dc1e56b7ab85bb0d2bbfa72e9c3fc40b18184f840f32d76a99d4830d0088",
+            "localSourceFile": "_composition_sources/B2a.svg"
+          },
+          {
+            "file": "B8.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B8.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+            "localSourceFile": "_composition_sources/B8.svg"
+          },
+          {
+            "file": "M4c.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M4c.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/France_road_sign_M4c.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Chabe01\" title=\"User:Chabe01\">Chabe01</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2019-10-04T00:03:26Z",
+            "sha256": "360ec82b74db25c8e587588d847c86a12a466f22724d0cbddc7143ac7710dae1",
+            "localSourceFile": "_composition_sources/M4c.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0723.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B3a.svg",
+      "components": null,
+      "svg": "q0723.svg",
+      "bytes": 5765,
+      "sha256": "64eeac70110439f0b554c5c40eba76883f8046d625e95dd8fc0eb6949568f8af",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B3a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "2eb05b82dbed19055efd868a002a51b00eda4042ff3ff0938bd10ef9db48f5b0",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0724.webp",
+      "status": "composed_for_human_review",
+      "expectedSourceTitle": null,
+      "components": [
+        "B8",
+        "M4f (5,5 t)"
+      ],
+      "originalSha256": "375ce200903f731bae9c8be8f83addcac9c4943aa809769de675d6f1a5bf427d",
+      "svg": "q0724.svg",
+      "bytes": 4367,
+      "sha256": "477b9301d63e38962b8f1104d839835e9c45952daab94b9cbcd412129257e71d",
+      "modified": true,
+      "modifications": [
+        "Assemblage accès interdit aux véhicules de transport de marchandises + panonceau 5.5t."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "B8.svg",
+            "sourcePage": "http://sig974.free.fr/?p=1520",
+            "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+            "archiveEntry": "B8.svg",
+            "authors": [
+              "Bertrand Bouteilles",
+              "Roulex_45"
+            ],
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "sha256": "51e77bc9c89d446953fc30c53f6184951830b380e1d11133d5ad9a138c0a26ab",
+            "localSourceFile": "_composition_sources/B8.svg"
+          },
+          {
+            "file": "M1.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:France_road_sign_M1.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d3/France_road_sign_M1.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Mathgb\" title=\"User:Mathgb\">Mathgb</a>",
+            "license": "CC0",
+            "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+            "sourceTimestamp": "2025-03-16T08:56:07Z",
+            "sha256": "914ddb189efbd008ac07d7077318f1e9ec43ff873ea1e997d3c643fd88af3cd0",
+            "localSourceFile": "_composition_sources/M1.svg"
+          },
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0725.webp",
+      "status": "adapted_for_human_review",
+      "expectedSourceTitle": "France road sign B13a.svg",
+      "components": null,
+      "originalSha256": "c0a14e0dc36d86d69ed5c3e1a5a88aa3de0c76a8c4f86eed14aea656660fe824",
+      "svg": "q0725.svg",
+      "bytes": 1687,
+      "sha256": "9b6ef03464ffe955cb2baa3b16cfbeda190965f621ea04c9f555f251bceee9d2",
+      "modified": true,
+      "modifications": [
+        "Inscription du SVG de limite par essieu adaptée de 5t à 2,5t ; pictogramme existant conservé, sans triangle supplémentaire."
+      ],
+      "humanReviewPending": false,
+      "source": {
+        "type": "composition_of_downloaded_svg_elements",
+        "sourceFiles": "_composition_sources/SOURCES.json",
+        "components": [
+          {
+            "file": "Axle.svg",
+            "sourcePage": "https://commons.wikimedia.org/wiki/File:Signal_B13A.svg",
+            "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Signal_B13A.svg",
+            "authorHtml": "<a href=\"//commons.wikimedia.org/wiki/User:Roulex_45\" title=\"User:Roulex 45\">Roulex 45</a>",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "sourceTimestamp": "2009-04-24T19:17:03Z",
+            "sha256": "a365055b51e14d9a05cc68b422d7e371dd5fab3094fb5512d866960397033b2d",
+            "localSourceFile": "_composition_sources/Axle.svg"
+          }
+        ],
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+      },
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0727.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B18b.svg",
+      "components": null,
+      "svg": "q0727.svg",
+      "bytes": 4332,
+      "sha256": "5e6d65622892e56bece86f22c961fe1236e0da4f013fd93ade754546bf4ee1b0",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B18b.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "c47dcfd7657737043a441e313370a4991519c95054b03ed0e95e1ff1b1a732b1",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0765.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B34a.svg",
+      "components": null,
+      "svg": "q0765.svg",
+      "bytes": 6115,
+      "sha256": "c5bec096188badeb39127e3207d916277d1af59b32205239292756bb870bf48d",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B34a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "46bcbb87323cb4725e92765d9e6fdcf274a04300aac05507bcb763b4fb6d884d",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0766.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B45a.svg",
+      "components": null,
+      "svg": "q0766.svg",
+      "bytes": 6491,
+      "sha256": "07959928f924ecde5640cd781195ff2eb0e0fa939a3bd184bafe829d2e5eb645",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B45a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "1a5e26e22f6c0577eba0463f5b8d350d2bf216ef49a1ff70218fe23e936a0fee",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0767.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B27a.svg",
+      "components": null,
+      "svg": "q0767.svg",
+      "bytes": 5709,
+      "sha256": "05a4496efd1bfeea3578f6db218fe86aa12315843098ac331d676288f2463a98",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B27a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "3cbb0c512625ab26da43381cc97a98c03a8fc21868ad1cf7a055509ca6f301df",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    },
+    {
+      "original": "q0769.webp",
+      "status": "downloaded_visual_match",
+      "expectedSourceTitle": "France road sign B10a.svg",
+      "components": null,
+      "svg": "q0769.svg",
+      "bytes": 7818,
+      "sha256": "14fb321d0039b6ca6ca555babde29eb5c2cf8f9a7398f406b7469601afca1004",
+      "source": {
+        "sourcePage": "http://sig974.free.fr/?p=1520",
+        "downloadUrl": "http://sig974.free.fr/wp-content/uploads/road_signs.zip",
+        "archiveEntry": "B10a.svg",
+        "authors": [
+          "Bertrand Bouteilles",
+          "Roulex_45"
+        ],
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/"
+      },
+      "modified": false,
+      "originalSha256": "3dfa785ecaf8f42a05f08fc6e95e7f61087a215844251969a079ff7a41ea561b",
+      "humanReviewPending": false,
+      "humanApprovedOn": "2026-10-05",
+      "originalWebpRemoved": true
+    }
+  ],
+  "svgEdited": true,
+  "svgGenerated": false,
+  "humanReviewCorrections": {
+    "date": "2026-10-05",
+    "horizontalMirror": [
+      "q0030.svg",
+      "q0119.svg",
+      "q0670.svg"
+    ],
+    "mopedSignReplacement": [
+      "q0057.svg"
+    ]
+  },
+  "availableSvg": 146,
+  "composed": 18,
+  "adaptedVariants": 2,
+  "svgComposed": true,
+  "humanReviewPending": false,
+  "compositionAuthorization": {
+    "date": "2026-10-05",
+    "instruction": "Composer les images en attente, pour nouvelle vérification humaine dans comparaison.html."
+  },
+  "humanApprovedOn": "2026-10-05"
+}

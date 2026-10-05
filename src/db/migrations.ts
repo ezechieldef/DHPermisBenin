@@ -1,4 +1,5 @@
 import type { SQLiteDatabase } from 'expo-sqlite';
+import { QUESTION_SVG_IMAGE_MIGRATION_SQL } from './question-image-migration';
 
 export async function migrateDatabase(db: SQLiteDatabase) {
   await db.execAsync(`
@@ -72,4 +73,5 @@ export async function migrateDatabase(db: SQLiteDatabase) {
       ELSE 'B'
     END;
   `);
+  await db.execAsync(QUESTION_SVG_IMAGE_MIGRATION_SQL);
 }

@@ -74,7 +74,8 @@ for (const [kind, title] of [['course', 'Illustrations des cours'], ['questions'
   if (await exists(directory)) await collectImages(directory);
   if (!files.length) throw new Error(`Illustrations absentes de l’export: ${kind}`);
   files.sort((a, b) => a.url.localeCompare(b.url));
-  imagePacks.push({ id: `images-${kind}`, title, version: 1, files, fileCount: files.length, bytes: files.reduce((sum, file) => sum + file.bytes, 0) });
+  const version = Number.parseInt(createHash('sha256').update(JSON.stringify(files)).digest('hex').slice(0, 12), 16);
+  imagePacks.push({ id: `images-${kind}`, title, version, files, fileCount: files.length, bytes: files.reduce((sum, file) => sum + file.bytes, 0) });
 }
 catalog.packs = [...catalog.packs.filter((pack) => !pack.id.startsWith('images-')), ...imagePacks];
 catalog.totalBytes = catalog.packs.reduce((sum, pack) => sum + pack.bytes, 0);

@@ -75,6 +75,31 @@ test('une illustration téléchargée est servie sans accès réseau', async () 
   assert.equal(await (await response).text(), body.toString());
 });
 
+test('un ancien pack WebP doit être mis à jour avant d’être déclaré complet pour les SVG', async () => {
+  const oldImage = { ...file, url: '/assets/assets/questions/q0001.old.webp' };
+  const newImage = { ...file, url: '/assets/assets/questions/q0001.new.svg' };
+  const w = worker(async () => new Response(body));
+  const currentPack = { id: 'images-questions', version: 2, files: [newImage] };
+  const status = async () => {
+    let completion, message;
+    w.handlers.message({
+      data: { type: 'GET_PACK_STATUS', packs: [{ id: currentPack.id, version: currentPack.version }] },
+      source: { postMessage(value) { message = value; } },
+      waitUntil(promise) { completion = promise; },
+    });
+    await completion;
+    return Array.from(message.installed);
+  };
+  await w.download({ ...currentPack, version: 1, files: [oldImage] });
+  assert.deepEqual(await status(), []);
+  await w.download(currentPack);
+  assert.deepEqual(await status(), ['images-questions']);
+  w.context.fetch = async () => { throw new Error('offline'); };
+  let response;
+  w.handlers.fetch({ request: new w.context.Request(newImage.url), respondWith(promise) { response = promise; } });
+  assert.equal(await (await response).text(), body.toString());
+});
+
 test('l’enregistrement du service worker ne recharge pas et ne force pas une mise à jour', async () => {
   const source = fs.readFileSync('scripts/prepare-pwa-dist.mjs', 'utf8').match(/const registration = `<script>(.*?)<\/script>`;/s)[1];
   const callbacks = {};

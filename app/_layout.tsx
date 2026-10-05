@@ -46,6 +46,7 @@ function RootNavigator() {
             <Stack.Screen name="category/[id]" options={{ title: 'Sujets', headerLeft: () => <HeaderBackButton fallback="/(tabs)/entrainement" /> }} />
             <Stack.Screen name="quiz/index" options={{ headerShown: false, gestureEnabled: false }} />
             <Stack.Screen name="result/index" options={{ headerShown: false, gestureEnabled: false }} />
+            <Stack.Screen name="illustration-credits" options={{ title: 'Crédits des illustrations', headerLeft: () => <HeaderBackButton fallback="/(tabs)/settings" /> }} />
             <Stack.Screen name="offline" options={{ title: 'Contenu hors ligne', headerLeft: () => <HeaderBackButton fallback="/(tabs)/cours" /> }} />
           </Stack>
         </QuizProvider>
